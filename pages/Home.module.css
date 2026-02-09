@@ -1,0 +1,221 @@
+.section {
+  @apply py-14 md:py-20 overflow-x-hidden;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.heroGrid {
+  @apply grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr];
+}
+
+.heroContent {
+  @apply space-y-6;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green;
+}
+
+.displayTitle {
+  @apply text-4xl font-semibold leading-tight md:text-5xl;
+}
+
+.displayTitleSm {
+  @apply text-3xl;
+}
+
+.bodyText {
+  @apply text-base text-brand-muted md:text-lg;
+}
+
+.buttonRow {
+  @apply flex flex-wrap gap-3;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-navy px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/30 transition hover:-translate-y-0.5 hover:bg-brand-ink;
+}
+
+.secondaryButton {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-navy/30 px-6 py-3 text-sm font-semibold text-brand-navy transition hover:-translate-y-0.5 hover:border-brand-navy hover:text-brand-ink;
+}
+
+.heroMeta {
+  @apply flex flex-wrap gap-6 text-xs uppercase tracking-[0.25em] text-brand-muted;
+}
+
+.heroCardWrap {
+  @apply relative;
+}
+
+.cardSurface {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-8 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.cardStack {
+  @apply space-y-6;
+}
+
+.cardTitle {
+  @apply text-3xl font-semibold text-brand-navy;
+}
+
+.cardCopy {
+  @apply text-sm text-brand-muted;
+}
+
+.cardCopyTop {
+  @apply mt-3 text-sm text-brand-muted;
+}
+
+.cardGrid {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.cardItem {
+  @apply rounded-2xl border border-brand-navy/10 bg-white/80 p-4 text-xs font-medium text-brand-ink;
+}
+
+.heroBadge {
+  @apply absolute -bottom-6 -right-4 hidden rounded-2xl border border-brand-green/30 bg-brand-green/10 px-5 py-4 text-xs font-semibold text-brand-green md:block;
+}
+
+
+.servicesGrid {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.serviceCard {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.serviceTitle {
+  @apply text-xl font-semibold text-brand-navy;
+}
+
+.sectionHeader {
+  @apply space-y-4;
+}
+
+.sectionStack {
+  @apply space-y-8;
+}
+
+.cardContent {
+  @apply space-y-4;
+}
+
+.approachGrid {
+  @apply grid gap-6 md:grid-cols-3;
+}
+
+.approachCard {
+  @apply cursor-pointer rounded-3xl border border-white/60 bg-white/80 p-8 text-center shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur transition-shadow duration-300 hover:shadow-[0_30px_80px_-30px_rgba(10,58,132,0.45)];
+}
+
+.approachIcon {
+  @apply mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-brand-green/10;
+}
+
+.whyGrid {
+  @apply grid gap-10 md:grid-cols-[0.9fr_1.1fr];
+}
+
+.whyList {
+  @apply grid gap-4;
+}
+
+.whyItem {
+  @apply flex items-center gap-3 rounded-3xl border border-white/60 bg-white/80 p-4 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.ctaCard {
+  @apply grid gap-8 rounded-3xl border border-white/60 bg-white/80 p-10 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur md:grid-cols-[1.2fr_0.8fr] md:items-center;
+}
+
+.ctaCopy {
+  @apply space-y-4;
+}
+
+.ctaActions {
+  @apply flex flex-wrap gap-3;
+}
+
+/* New Comprehensive Services Section */
+.sectionHeaderCenter {
+  @apply mx-auto max-w-3xl space-y-4 text-center;
+}
+
+.bodyTextCenter {
+  @apply text-base text-brand-muted md:text-lg;
+}
+
+.serviceDetailGrid {
+  @apply grid items-center gap-10 py-12 md:grid-cols-2 md:gap-16;
+}
+
+.serviceDetailGridReverse {
+  @apply md:grid-flow-dense;
+}
+
+.serviceDetailGridReverse .serviceImageWrap {
+  @apply md:col-start-2;
+}
+
+.serviceDetailGridReverse .serviceContent {
+  @apply md:col-start-1 md:row-start-1;
+}
+
+.serviceImageWrap {
+  @apply relative overflow-hidden rounded-3xl border border-white/60 bg-gradient-to-br from-white/80 to-white/60 p-12 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.25)] backdrop-blur transition-transform duration-300;
+}
+
+.serviceImage {
+  @apply flex items-center justify-center;
+}
+
+.serviceContent {
+  @apply space-y-5;
+}
+
+.serviceBadge {
+  @apply inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider;
+}
+
+.serviceDetailTitle {
+  @apply text-2xl font-semibold text-brand-navy md:text-3xl;
+}
+
+.serviceDetailDesc {
+  @apply text-base text-brand-muted;
+}
+
+.featureList {
+  @apply space-y-3;
+}
+
+.featureItem {
+  @apply flex items-start gap-3 text-sm text-brand-ink;
+}
+
+.linkButton {
+  @apply inline-flex items-center gap-1 font-semibold transition hover:gap-2;
+}
+
+.whyCardsGrid {
+  @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.whyCard {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur transition-shadow duration-300 hover:shadow-[0_30px_80px_-30px_rgba(10,58,132,0.45)];
+}
+
+.whyIconWrap {
+  @apply mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl;
+}
+
+.whyCardText {
+  @apply text-base font-medium text-brand-ink;
+}

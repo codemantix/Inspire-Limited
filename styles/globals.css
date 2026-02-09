@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --brand-navy: #0a3a84;
+  --brand-green: #228b22;
+  --brand-mint: #6faf6f;
+  --brand-lime: #02ce02;
+  --brand-ink: #1f2933;
+  --brand-muted: #6b7280;
+  --brand-shell: #f6f7f9;
+}
+
+html {
+  background: var(--brand-shell) !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-inter text-brand-ink antialiased;
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(2, 206, 2, 0.18), transparent 60%),
+    radial-gradient(900px 520px at 10% 10%, rgba(10, 58, 132, 0.2), transparent 55%),
+    linear-gradient(180deg, #f6f7f9 0%, #ffffff 40%, #f7fafc 100%);
+  min-height: 100vh;
+}

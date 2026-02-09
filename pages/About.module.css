@@ -1,0 +1,87 @@
+.section {
+  @apply py-14 md:py-20;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.splitGrid {
+  @apply grid gap-10 md:grid-cols-[1.1fr_0.9fr];
+}
+
+.twoColGrid {
+  @apply grid gap-10 md:grid-cols-[1fr_1fr];
+}
+
+.stack {
+  @apply space-y-4;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green;
+}
+
+.displayTitle {
+  @apply text-4xl font-semibold leading-tight md:text-5xl;
+}
+
+.displayTitleSm {
+  @apply text-3xl;
+}
+
+.bodyText {
+  @apply text-sm text-brand-muted;
+}
+
+.cardSurface {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.cardStack {
+  @apply space-y-6;
+}
+
+.cardSectionTitle {
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green;
+}
+
+.cardCopy {
+  @apply text-sm text-brand-ink;
+}
+
+.cardCopyTop {
+  @apply mt-3 text-sm text-brand-ink;
+}
+
+.sectionStack {
+  @apply space-y-8;
+}
+
+.valuesGrid {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.valueCard {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.valueTitle {
+  @apply text-lg font-semibold text-brand-navy;
+}
+
+.valueCopy {
+  @apply mt-3 text-sm text-brand-muted;
+}
+
+.listCard {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.listItem {
+  @apply flex items-start gap-3 text-sm text-brand-ink;
+}
+
+.listDot {
+  @apply mt-1 h-2 w-2 rounded-full bg-brand-lime;
+}

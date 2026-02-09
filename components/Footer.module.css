@@ -1,0 +1,63 @@
+.footer {
+  @apply bg-brand-ink text-white;
+}
+
+.container {
+  @apply mx-auto grid w-full max-w-7xl gap-12 px-5 py-12 md:grid-cols-[1.5fr_1fr_1fr] md:gap-16 md:px-8 md:py-16;
+}
+
+.brandColumn {
+  @apply space-y-6;
+}
+
+.logoWrapper {
+  @apply mb-2 flex items-center;
+}
+
+.logoImage {
+  @apply h-16 w-auto;
+}
+
+.brandCopy {
+  @apply text-sm leading-relaxed text-white/80;
+}
+
+.quote {
+  @apply text-sm italic text-white/70;
+}
+
+.linkColumn {
+  @apply space-y-4;
+}
+
+.columnTitle {
+  @apply text-lg font-semibold text-white;
+}
+
+.linkList {
+  @apply space-y-3;
+}
+
+.linkItem {
+  @apply block text-sm text-white/80 transition-colors duration-200 hover:text-white;
+}
+
+.divider {
+  @apply mx-auto w-full max-w-7xl border-t border-white/10 px-5 md:px-8;
+}
+
+.bottomBar {
+  @apply mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 md:flex-row md:px-8;
+}
+
+.copyright {
+  @apply text-sm text-white/70;
+}
+
+.legalLinks {
+  @apply flex items-center gap-6;
+}
+
+.legalLink {
+  @apply text-sm text-white/70 transition-colors duration-200 hover:text-white;
+}

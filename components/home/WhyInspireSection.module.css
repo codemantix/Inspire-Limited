@@ -1,0 +1,157 @@
+.section {
+  @apply bg-gray-50 py-16 md:py-24 overflow-x-hidden;
+}
+
+.container {
+  @apply mx-auto w-full max-w-7xl px-5 md:px-8;
+}
+
+.contentGrid {
+  @apply grid gap-12 md:grid-cols-2 md:gap-16 items-center;
+}
+
+.leftContent {
+  @apply space-y-8;
+}
+
+.sectionHeader {
+  @apply space-y-4;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-green;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold text-gray-900 md:text-4xl;
+}
+
+.sectionDesc {
+  @apply text-base leading-relaxed text-gray-600 md:text-lg;
+}
+
+.whyList {
+  @apply space-y-6;
+}
+
+.whyItem {
+  @apply flex items-start gap-4 transition-transform duration-200;
+}
+
+.iconWrapper {
+  @apply flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-green-50;
+}
+
+.whyContent {
+  @apply flex-1 space-y-1;
+}
+
+.whyTitle {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.whyDesc {
+  @apply text-sm leading-relaxed text-gray-600;
+}
+
+.rightContent {
+  @apply flex items-start justify-center md:items-center;
+}
+
+.commitmentCard {
+  @apply w-full rounded-xl border border-gray-200 bg-white p-10 shadow-xl transition-all duration-300 hover:shadow-2xl md:p-12;
+}
+
+.commitmentIcon {
+  @apply mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-3xl bg-green-50;
+}
+
+.commitmentTitle {
+  @apply mb-3 text-center text-2xl font-bold text-gray-900 md:text-3xl;
+}
+
+.commitmentDesc {
+  @apply mb-10 text-center text-base text-gray-500;
+}
+
+.statsGrid {
+  @apply space-y-8;
+}
+
+.statItem {
+  @apply space-y-3 rounded-xl bg-gray-50 p-5;
+}
+
+.statHeader {
+  @apply flex items-center justify-between text-sm;
+}
+
+.statLabel {
+  @apply font-medium text-gray-600;
+}
+
+.statValue {
+  @apply text-lg font-bold text-gray-900;
+}
+
+.progressBar {
+  @apply h-2.5 w-full overflow-hidden rounded-full bg-gray-200;
+}
+
+.progressFill {
+  @apply h-full rounded-full bg-brand-green;
+}
+
+@screen mobile {
+  .section {
+    @apply py-12;
+  }
+  
+  .contentGrid {
+    @apply gap-10;
+  }
+  
+  .sectionTitle {
+    @apply text-2xl;
+  }
+  
+  .whyList {
+    @apply space-y-5;
+  }
+  
+  .whyItem {
+    @apply gap-3;
+  }
+  
+  .iconWrapper {
+    @apply h-10 w-10;
+  }
+  
+  .whyTitle {
+    @apply text-base;
+  }
+  
+  .commitmentCard {
+    @apply p-8;
+  }
+  
+  .commitmentIcon {
+    @apply mb-6 h-20 w-20;
+  }
+  
+  .commitmentTitle {
+    @apply text-xl;
+  }
+  
+  .commitmentDesc {
+    @apply mb-8;
+  }
+  
+  .statsGrid {
+    @apply space-y-6;
+  }
+  
+  .statItem {
+    @apply p-4;
+  }
+}

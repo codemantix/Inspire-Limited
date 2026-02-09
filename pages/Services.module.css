@@ -1,0 +1,95 @@
+.section {
+  @apply py-14 md:py-20;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.sectionStack {
+  @apply space-y-4;
+}
+
+.blockStack {
+  @apply space-y-8;
+}
+
+.splitGrid {
+  @apply grid gap-10 md:grid-cols-[1fr_1fr];
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green;
+}
+
+.displayTitle {
+  @apply text-4xl font-semibold leading-tight md:text-5xl;
+}
+
+.displayTitleSm {
+  @apply text-3xl;
+}
+
+.bodyText {
+  @apply text-sm text-brand-muted;
+}
+
+.cardSurface {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.formStack {
+  @apply space-y-4;
+}
+
+.formStackLg {
+  @apply space-y-6;
+}
+
+.formGridTwo {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.formGridThree {
+  @apply grid gap-4 md:grid-cols-3;
+}
+
+.label {
+  @apply text-xs uppercase tracking-[0.2em] text-brand-muted;
+}
+
+.inputField {
+  @apply w-full rounded-2xl border border-brand-ink/10 bg-white px-4 py-3 text-sm text-brand-ink shadow-sm focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-navy/30;
+}
+
+.fieldSpacing {
+  @apply mt-2;
+}
+
+.textareaField {
+  @apply min-h-[110px];
+}
+
+.textareaTall {
+  @apply min-h-[120px];
+}
+
+.primaryButton {
+  @apply inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-navy px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/30 transition hover:-translate-y-0.5 hover:bg-brand-ink;
+}
+
+.checkboxRow {
+  @apply flex items-start gap-3 text-xs text-brand-muted;
+}
+
+.checkboxInput {
+  @apply mt-1 h-4 w-4;
+}
+
+.subtleText {
+  @apply text-sm text-brand-muted;
+}
+
+.checkboxList {
+  @apply mt-2 grid gap-2 text-xs text-brand-muted;
+}

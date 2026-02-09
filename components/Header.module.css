@@ -1,0 +1,111 @@
+.header {
+  @apply sticky top-0 z-40 border-b border-white/30 bg-white/70 backdrop-blur;
+}
+
+.container {
+  @apply mx-auto flex w-full max-w-7xl items-center justify-between gap-4 py-3 px-4;
+}
+
+@screen laptop {
+  .container {
+    @apply gap-8 py-4 px-8;
+  }
+}
+
+.brand {
+  @apply flex items-center gap-2;
+}
+
+@screen laptop {
+  .brand {
+    @apply gap-3;
+  }
+}
+
+.logoImage {
+  @apply h-[45px] w-[45px] object-contain;
+}
+
+@screen laptop {
+  .logoImage {
+    @apply h-[60px] w-[60px];
+  }
+}
+
+.brandTitle {
+  @apply text-2xl font-bold text-brand-navy;
+}
+
+.nav {
+  @apply hidden;
+}
+
+@screen laptop {
+  .nav {
+    @apply flex flex-1 items-center justify-center gap-x-8 text-base font-medium text-brand-ink;
+  }
+}
+
+.navItemWrapper {
+  @apply relative;
+}
+
+.navLink {
+  @apply flex items-center text-sm font-medium transition hover:text-brand-navy;
+}
+
+@screen laptop {
+  .navLink {
+    @apply text-base;
+  }
+}
+
+.dropdown {
+  @apply absolute left-0 top-full mt-2 w-72 rounded-2xl bg-gray-50 py-4 shadow-xl;
+}
+
+.dropdownItem {
+  @apply block px-6 py-3.5 text-base font-medium text-gray-800 transition hover:bg-white hover:text-brand-navy;
+}
+
+.actions {
+  @apply flex items-center gap-3;
+}
+
+.mobileMenuButton {
+  @apply flex items-center justify-center text-brand-navy laptop:hidden;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand-green px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#1a7a1a];
+}
+
+@screen laptop {
+  .primaryButton {
+    @apply px-8 py-3 text-base;
+  }
+}
+
+.mobileMenu {
+  @apply overflow-hidden border-t border-white/30 bg-white/90 backdrop-blur laptop:hidden;
+}
+
+.mobileNav {
+  @apply flex flex-col;
+}
+
+.mobileNavItem {
+  @apply border-b border-gray-100;
+}
+
+.mobileNavLink {
+  @apply flex w-full items-center justify-between px-5 py-4 text-base font-medium text-brand-ink transition hover:bg-gray-50 hover:text-brand-navy;
+}
+
+.mobileDropdown {
+  @apply overflow-hidden bg-gray-50;
+}
+
+.mobileDropdownItem {
+  @apply block px-8 py-3 text-sm text-gray-700 transition hover:bg-white hover:text-brand-navy;
+}

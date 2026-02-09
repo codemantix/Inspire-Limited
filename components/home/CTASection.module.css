@@ -1,0 +1,98 @@
+.section {
+  @apply bg-[#FBFAF9] py-16 md:py-24;
+}
+
+.container {
+  @apply mx-auto w-full max-w-7xl px-5 md:px-8;
+}
+
+.ctaCard {
+  @apply grid gap-10 rounded-3xl bg-gradient-to-br from-[#1e293b] to-[#0f172a] p-10 md:grid-cols-2 md:gap-16 md:p-16;
+}
+
+.leftContent {
+  @apply space-y-6;
+}
+
+.title {
+  @apply text-3xl font-bold text-white md:text-4xl lg:text-5xl;
+}
+
+.description {
+  @apply text-base leading-relaxed text-white/80 md:text-lg;
+}
+
+.buttonGroup {
+  @apply flex flex-col gap-4 pt-4 md:flex-row md:items-center;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand-green px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#1a7a1a] md:px-8 md:py-4;
+}
+
+.secondaryButton {
+  @apply inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-6 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:border-white/50 hover:bg-white/5 md:px-8 md:py-4;
+}
+
+.rightContent {
+  @apply flex flex-col justify-center space-y-6;
+}
+
+.contactTitle {
+  @apply text-2xl font-bold text-white md:text-3xl;
+}
+
+.contactList {
+  @apply space-y-5;
+}
+
+.contactItem {
+  @apply flex items-center gap-4 transition-transform duration-200;
+}
+
+.contactIcon {
+  @apply flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white;
+}
+
+.contactText {
+  @apply text-lg font-medium text-white transition-colors duration-200 hover:text-brand-green md:text-xl;
+}
+
+@screen mobile {
+  .section {
+    @apply py-12;
+  }
+  
+  .ctaCard {
+    @apply gap-8 p-8;
+  }
+  
+  .title {
+    @apply text-2xl;
+  }
+  
+  .description {
+    @apply text-base;
+  }
+  
+  .buttonGroup {
+    @apply gap-3;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    @apply w-full py-3.5 text-base;
+  }
+  
+  .contactTitle {
+    @apply text-xl;
+  }
+  
+  .contactIcon {
+    @apply h-12 w-12;
+  }
+  
+  .contactText {
+    @apply text-base;
+  }
+}

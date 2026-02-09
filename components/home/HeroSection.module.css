@@ -1,0 +1,119 @@
+.heroSection {
+  @apply relative min-h-[700px] py-16 mobile:pt-10 flex items-center justify-center overflow-x-hidden;
+}
+
+.backgroundSlider {
+  @apply absolute inset-0;
+}
+
+.backgroundImage {
+  @apply absolute inset-0 opacity-0 transition-opacity duration-1000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.backgroundImageActive {
+  @apply opacity-100;
+}
+
+.heroSection::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/30 z-[1];
+}
+
+.heroOverlay {
+  @apply absolute inset-0 bg-black/20 z-[2];
+}
+
+.heroContent {
+  @apply relative z-10 mx-auto w-full max-w-6xl px-5 md:px-8;
+  z-index: 10;
+}
+
+.heroCenter {
+  @apply flex flex-col items-center text-center;
+}
+
+.badge {
+  @apply mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-medium text-white backdrop-blur-sm;
+}
+
+.badgeDot {
+  @apply h-2 w-2 rounded-full bg-brand-green animate-pulse;
+}
+
+.heroTitle {
+  @apply mb-6 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl;
+}
+
+.heroTitleGreen {
+  @apply text-brand-lime;
+}
+
+.heroDescription {
+  @apply mb-8 max-w-4xl text-base text-white/90 md:text-lg;
+}
+
+.heroButtons {
+  @apply mb-16 flex flex-wrap items-center justify-center gap-4;
+}
+
+.primaryButton {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-green/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-green/40;
+}
+
+.secondaryButton {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/80 bg-transparent px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white/10;
+}
+
+.statsContainer {
+  @apply flex flex-wrap items-center justify-center gap-12 border-t border-white/20 pt-6 md:gap-20;
+}
+
+.statItem {
+  @apply flex flex-col items-center text-center max-w-[150px];
+}
+
+.statRow {
+  @apply flex items-center gap-3 mb-2;
+}
+
+.statIcon {
+  @apply flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm;
+}
+
+.statValue {
+  @apply text-xl font-black mobile:font-extrabold text-brand-lime md:text-4xl;
+}
+
+.statLabel {
+  @apply text-xs font-medium text-white/80 md:text-base;
+}
+
+@screen mobile {
+  .heroTitle {
+    @apply text-3xl font-black;
+  }
+  
+  .heroDescription {
+    @apply text-base;
+  }
+  
+  .heroButtons {
+    @apply flex-col mb-6;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    @apply w-full;
+  }
+  
+  .statsContainer {
+    @apply gap-8;
+  }
+  
+  .statValue {
+    @apply text-2xl;
+  }
+}

@@ -1,0 +1,7 @@
+.wrapper {
+  @apply text-brand-ink;
+}
+
+.main {
+  @apply min-h-screen;
+}

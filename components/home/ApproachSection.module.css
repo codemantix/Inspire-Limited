@@ -1,0 +1,81 @@
+.section {
+  @apply bg-[#F8F6F2] py-16 md:py-24 overflow-x-hidden;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.sectionHeader {
+  @apply mb-12 space-y-4 text-center md:mb-16;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-green;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold text-brand-ink md:text-4xl;
+}
+
+.sectionDesc {
+  @apply mx-auto max-w-3xl text-base text-brand-muted md:text-lg;
+}
+
+.approachGrid {
+  @apply grid gap-6 md:grid-cols-3 md:gap-8;
+}
+
+.approachCard {
+  @apply relative  rounded-2xl bg-white p-8 pt-10 shadow-lg transition-all duration-300 hover:shadow-xl;
+}
+
+.cardNumber {
+  @apply absolute -left-6 -top-6 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-brand-ink text-sm font-bold text-white;
+}
+
+.iconWrapper {
+  @apply mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-green/10;
+}
+
+.cardTitle {
+  @apply mb-3 text-xl font-bold text-brand-ink md:text-2xl;
+}
+
+.cardDesc {
+  @apply text-sm leading-relaxed text-brand-muted md:text-base;
+}
+
+@screen mobile {
+  .section {
+    @apply py-12;
+  }
+  
+  .sectionHeader {
+    @apply mb-10;
+  }
+  
+  .sectionTitle {
+    @apply text-2xl;
+  }
+  
+  .approachGrid {
+    @apply gap-6;
+  }
+  
+  .approachCard {
+    @apply p-6 pt-10;
+  }
+  
+  .cardNumber {
+    @apply -left-4 -top-4 h-10 w-10 text-xs;
+  }
+  
+  .iconWrapper {
+    @apply h-14 w-14;
+  }
+  
+  .cardTitle {
+    @apply text-lg;
+  }
+}

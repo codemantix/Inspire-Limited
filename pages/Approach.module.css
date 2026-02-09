@@ -1,0 +1,63 @@
+.section {
+  @apply py-14 md:py-20;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.stack {
+  @apply space-y-4;
+}
+
+.sectionStack {
+  @apply space-y-6;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green;
+}
+
+.displayTitle {
+  @apply text-4xl font-semibold leading-tight md:text-5xl;
+}
+
+.displayTitleSm {
+  @apply text-3xl;
+}
+
+.bodyText {
+  @apply text-sm text-brand-muted;
+}
+
+.cardSurface {
+  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+}
+
+.cardTitle {
+  @apply text-lg font-semibold text-brand-navy;
+}
+
+.cardCopy {
+  @apply mt-3 text-sm text-brand-muted;
+}
+
+.gridThree {
+  @apply grid gap-6 md:grid-cols-3;
+}
+
+.splitGrid {
+  @apply grid gap-10 md:grid-cols-[1.1fr_0.9fr];
+}
+
+.list {
+  @apply space-y-3 text-sm text-brand-ink;
+}
+
+.listItem {
+  @apply flex items-start gap-3;
+}
+
+.listDot {
+  @apply mt-1 h-2 w-2 rounded-full bg-brand-green;
+}

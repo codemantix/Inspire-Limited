@@ -1,0 +1,105 @@
+.section {
+  @apply bg-brand-shell py-16 md:py-24 overflow-x-hidden;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.sectionHeader {
+  @apply mb-16 space-y-4 text-center;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-green;
+}
+
+.sectionTitle {
+  @apply text-3xl font-bold text-brand-ink md:text-4xl;
+}
+
+.sectionDesc {
+  @apply mx-auto max-w-3xl text-base text-brand-muted md:text-lg;
+}
+
+.serviceCard {
+  @apply mb-12 grid items-center gap-8 md:grid-cols-2 md:gap-12;
+}
+
+.serviceCardReverse {
+  @apply md:grid-flow-dense;
+}
+
+.serviceCardReverse .serviceImage {
+  @apply md:col-start-2;
+}
+
+.serviceCardReverse .serviceContent {
+  @apply md:col-start-1 md:row-start-1;
+}
+
+.serviceImage {
+  @apply overflow-hidden rounded-2xl shadow-lg;
+}
+
+.serviceImage img {
+  @apply h-full w-full object-cover transition-transform duration-500 hover:scale-105;
+}
+
+.serviceContent {
+  @apply space-y-4;
+}
+
+.serviceIconWrapper {
+  @apply flex items-center gap-3;
+}
+
+.serviceIconBadge {
+  @apply inline-flex h-14 w-14 items-center justify-center rounded-xl bg-brand-green/10;
+}
+
+.serviceCategory {
+  @apply text-xs font-semibold uppercase tracking-wider text-brand-green;
+}
+
+.serviceTitle {
+  @apply text-2xl font-bold text-brand-ink md:text-3xl;
+}
+
+.serviceDesc {
+  @apply text-base text-brand-muted;
+}
+
+.featureList {
+  @apply mt-6 space-y-3;
+}
+
+.featureItem {
+  @apply flex items-start gap-2.5 text-sm text-brand-ink;
+}
+
+@screen mobile {
+  .section {
+    @apply py-12;
+  }
+  
+  .sectionHeader {
+    @apply mb-10;
+  }
+  
+  .sectionTitle {
+    @apply text-2xl;
+  }
+  
+  .sectionDesc br {
+    @apply hidden;
+  }
+  
+  .serviceCard {
+    @apply mb-10 gap-6;
+  }
+  
+  .serviceTitle {
+    @apply text-xl;
+  }
+}
