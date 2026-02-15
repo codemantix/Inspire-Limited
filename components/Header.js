@@ -7,17 +7,18 @@ import CloseIcon from "@mui/icons-material/Close";
 import styles from "./Header.module.css";
 
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Service", hasDropdown: true },
   { href: "/about", label: "About" },
   { href: "/why-inspire", label: "Why Inspire" },
-  { href: "/contact", label: "Career" },
+  { href: "/career", label: "Career" },
 ];
 
 const serviceDropdownItems = [
   { href: "/services", label: "All Services" },
-  { href: "/services/pbo-cleaning", label: "PBO Cleaning Personnel" },
+  { href: "/services/bpo-cleaning", label: "BPO Cleaning Personnel" },
   { href: "/services/commercial-industrial", label: "Commercial & Industrial" },
-  { href: "/services/residential", label: "Residential Cleaning" },
+  { href: "/services/residential-cleaning", label: "Residential Cleaning" },
   { href: "/services/fumigation", label: "Fumigation & Pest Control" },
 ];
 

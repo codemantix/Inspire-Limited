@@ -1,0 +1,55 @@
+/* Hero Section */
+.heroSection {
+  @apply relative min-h-[600px] mobile:min-h-full py-20 md:py-32 flex items-center justify-center overflow-hidden;
+  background: linear-gradient(135deg, #0a3a84 0%, #1e5fa8 50%, #228B22 100%);
+}
+
+.heroSection::before {
+  content: '';
+  @apply absolute inset-0;
+  background-image: url('/images/hero/hero1.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.heroOverlay {
+content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/30 z-[1];
+}
+
+.heroContent {
+  @apply relative z-10 mx-auto w-full max-w-5xl px-5 md:px-8 text-center;
+}
+
+.badge {
+  @apply mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-medium text-white backdrop-blur-sm;
+}
+
+.badgeDot {
+  @apply h-2 w-2 rounded-full bg-brand-green animate-pulse;
+}
+
+.heroTitle {
+  @apply mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl;
+}
+
+.heroTitleGreen {
+  @apply text-brand-lime;
+}
+
+.heroDescription {
+  @apply max-w-3xl mx-auto text-base text-white/90 md:text-lg;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .heroTitle {
+    @apply text-3xl;
+  }
+  
+  .heroDescription {
+    @apply text-base;
+  }
+}

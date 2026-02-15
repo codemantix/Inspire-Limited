@@ -1,0 +1,28 @@
+.section {
+  padding: 4rem 0;
+  background-color: var(--brand-ink); /* Dark Navy */
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.statsGrid {
+@apply mobile:grid mobile:grid-cols-2 flex justify-between gap-4;
+}
+
+.statItem {
+@apply flex flex-col items-center text-center;
+}
+
+.value {
+  @apply text-2xl font-bold mb-1 text-white;
+}
+
+.label {
+@apply text-sm text-gray-400 uppercase tracking-wider;
+}
+

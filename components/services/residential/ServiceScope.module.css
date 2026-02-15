@@ -1,0 +1,88 @@
+.section {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.eyebrow {
+  color: var(--brand-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  @apply mobile:text-2xl
+}
+
+.sectionDesc {
+  color: var(--brand-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 350px; /* Grow, shrink, base width */
+  max-width: 400px; /* Prevent becoming too wide on large screens */
+  min-width: 300px; /* Prevent becoming too narrow */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #e2e8f0;
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--brand-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  color: var(--brand-muted);
+  line-height: 1.6;
+}

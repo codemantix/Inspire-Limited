@@ -1,34 +1,26 @@
 import Layout from "../../components/Layout";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import styles from "../Home.module.css";
+import ServiceHero from "../../components/services/ServiceHero";
+import MethodologySteps from "../../components/services/fumigation/MethodologySteps";
+import PestExpertise from "../../components/services/fumigation/PestExpertise";
+import CallToAction from "../../components/services/fumigation/CallToAction";
+import PestControlForm from "../../components/services/fumigation/PestControlForm";
+import BeforeAfterGallery from "@/components/services/BeforeAfterGallery";
 
-export default function FumigationPestControl() {
+export default function Fumigation() {
   return (
     <Layout>
-      <section className={styles.section}>
-        <motion.div 
-          className={styles.container}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6 }}
-        >
-          <div className={styles.sectionStack}>
-            <div className={styles.sectionHeader}>
-              <p className={styles.eyebrow}>Service</p>
-              <h1 className={`${styles.displayTitle} ${styles.displayTitleSm}`}>
-                Fumigation & Pest Control
-              </h1>
-              <p className={styles.bodyText}>
-                Safe, compliant pest management solutions for all environments.
-              </p>
-            </div>
-            <Link href="/contact" className={styles.primaryButton}>
-              Request a Quote
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+      <ServiceHero 
+        title="Fumigation & Pest Control"
+        subtitle="Professional pest management with certified professionals using safe, approved treatment methods to protect your property and health."
+        backgroundImage="/images/services/fumigation-hero.jpg"
+        ctaText="Schedule an Inspection"
+        ctaLink="#request-quote"
+      />
+      <MethodologySteps />
+      <PestExpertise />
+      <BeforeAfterGallery/>
+      <CallToAction />
+      <PestControlForm />
     </Layout>
   );
 }

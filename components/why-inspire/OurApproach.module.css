@@ -1,0 +1,90 @@
+.section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  color: var(--brand-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  @apply mobile:text-3xl
+}
+
+.subtitle {
+  color: var(--brand-muted);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: #f8fafc;
+  padding: 3rem 2rem;
+  border-radius: 0; /* Square-ish look? Or keep rounded? Let's keep rounded for consistency */
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(34, 197, 94, 0.1); /* Very faint green */
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+.cardText {
+  color: var(--brand-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}

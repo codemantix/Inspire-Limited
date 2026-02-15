@@ -1,0 +1,43 @@
+.section {
+  padding: 5rem 0;
+  background-color: var(--brand-ink);
+  color: white;
+  text-align: left;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.content {
+  max-width: 800px;
+}
+
+.eyebrow {
+  color: var(--brand-lime);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  color: white;
+  @apply mobile:text-[2rem]
+}
+
+.textBlock {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #cbd5e1; /* Slate 300 */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

@@ -1,0 +1,85 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--brand-green);
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.2;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--brand-ink);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--brand-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background-color: var(--brand-green);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.primaryButton:hover {
+  background-color: var(--brand-lime);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background-color: white;
+  color: var(--brand-ink);
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .errorCode {
+    font-size: 6rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}

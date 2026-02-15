@@ -1,0 +1,69 @@
+.section {
+  background-color: #1e293b; /* Dark slate/navy from image */
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  @apply mobile:flex-col mobile:items-center mobile:justify-center mobile:text-center
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  @apply mobile:flex-col mobile:items-center mobile:justify-center mobile:text-center
+}
+
+.iconWrapper {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  @apply mobile:text-2xl
+}
+
+.text {
+  color: #94a3b8; /* Slate 400 */
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--brand-green);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px; /* Slightly rounded, not full pill */
+  font-weight: 700;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: var(--brand-lime);
+  transform: translateY(-2px);
+}

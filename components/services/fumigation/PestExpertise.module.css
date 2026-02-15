@@ -1,0 +1,131 @@
+.section {
+  padding: 5rem 0;
+  background-color: #f1f5f9; /* Light gray background from image */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Left Column */
+.eyebrow {
+  color: var(--brand-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.desc {
+  color: var(--brand-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.pestGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .pestGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pestCard {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.pestCard:hover {
+  transform: translateX(5px);
+}
+
+.pestIcon {
+  color: var(--brand-green);
+  display: flex;
+  align-items: center;
+}
+
+.pestName {
+  font-weight: 700;
+  color: var(--brand-ink);
+  font-size: 1rem;
+}
+
+/* Right Column */
+.featuresCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  gap: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  align-items: flex-start;
+  @apply mobile:flex-col mobile:items-center mobile:justify-center mobile:text-center
+}
+
+.featureIcon {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--brand-green);
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-ink);
+  margin-bottom: 0.5rem;
+}
+
+.featureDesc {
+  color: var(--brand-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

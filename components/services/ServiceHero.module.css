@@ -1,0 +1,140 @@
+.heroSection {
+  position: relative;
+  padding: 10rem 0 8rem; /* Generous padding for grand feel */
+  background-color: var(--brand-ink);
+  color: white;
+  text-align: left;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 80vh; /* Occupy significant screen real estate */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Complex gradient for depth: Navy tint -> Dark Ink/Black fade */
+  background: linear-gradient(
+    90deg, 
+    rgba(10, 58, 132, 0.9) 0%,   /* Brand Navy */
+    rgba(31, 41, 51, 0.85) 50%,   /* Brand Ink */
+    rgba(31, 41, 51, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 2;
+}
+
+.heroContent {
+  max-width: 900px;
+}
+
+.heroTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 4.5rem; /* Massive, impactful title */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  line-height: 1.05;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  @apply mobile:!text-4xl mobile:leading-normal
+}
+
+.heroSubtitle {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  max-width: 750px;
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid var(--brand-lime);
+  padding-left: 1.5rem;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-lime) 100%);
+  color: white;
+  padding: 1.125rem 2.5rem; /* Slightly reduced padding to balance icon */
+  border-radius: 10px; /* Full pill shape */
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+  @apply mobile:text-sm mobile:font-medium
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 35px -5px rgba(34, 197, 94, 0.5);
+  filter: brightness(1.1);
+}
+
+.primaryButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.primaryButton:hover::after {
+  transform: translateX(100%);
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    min-height: auto;
+    padding: 8rem 0 6rem;
+  }
+  
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.75rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.125rem;
+    padding-left: 1rem;
+    border-left-width: 3px;
+  }
+  
+  .heroSection {
+    padding: 6rem 0 4rem;
+  }
+  
+  .primaryButton {
+    width: 100%;
+  }
+}

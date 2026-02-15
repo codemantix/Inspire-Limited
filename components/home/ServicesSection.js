@@ -6,6 +6,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import PestControlIcon from "@mui/icons-material/PestControl";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import styles from "./ServicesSection.module.css";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 
 const fadeInUp = {
 	hidden: { opacity: 0, y: 30 },
@@ -67,7 +69,8 @@ export default function ServicesSection() {
 				"Continuous training and development",
 				"Reliable staff replacement"
 			],
-			image: "/images/services/outsourced-personnel.jpg"
+			image: "/images/services/outsourced-personnel.jpg",
+			link: "/services/pbo-cleaning",
 		},
 		{
 			category: "Home Services",
@@ -81,7 +84,8 @@ export default function ServicesSection() {
 				"Discretion and reliability",
 				"Detailed attention to care"
 			],
-			image: "/images/services/residential-cleaning.jpg"
+			image: "/images/services/residential-cleaning.jpg",
+			link: "/services/residential-cleaning",
 		},
 		{
 			category: "Facility Services",
@@ -95,7 +99,8 @@ export default function ServicesSection() {
 				"Bank and institutional care",
 				"Safety compliance standards"
 			],
-			image: "/images/services/commercial-cleaning.jpg"
+			image: "/images/services/commercial-cleaning.jpg",
+			link: "/services/commercial-industrial",
 		},
 		{
 			category: "Environmental Services",
@@ -109,7 +114,8 @@ export default function ServicesSection() {
 				"Industrial pest management",
 				"Regulatory compliance"
 			],
-			image: "/images/services/fumigation-pest-control.jpg"
+			image: "/images/services/fumigation-pest-control.jpg",
+			link: "/services/fumigation",
 		},
 	];
 
@@ -183,6 +189,10 @@ export default function ServicesSection() {
 										</motion.li>
 									))}
 								</motion.ul>
+								 <Link href={service.link} className={styles.ctaButton}>
+                  <span>Learn More</span>
+                  <ArrowForwardIcon className={styles.ctaIcon} />
+                </Link>
 							</motion.div>
 						</div>
 					</motion.div>

@@ -1,5 +1,97 @@
+/* Hero Section */
+.heroSection {
+  @apply relative min-h-[600px] py-20 md:py-32 flex items-center justify-center overflow-hidden;
+  background: linear-gradient(135deg, #0a3a84 0%, #1e5fa8 50%, #228B22 100%);
+}
+
+.heroSection::before {
+  content: '';
+  @apply absolute inset-0;
+  background-image: url('/images/hero/hero1.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.heroOverlay {
+  @apply absolute inset-0 bg-gradient-to-b from-brand-navy/60 via-brand-ink/40 to-brand-navy/60 z-[1];
+}
+
+.heroContent {
+  @apply relative z-10 mx-auto w-full max-w-5xl px-5 md:px-8 text-center;
+}
+
+.badge {
+  @apply mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-2 text-sm font-medium text-white backdrop-blur-sm;
+}
+
+.badgeDot {
+  @apply h-2 w-2 rounded-full bg-brand-green animate-pulse;
+}
+
+.heroTitle {
+  @apply mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl;
+}
+
+.heroTitleGreen {
+  @apply text-brand-lime;
+}
+
+.heroDescription {
+  @apply max-w-3xl mx-auto text-base text-white/90 md:text-lg;
+}
+
+/* Services Grid Section */
+.servicesGridSection {
+  @apply py-16 md:py-24 bg-gradient-to-b from-white via-blue-50/30 to-white;
+}
+
+.servicesGrid {
+  @apply grid gap-8 md:grid-cols-2 lg:grid-cols-2;
+}
+
+.serviceCard {
+  @apply rounded-3xl border border-brand-navy/10 bg-white p-8 shadow-xl shadow-brand-navy/5 backdrop-blur transition-all duration-300 hover:shadow-2xl hover:shadow-brand-navy/10 hover:border-brand-green/30;
+}
+
+.serviceIconWrapper {
+  @apply mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-green to-brand-lime shadow-lg shadow-brand-green/30;
+}
+
+.serviceIcon {
+  @apply text-white;
+  font-size: 2rem !important;
+}
+
+.serviceTitle {
+  @apply mb-4 text-2xl font-bold text-brand-ink;
+}
+
+.serviceDescription {
+  @apply mb-6 text-sm leading-relaxed text-brand-muted;
+}
+
+.serviceFeatures {
+  @apply space-y-3;
+}
+
+.serviceFeature {
+  @apply flex items-start gap-2 text-sm text-brand-ink;
+}
+
+.checkIcon {
+  @apply text-brand-green flex-shrink-0 mt-0.5;
+  font-size: 1.25rem !important;
+}
+
+/* Section Styles */
 .section {
-  @apply py-14 md:py-20;
+  @apply py-16 md:py-24;
+}
+
+.sectionAlt {
+  @apply py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-white;
 }
 
 .container {
@@ -19,23 +111,35 @@
 }
 
 .eyebrow {
-  @apply text-xs uppercase tracking-[0.3em] text-brand-green;
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green font-semibold;
 }
 
 .displayTitle {
-  @apply text-4xl font-semibold leading-tight md:text-5xl;
+  @apply text-4xl font-bold leading-tight md:text-5xl text-brand-ink;
 }
 
 .displayTitleSm {
-  @apply text-3xl;
+  @apply text-3xl md:text-4xl;
+}
+
+.titleAccent {
+  @apply text-brand-green;
 }
 
 .bodyText {
-  @apply text-sm text-brand-muted;
+  @apply text-base leading-relaxed text-brand-muted;
+}
+
+.highlightBox {
+  @apply mt-6 rounded-2xl border border-brand-green/20 bg-brand-green/5 p-4;
+}
+
+.highlightText {
+  @apply text-sm font-medium text-brand-navy;
 }
 
 .cardSurface {
-  @apply rounded-3xl border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-30px_rgba(10,58,132,0.35)] backdrop-blur;
+  @apply rounded-3xl border border-brand-navy/10 bg-white p-8 shadow-2xl shadow-brand-navy/10 backdrop-blur transition-all duration-300 hover:shadow-2xl hover:shadow-brand-navy/20;
 }
 
 .formStack {
@@ -55,11 +159,11 @@
 }
 
 .label {
-  @apply text-xs uppercase tracking-[0.2em] text-brand-muted;
+  @apply text-xs uppercase tracking-[0.2em] text-brand-navy font-semibold;
 }
 
 .inputField {
-  @apply w-full rounded-2xl border border-brand-ink/10 bg-white px-4 py-3 text-sm text-brand-ink shadow-sm focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-navy/30;
+  @apply w-full rounded-2xl border border-brand-navy/20 bg-white px-4 py-3 text-sm text-brand-ink shadow-sm transition-all duration-200 focus:border-brand-green focus:outline-none focus:ring-4 focus:ring-brand-green/20 hover:border-brand-navy/30;
 }
 
 .fieldSpacing {
@@ -67,29 +171,65 @@
 }
 
 .textareaField {
-  @apply min-h-[110px];
+  @apply min-h-[110px] resize-none;
 }
 
 .textareaTall {
-  @apply min-h-[120px];
+  @apply min-h-[120px] resize-none;
 }
 
 .primaryButton {
-  @apply inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-navy px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/30 transition hover:-translate-y-0.5 hover:bg-brand-ink;
+  @apply inline-flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-brand-green to-brand-lime px-8 py-4 text-base font-bold text-white shadow-xl shadow-brand-green/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-green/40 active:translate-y-0;
+}
+
+.buttonIcon {
+  font-size: 1.25rem !important;
+  @apply transition-transform duration-300 group-hover:translate-x-1;
+}
+
+.primaryButton:hover .buttonIcon {
+  @apply translate-x-1;
 }
 
 .checkboxRow {
-  @apply flex items-start gap-3 text-xs text-brand-muted;
+  @apply flex items-start gap-3 text-sm text-brand-muted leading-relaxed;
 }
 
 .checkboxInput {
-  @apply mt-1 h-4 w-4;
+  @apply mt-1 h-5 w-5 rounded border-brand-navy/30 text-brand-green focus:ring-2 focus:ring-brand-green/30 cursor-pointer;
 }
 
 .subtleText {
-  @apply text-sm text-brand-muted;
+  @apply text-sm text-brand-muted leading-relaxed;
 }
 
 .checkboxList {
-  @apply mt-2 grid gap-2 text-xs text-brand-muted;
+  @apply mt-2 grid gap-3 text-sm text-brand-muted;
+}
+
+/* Mobile Responsiveness */
+@screen mobile {
+  .heroTitle {
+    @apply text-3xl;
+  }
+  
+  .heroDescription {
+    @apply text-base;
+  }
+  
+  .servicesGrid {
+    @apply grid-cols-1;
+  }
+  
+  .serviceCard {
+    @apply p-6;
+  }
+  
+  .cardSurface {
+    @apply p-6;
+  }
+  
+  .splitGrid {
+    @apply grid-cols-1;
+  }
 }

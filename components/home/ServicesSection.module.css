@@ -78,6 +78,19 @@
   @apply flex items-start gap-2.5 text-sm text-brand-ink;
 }
 
+.ctaButton {
+  @apply mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-green to-brand-lime px-6 py-3 text-sm font-bold text-white shadow-lg shadow-brand-green/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-green/40 no-underline;
+}
+
+.ctaIcon {
+  font-size: 1.125rem !important;
+  @apply transition-transform duration-300;
+}
+
+.ctaButton:hover .ctaIcon {
+  @apply translate-x-1;
+}
+
 @screen mobile {
   .section {
     @apply py-12;

@@ -1,0 +1,107 @@
+/* Services Grid Section */
+.servicesGridSection {
+  @apply py-16 md:py-24 bg-gradient-to-b from-white via-blue-50/30 to-white;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.servicesGrid {
+  @apply flex flex-col gap-12 md:gap-16;
+}
+
+.serviceCard {
+  @apply rounded-3xl border border-brand-navy/10 bg-white shadow-xl shadow-brand-navy/5 backdrop-blur transition-all duration-300 hover:shadow-2xl hover:shadow-brand-navy/10 hover:border-brand-green/30 overflow-hidden;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-0;
+}
+
+.serviceCardReverse {
+  @apply md:grid-cols-2;
+}
+
+.serviceCardReverse .serviceContent {
+  @apply md:order-2;
+}
+
+.serviceCardReverse .serviceImageWrapper {
+  @apply md:order-1;
+}
+
+.serviceContent {
+  @apply p-8 md:p-10 flex flex-col justify-center;
+}
+
+.serviceIconWrapper {
+  @apply mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-green to-brand-lime shadow-lg shadow-brand-green/30;
+}
+
+.serviceIcon {
+  @apply text-white;
+  font-size: 2rem !important;
+}
+
+.serviceTitle {
+  @apply mb-4 text-2xl font-bold text-brand-ink;
+}
+
+.serviceDescription {
+  @apply mb-6 text-sm leading-relaxed text-brand-muted;
+}
+
+.serviceFeatures {
+  @apply space-y-3;
+}
+
+.serviceFeature {
+  @apply flex items-start gap-2 text-sm text-brand-ink;
+}
+
+.checkIcon {
+  @apply text-brand-green flex-shrink-0 mt-0.5;
+  font-size: 1.25rem !important;
+}
+
+.ctaButton {
+  @apply mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-green to-brand-lime px-6 py-3 text-sm font-bold text-white shadow-lg shadow-brand-green/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-green/40 no-underline;
+}
+
+.ctaIcon {
+  font-size: 1.125rem !important;
+  @apply transition-transform duration-300;
+}
+
+.ctaButton:hover .ctaIcon {
+  @apply translate-x-1;
+}
+
+.serviceImageWrapper {
+  @apply relative min-h-[300px] md:min-h-[400px];
+}
+
+.serviceImage {
+  @apply absolute inset-0 bg-cover bg-center transition-transform duration-500;
+}
+
+.serviceCard:hover .serviceImage {
+  @apply scale-105;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .servicesGrid {
+    @apply gap-8;
+  }
+  
+  .serviceCard {
+    @apply grid-cols-1;
+  }
+  
+  .serviceContent {
+    @apply p-6;
+  }
+  
+  .serviceImageWrapper {
+    @apply min-h-[250px];
+  }
+}

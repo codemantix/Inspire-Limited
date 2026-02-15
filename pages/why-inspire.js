@@ -1,67 +1,50 @@
 import Layout from "../components/Layout";
-import styles from "./WhyInspire.module.css";
-
-const highlights = [
-  "End-to-end service management, not ad-hoc cleaning",
-  "Trained and supervised personnel",
-  "Consistent quality assurance and reporting",
-  "Embedded workforce development model",
-  "Trusted by organizations that value reliability",
-];
+import ServiceHero from "../components/services/ServiceHero";
+import SetsApart from "../components/why-inspire/SetsApart";
+import StatsBanner from "../components/why-inspire/StatsBanner";
+import OurApproach from "../components/why-inspire/OurApproach";
+import CSRSection from "../components/why-inspire/CSRSection";
+import Benefits from "../components/why-inspire/Benefits";
+import CallToAction from "../components/services/fumigation/CallToAction"; // Reuse generic CTA styling or create new? Let's reuse or use ServiceHero CTA.
 
 export default function WhyInspire() {
   return (
     <Layout>
-      <section className={styles.section}>
-        <div className={`${styles.container} ${styles.splitGrid}`}>
-          <div className={styles.stack}>
-            <p className={styles.eyebrow}>What Sets Us Apart</p>
-            <h1 className={styles.displayTitle}>Structure, accountability, and impact.</h1>
-            <p className={styles.bodyText}>
-              Inspire Limited is built on structure, accountability, and people-centered impact.
-              We offer reliable, compliant facility services with clear reporting and measurable
-              outcomes.
-            </p>
-          </div>
-          <div className={styles.cardSurface}>
-            <ul className={styles.list}>
-              {highlights.map((item) => (
-                <li key={item} className={styles.listItem}>
-                  <span className={styles.listDotLime} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+      <ServiceHero 
+        title="Why Choose Inspire Limited"
+        subtitle="We’re not just a service provider – we’re a partner committed to excellence, compliance, and meaningful workforce development that creates lasting impact."
+        backgroundImage="/images/hero/why-hero.jpg" // Need to check if this exists or use generic
+        ctaText="Partner With Us"
+        ctaLink="/contact"
+      />
+      
+      <SetsApart />
+      <StatsBanner />
+      <Benefits />
+      <OurApproach />
+      <CSRSection />
 
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.ctaCard}>
-            <div className={styles.stack}>
-              <p className={styles.eyebrow}>Client Focus</p>
-              <h2 className={`${styles.displayTitle} ${styles.displayTitleSm}`}>A partner you can trust.</h2>
-              <p className={styles.bodyText}>
-                We combine structured recruitment, rigorous supervision, and continuous quality
-                audits to deliver reliable service and clear accountability.
-              </p>
-            </div>
-            <div className={styles.ctaList}>
-              {[
-                "Clear documentation and service verification",
-                "Continuous training and mentorship",
-                "Health, safety, and environmental compliance",
-              ].map((item) => (
-                <div key={item} className={styles.listItem}>
-                  <span className={styles.listDotGreen} />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Bottom CTA */}
+      <div style={{ padding: '4rem 2rem', background: '#ffffff', textAlign: 'center' }}>
+         <h2 className=" text-2xl" style={{ fontWeight: '800', color: 'var(--brand-ink)', marginBottom: '1rem' }}>
+           Ready to Experience the Inspire Difference?
+         </h2>
+         <p style={{ color: 'var(--brand-muted)', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
+           Join organizations across Africa who trust Inspire Limited for their facility and environmental services needs.
+         </p>
+         <a href="/contact" style={{
+           display: 'inline-block',
+           backgroundColor: 'var(--brand-green)',
+           color: 'white',
+           padding: '1rem 2.5rem',
+           borderRadius: '9999px',
+           fontWeight: '700',
+           textDecoration: 'none'
+         }}>
+           Partner With Inspire Limited →
+         </a>
+      </div>
+
     </Layout>
   );
 }

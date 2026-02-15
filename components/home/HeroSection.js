@@ -39,10 +39,10 @@ export default function HeroSection() {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	
 	const backgroundImages = [
-		"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80&auto=format",
-		"https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80&auto=format",
-		"https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80&auto=format",
-		"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1920&q=80&auto=format",
+		"/images/hero/about-hero.jpg",
+		"/images/hero/hero2.webp",
+		"/images/hero/hero3.webp",
+		"/images/hero/hero4.jpg",
 	];
 	
 	useEffect(() => {

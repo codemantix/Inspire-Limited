@@ -1,0 +1,85 @@
+.section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--brand-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  @apply mobile:text-2xl
+}
+
+.sectionDesc {
+  color: var(--brand-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.segmentList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .segmentList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.segmentItem {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.segmentItem:hover {
+  transform: translateX(5px);
+  border-color: var(--brand-green);
+}
+
+.iconBox {
+  color: var(--brand-green);
+  display: flex;
+  align-items: center;
+}
+
+.segmentText {
+  font-weight: 600;
+  color: var(--brand-ink);
+  font-size: 1.125rem;
+  text-align: left;
+}

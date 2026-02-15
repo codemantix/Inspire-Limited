@@ -1,34 +1,24 @@
 import Layout from "../../components/Layout";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import styles from "../Home.module.css";
+import ServiceHero from "../../components/services/ServiceHero";
+import FacilitiesGrid from "../../components/services/commercial/FacilitiesGrid";
+import CleaningSolutions from "../../components/services/commercial/CleaningSolutions";
+import CommercialForm from "../../components/services/commercial/CommercialForm";
+import BeforeAfterGallery from "@/components/services/BeforeAfterGallery";
 
 export default function CommercialIndustrial() {
   return (
     <Layout>
-      <section className={styles.section}>
-        <motion.div 
-          className={styles.container}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6 }}
-        >
-          <div className={styles.sectionStack}>
-            <div className={styles.sectionHeader}>
-              <p className={styles.eyebrow}>Service</p>
-              <h1 className={`${styles.displayTitle} ${styles.displayTitleSm}`}>
-                Commercial & Industrial Facility Cleaning
-              </h1>
-              <p className={styles.bodyText}>
-                Professional cleaning for commercial, institutional, and industrial spaces.
-              </p>
-            </div>
-            <Link href="/contact" className={styles.primaryButton}>
-              Request a Quote
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+      <ServiceHero 
+        title="Commercial & Industrial Facility Cleaning"
+        subtitle="Professional cleaning services for offices, financial institutions, industrial sites, and public facilities. Tailored to each site’s usage, risk profile, and operational requirements."
+        backgroundImage="/images/services/commercial.jpg"
+        ctaText="Request a Quote"
+        ctaLink="#request-quote"
+      />
+      <FacilitiesGrid />
+      <CleaningSolutions />
+      <BeforeAfterGallery/>
+      <CommercialForm />
     </Layout>
   );
 }
