@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./BeforeAfterGallery.module.css";
@@ -33,25 +34,66 @@ const staggerItem = {
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
 function BeforeAfterCard({ before, after, title, category }) {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    let count = 0;
+    function onLoad() {
+      count += 1;
+      if (count === 2) setLoaded(true);
+    }
+
+    const imgs = [before, after].map((src) => {
+      const img = new Image();
+      img.onload = onLoad;
+      img.onerror = onLoad; // don't block forever on broken images
+      img.src = src;
+      // already cached — readyState is "complete"
+      if (img.complete) onLoad();
+      return img;
+    });
+
+    return () => {
+      imgs.forEach((img) => {
+        img.onload = null;
+        img.onerror = null;
+      });
+    };
+  }, [before, after]);
+
   return (
-    <motion.div 
+    <motion.div
       variants={staggerItem}
       className={styles.galleryCard}
     >
-      <div className={styles.imageContainer}>
-        <ReactCompareSlider
-          itemOne={<ReactCompareSliderImage src={before} alt="Before" />}
-          itemTwo={<ReactCompareSliderImage src={after} alt="After" />}
-          className={styles.sliderContainer}
-        />
-        <div className={styles.badgesContainer}>
-          <span className={styles.badge}>Before</span>
-          <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
+      {/* Skeleton overlay — removed once both images are ready */}
+      {!loaded && (
+        <div className={styles.skeleton}>
+          <div className={styles.skeletonImage} />
+          <div className={styles.skeletonContent}>
+            <div className={styles.skeletonBadge} />
+            <div className={styles.skeletonTitle} />
+          </div>
         </div>
-      </div>
-      <div className={styles.cardContent}>
-        <span className={styles.category}>{category}</span>
-        <h3 className={styles.cardTitle}>{title}</h3>
+      )}
+
+      {/* Real card content — invisible until loaded */}
+      <div className={loaded ? styles.cardVisible : styles.cardHidden}>
+        <div className={styles.imageContainer}>
+          <ReactCompareSlider
+            itemOne={<ReactCompareSliderImage src={before} alt="Before" />}
+            itemTwo={<ReactCompareSliderImage src={after} alt="After" />}
+            className={styles.sliderContainer}
+          />
+          <div className={styles.badgesContainer}>
+            <span className={styles.badge}>Before</span>
+            <span className={`${styles.badge} ${styles.badgeAfter}`}>After</span>
+          </div>
+        </div>
+        <div className={styles.cardContent}>
+          <span className={styles.category}>{category}</span>
+          <h3 className={styles.cardTitle}>{title}</h3>
+        </div>
       </div>
     </motion.div>
   );

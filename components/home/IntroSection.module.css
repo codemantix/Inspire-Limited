@@ -75,7 +75,7 @@
 }
 
 .card {
-  @apply relative rounded-[32px] border border-white/70 bg-white/85 p-7 shadow-[0_25px_80px_-35px_rgba(10,58,132,0.4)] backdrop-blur;
+  @apply relative rounded-[12px] border border-white/70 bg-white/85 p-7 shadow-[0_25px_80px_-35px_rgba(10,58,132,0.4)] backdrop-blur;
 }
 
 

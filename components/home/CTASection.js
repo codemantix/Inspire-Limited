@@ -59,7 +59,7 @@ export default function CTASection() {
 						<div className={styles.buttonGroup}>
 							<motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.98 }}>
 								<Link href="/services" className={styles.primaryButton}>
-									Request a Quote
+									Explore Services
 									<ArrowForwardIcon style={{ fontSize: 20, marginLeft: 8 }} />
 								</Link>
 							</motion.div>
@@ -86,7 +86,7 @@ export default function CTASection() {
 									<PhoneIcon style={{ fontSize: 24, color: "#228B22" }} />
 								</div>
 								<a href="tel:+2348135678905" className={styles.contactText}>
-									+(234) 813 567 8905
+									(+234) 813 567 8905
 								</a>
 							</motion.div>
 

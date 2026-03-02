@@ -35,7 +35,7 @@ export default function ServicesGridSection() {
       description: "Trained, supervised cleaning staff for organizations that prefer to outsource recruitment and management.",
       features: ["Vetted personnel", "Ongoing supervision", "Staff replacement"],
       image: "/images/services/outsourced-personnel.jpg",
-      link: "/services/pbo-cleaning",
+      link: "/services/bpo-cleaning",
       reverse: false
     },
     {

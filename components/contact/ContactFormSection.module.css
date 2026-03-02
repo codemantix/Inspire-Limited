@@ -1,0 +1,138 @@
+.section {
+  @apply py-16 md:py-24;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%);
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.mainGrid {
+  @apply grid gap-10 lg:grid-cols-[1.1fr_0.9fr];
+}
+
+/* ── Form card ──────────────────────────────────────────── */
+.formCard {
+  @apply rounded-3xl border border-brand-navy/10 bg-white p-8 mobile:p-4 shadow-xl shadow-brand-navy/5;
+}
+
+.formTitle {
+  @apply mb-1 text-2xl font-bold text-brand-ink;
+}
+
+.formSub {
+  @apply mb-6 text-sm text-brand-muted;
+}
+
+.form {
+  @apply space-y-5;
+}
+
+.formRow {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.formGroup {
+  @apply flex flex-col gap-1.5;
+}
+
+.label {
+  @apply text-xs font-semibold uppercase tracking-[0.15em] text-brand-muted;
+}
+
+.input {
+  @apply w-full rounded-xl border border-brand-ink/10 bg-brand-shell px-4 py-3 text-sm text-brand-ink placeholder:text-brand-muted/60 focus:border-brand-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-navy/20 transition;
+}
+
+.select {
+  @apply w-full appearance-none rounded-xl border border-brand-ink/10 bg-brand-shell px-4 py-3 text-sm text-brand-ink focus:border-brand-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-navy/20 transition cursor-pointer;
+}
+
+.textarea {
+  @apply min-h-[120px] resize-none;
+}
+
+.submitBtn {
+  @apply mt-1 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-ink px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-ink/25 transition hover:-translate-y-0.5 hover:bg-brand-navy;
+}
+
+/* Success state */
+.successBox {
+  @apply mt-4 flex flex-col items-center gap-4 rounded-2xl bg-brand-green/10 py-12 text-center;
+}
+
+.successIcon {
+  color: #228b22 !important;
+  font-size: 3rem !important;
+}
+
+.successText {
+  @apply text-base font-medium text-brand-ink;
+}
+
+/* ── Info column ─────────────────────────────────────────── */
+.infoCol {
+  @apply space-y-6;
+}
+
+.infoTitle {
+  @apply text-2xl font-bold text-brand-ink;
+}
+
+.infoSub {
+  @apply text-sm text-brand-muted;
+}
+
+.infoCards {
+  @apply space-y-3;
+}
+
+.infoCard {
+  @apply flex items-center gap-4 rounded-2xl border border-brand-navy/10 bg-white p-4 shadow-sm shadow-brand-navy/5 transition hover:border-brand-green/30 hover:shadow-md;
+}
+
+.infoIconWrap {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-green/10;
+}
+
+.infoIcon {
+  color: #228b22 !important;
+  font-size: 1.3rem !important;
+}
+
+.infoLabel {
+  @apply text-xs font-semibold uppercase tracking-[0.15em] text-brand-muted;
+}
+
+.infoValue {
+  @apply text-sm font-medium text-brand-ink;
+}
+
+a.infoValue {
+  @apply transition hover:text-brand-green;
+}
+
+/* ── Steps card ──────────────────────────────────────────── */
+.stepsCard {
+  @apply rounded-2xl bg-brand-ink p-6 text-white;
+}
+
+.stepsTitle {
+  @apply mb-5 text-base font-bold;
+}
+
+.stepsList {
+  @apply space-y-4;
+}
+
+.stepItem {
+  @apply flex items-start gap-4;
+}
+
+.stepNumber {
+  @apply flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-green text-xs font-bold text-white;
+}
+
+.stepText {
+  @apply mt-0.5 text-sm leading-relaxed text-white/80;
+}

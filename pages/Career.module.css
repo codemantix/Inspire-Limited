@@ -1,0 +1,208 @@
+/* ── Hero ─────────────────────────────────────────────── */
+.hero {
+  @apply py-16 md:py-24;
+  background: radial-gradient(900px 500px at 70% -20%, rgba(2, 206, 2, 0.12), transparent 60%),
+    radial-gradient(700px 400px at 5% 10%, rgba(10, 58, 132, 0.15), transparent 55%);
+}
+
+.container {
+  @apply mx-auto w-full max-w-4xl px-5 md:px-8;
+}
+
+.eyebrow {
+  @apply mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-brand-green;
+}
+
+.heroTitle {
+  @apply mb-5 text-4xl font-bold leading-tight text-brand-navy md:text-5xl;
+}
+
+.heroBody {
+  @apply mb-4 max-w-2xl text-base leading-relaxed text-brand-muted;
+}
+
+/* ── Form section ─────────────────────────────────────── */
+.formSection {
+  @apply pb-24;
+}
+
+.form {
+  @apply space-y-6;
+}
+
+/* ── Section card ─────────────────────────────────────── */
+.section {
+  @apply rounded-3xl border border-white/70 bg-white/85 p-6 shadow-[0_16px_48px_-20px_rgba(10,58,132,0.18)] backdrop-blur md:p-8;
+}
+
+.sectionHeader {
+  @apply mb-6 flex flex-wrap items-center gap-3;
+}
+
+.sectionNumber {
+  @apply flex h-9 w-9 items-center justify-center rounded-full bg-brand-navy text-sm font-bold text-white;
+}
+
+.sectionTitle {
+  @apply text-xl font-semibold text-brand-ink md:text-2xl;
+}
+
+.sectionNote {
+  @apply rounded-full border border-brand-muted/30 px-3 py-0.5 text-xs text-brand-muted;
+}
+
+.important {
+  @apply border-red-300 bg-red-50 text-red-600;
+}
+
+/* ── Grid layouts ─────────────────────────────────────── */
+.grid2 {
+  @apply grid gap-5 sm:grid-cols-2;
+}
+
+.fullWidth {
+  @apply sm:col-span-2;
+}
+
+/* ── Field ────────────────────────────────────────────── */
+.field {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-sm font-medium text-brand-ink;
+}
+
+.hint {
+  @apply text-xs text-brand-muted;
+}
+
+.req {
+  @apply text-red-500;
+}
+
+/* ── Inputs ───────────────────────────────────────────── */
+.input {
+  @apply mt-1 w-full rounded-2xl border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink shadow-sm transition focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-navy/25;
+}
+
+.textarea {
+  @apply resize-none;
+}
+
+.select {
+  @apply mt-1 w-full rounded-2xl border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink shadow-sm transition focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-navy/25;
+}
+
+/* ── Radio & Checkbox groups ──────────────────────────── */
+.radioGroup {
+  @apply mt-1 flex flex-wrap gap-3;
+}
+
+.radioLabel {
+  @apply flex cursor-pointer items-center gap-2 rounded-xl border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink shadow-sm transition hover:border-brand-navy/40 hover:bg-brand-navy/5 has-[:checked]:border-brand-navy has-[:checked]:bg-brand-navy/10 has-[:checked]:font-medium;
+}
+
+.radio {
+  @apply accent-brand-navy;
+}
+
+.checkboxGroup {
+  @apply mt-1 flex flex-wrap gap-3;
+}
+
+.checkboxLabel {
+  @apply flex cursor-pointer items-center gap-2 rounded-xl border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink shadow-sm transition hover:border-brand-green/40 hover:bg-brand-green/5 has-[:checked]:border-brand-green has-[:checked]:bg-brand-green/10 has-[:checked]:font-medium;
+}
+
+.checkbox {
+  @apply accent-brand-green;
+}
+
+/* ── File upload ──────────────────────────────────────── */
+.uploadIntro {
+  @apply mb-5 text-sm text-brand-muted;
+}
+
+.uploadGrid {
+  @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.uploadCard {
+  @apply flex flex-col gap-3 rounded-2xl border border-brand-ink/10 bg-brand-shell p-4;
+}
+
+.uploadCardHeader {
+  @apply flex items-start gap-3;
+}
+
+.uploadIcon {
+  @apply text-2xl leading-none;
+}
+
+.uploadLabel {
+  @apply text-sm font-medium text-brand-ink;
+}
+
+.uploadHint {
+  @apply mt-0.5 text-xs leading-relaxed text-brand-muted;
+}
+
+.fileInputWrapper {
+  @apply mt-auto block cursor-pointer;
+}
+
+.fileInput {
+  @apply sr-only;
+}
+
+.fileButton {
+  @apply block truncate rounded-xl border border-brand-navy/20 bg-white px-4 py-2 text-xs text-brand-navy shadow-sm transition hover:bg-brand-navy hover:text-white;
+}
+
+/* ── Confirmation ─────────────────────────────────────── */
+.confirmBox {
+  @apply mt-6 rounded-2xl border border-brand-navy/15 bg-brand-navy/5 p-4;
+}
+
+.confirmLabel {
+  @apply flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-brand-ink;
+}
+
+.confirmCheckbox {
+  @apply mt-0.5 h-4 w-4 flex-shrink-0 accent-brand-navy;
+}
+
+/* ── Submit ───────────────────────────────────────────── */
+.submitRow {
+  @apply flex justify-center pt-2;
+}
+
+.submitButton {
+  @apply rounded-full bg-brand-navy px-10 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-brand-navy/90 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-40;
+}
+
+/* ── Success screen ───────────────────────────────────── */
+.successSection {
+  @apply flex min-h-[70vh] items-center justify-center px-5 py-16;
+}
+
+.successCard {
+  @apply w-full max-w-lg rounded-3xl border border-white/70 bg-white/90 p-10 text-center shadow-[0_20px_60px_-20px_rgba(10,58,132,0.25)] backdrop-blur;
+}
+
+.successIcon {
+  @apply mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-green text-3xl font-bold text-white;
+}
+
+.successTitle {
+  @apply mb-4 text-2xl font-bold text-brand-ink md:text-3xl;
+}
+
+.successBody {
+  @apply mb-4 text-sm leading-relaxed text-brand-muted;
+}
+
+.successTagline {
+  @apply text-xs font-medium uppercase tracking-widest text-brand-green;
+}

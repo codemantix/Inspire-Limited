@@ -133,7 +133,7 @@ export default function WhoWeServeSection() {
 					>
 						<div className={styles.imageWrapper}>
 							<img 
-								src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" 
+								src="/images/hero/about-hero.jpg" 
 								alt="Modern office building and corporate spaces" 
 								className={styles.image}
 							/>

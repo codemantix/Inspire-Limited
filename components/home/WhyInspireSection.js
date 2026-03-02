@@ -57,27 +57,27 @@ export default function WhyInspireSection() {
 	const whyItems = [
 		{
 			title: "Professionally Trained Personnel",
-			desc: "All staff undergo rigorous training and vetting processes.",
+			desc: "Trained, vetted, and supervised staff equipped to meet professional service standards",
 			icon: CheckCircleIcon,
 		},
 		{
 			title: "Reliable Service Delivery",
-			desc: "Consistent quality assurance and service standards.",
+			desc: "Structured processes and quality controls ensure consistent and dependable outcomes.",
 			icon: VerifiedIcon,
 		},
 		{
 			title: "Health & Safety Compliance",
-			desc: "Full compliance with environmental and safety regulations.",
+			desc: "Full adherence to hygiene, safety, and environmental regulations across all services",
 			icon: HealthAndSafetyIcon,
 		},
 		{
 			title: "Social Impact Focus",
-			desc: "Embedded workforce development creating real change.",
+			desc: "Workforce development is embedded into our operations, creating real career pathways.",
 			icon: VolunteerActivismIcon,
 		},
 		{
 			title: "Clear Reporting",
-			desc: "Transparent client accountability and performance tracking.",
+			desc: "Transparent performance tracking and client accountability at every step.",
 			icon: AssessmentIcon,
 		},
 	];
@@ -106,7 +106,7 @@ export default function WhyInspireSection() {
 							<p className={styles.eyebrow}>WHY CHOOSE US</p>
 							<h2 className={styles.sectionTitle}>The Inspire Difference</h2>
 							<p className={styles.sectionDesc}>
-								We combine professional excellence with social impact, delivering world-class facility services while empowering our workforce to build meaningful careers.
+								Where professional facility services meet purpose-driven impact.
 							</p>
 						</div>
 

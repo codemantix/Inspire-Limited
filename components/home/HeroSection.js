@@ -39,10 +39,10 @@ export default function HeroSection() {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	
 	const backgroundImages = [
-		"/images/hero/about-hero.jpg",
-		"/images/hero/hero2.webp",
+		"/images/services/bpo.jpg",
+		"/images/services/residential.jpg",
 		"/images/hero/hero3.webp",
-		"/images/hero/hero4.jpg",
+		"/images/services/fumigation-hero.jpg",
 	];
 	
 	useEffect(() => {
