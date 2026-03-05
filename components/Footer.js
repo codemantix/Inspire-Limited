@@ -10,7 +10,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { href: "/about", label: "About Us" },
-  { href: "/why-choose-us", label: "Why Choose Us" },
+  { href: "/why-inspire", label: "Why Choose Us" },
   { href: "/career", label: "Career" },
   { href: "/contact", label: "Contact" },
 ];
