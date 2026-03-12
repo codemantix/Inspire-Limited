@@ -3,25 +3,29 @@ import styles from "./BPOForm.module.css";
 
 const WHATSAPP_PHONE = "2349132736772";
 
+const INITIAL_FORM_STATE = {
+  fullName: "",
+  phone: "",
+  email: "",
+  orgName: "",
+  orgType: "",
+  location: "",
+  cleanersNeeded: "",
+  contactMethod: "Phone Call",
+  urgency: "Immediate (24-48h)",
+};
+
 export default function BPOForm() {
-  const [form, setForm] = useState({
-    fullName: "",
-    phone: "",
-    email: "",
-    orgName: "",
-    orgType: "",
-    location: "",
-    cleanersNeeded: "",
-    contactMethod: "Phone Call",
-    urgency: "Immediate (24-48h)",
-  });
+  const [form, setForm] = useState(INITIAL_FORM_STATE);
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     const msg = [
       "*BPO Cleaning Service Request*",
       `Name: ${form.fullName}`,
@@ -34,6 +38,18 @@ export default function BPOForm() {
       `Preferred Contact: ${form.contactMethod}`,
       `Urgency: ${form.urgency}`,
     ].join("\n");
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form_type: "bpo", data: form }),
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+    } finally {
+      setLoading(false);
+      setForm(INITIAL_FORM_STATE);
+    }
     window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
   }
 
@@ -108,8 +124,8 @@ export default function BPOForm() {
                 <option value="Planning Stage">Planning Stage</option>
               </select>
             </div>
-            <button type="submit" className={`${styles.submitButton} ${styles.fullWidth}`}>
-              Submit Request
+            <button type="submit" className={`${styles.submitButton} ${styles.fullWidth}`} disabled={loading}>
+              {loading ? "Submitting..." : "Submit Request"}
             </button>
           </form>
         </div>

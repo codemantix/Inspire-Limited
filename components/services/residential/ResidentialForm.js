@@ -3,25 +3,29 @@ import styles from "./ResidentialForm.module.css";
 
 const WHATSAPP_URL = "https://wa.me/message/FTINUCHUTZIPP1";
 
+const INITIAL_FORM_STATE = {
+  fullName: "",
+  phone: "",
+  email: "",
+  contactMethod: "Phone",
+  residentialType: "",
+  bedrooms: "",
+  city: "",
+  location: "",
+  serviceTypes: [],
+  frequency: "",
+  timing: "",
+  accessDetails: "",
+  specialInstructions: "",
+  date: "",
+  urgency: "",
+  consent: false
+};
+
 export default function ResidentialForm() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    phone: "",
-    email: "",
-    contactMethod: "Phone",
-    residentialType: "",
-    bedrooms: "",
-    city: "",
-    location: "",
-    serviceTypes: [],
-    frequency: "",
-    timing: "",
-    accessDetails: "",
-    specialInstructions: "",
-    date: "",
-    urgency: "",
-    consent: false
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [loading, setLoading] = useState(false);
+  const [formKey, setFormKey] = useState(0);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -44,8 +48,9 @@ export default function ResidentialForm() {
 
   const WHATSAPP_PHONE = "2349132736772";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const services = formData.serviceTypes.length > 0 ? formData.serviceTypes.join(", ") : "Not specified";
     const msg = [
       "*Residential Cleaning Request*",
@@ -65,6 +70,22 @@ export default function ResidentialForm() {
       `Preferred Date: ${formData.date || "Not specified"}`,
       `Urgency: ${formData.urgency}`,
     ].join("\n");
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form_type: "residential",
+          data: { ...formData, serviceTypes: services },
+        }),
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+    } finally {
+      setLoading(false);
+      setFormData(INITIAL_FORM_STATE);
+      setFormKey(k => k + 1);
+    }
     window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
   };
 
@@ -90,7 +111,7 @@ export default function ResidentialForm() {
           </a>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form key={formKey} onSubmit={handleSubmit} className={styles.form}>
           
           {/* 1. Contact Information */}
           <div className={styles.formGroup}>
@@ -259,8 +280,8 @@ export default function ResidentialForm() {
             </label>
           </div>
 
-          <button type="submit" className={styles.submitButton}>
-           Submit Request
+          <button type="submit" className={styles.submitButton} disabled={loading}>
+            {loading ? "Submitting..." : "Submit Request"}
           </button>
         </form>
       </div>

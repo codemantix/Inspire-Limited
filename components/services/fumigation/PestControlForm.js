@@ -3,34 +3,31 @@ import styles from "./PestControlForm.module.css";
 
 const WHATSAPP_URL = "https://wa.me/message/FTINUCHUTZIPP1";
 
+const INITIAL_FORM_STATE = {
+  fullName: "",
+  orgName: "",
+  phone: "",
+  email: "",
+  contactChannel: "Phone",
+  address: "",
+  city: "",
+  propertyType: "",
+  otherPropertyType: "",
+  pests: [],
+  serviceType: "",
+  estimatedSize: "",
+  preferredDate: "",
+  timing: "",
+  accessType: "",
+  additionalNotes: "",
+  documents: [],
+  consent: false
+};
+
 export default function PestControlForm() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    orgName: "",
-    phone: "",
-    email: "",
-    contactChannel: "Phone",
-    
-    address: "",
-    city: "",
-    propertyType: "",
-    otherPropertyType: "",
-    
-    pests: [],
-    
-    serviceType: "",
-    estimatedSize: "",
-    
-    preferredDate: "",
-    timing: "",
-    accessType: "",
-    
-    additionalNotes: "",
-    
-    documents: [],
-    
-    consent: false
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [loading, setLoading] = useState(false);
+  const [formKey, setFormKey] = useState(0);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -54,8 +51,9 @@ export default function PestControlForm() {
 
   const WHATSAPP_PHONE = "2349132736772";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const pests = formData.pests.length > 0 ? formData.pests.join(", ") : "Not specified";
     const docs = formData.documents.length > 0 ? formData.documents.join(", ") : "None";
     const propertyType = formData.propertyType === "Public" ? `Other: ${formData.otherPropertyType}` : formData.propertyType;
@@ -78,6 +76,22 @@ export default function PestControlForm() {
       `Additional Notes: ${formData.additionalNotes || "None"}`,
       `Documents Requested: ${docs}`,
     ].join("\n");
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form_type: "fumigation",
+          data: { ...formData, pests, documents: docs, propertyType },
+        }),
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+    } finally {
+      setLoading(false);
+      setFormData(INITIAL_FORM_STATE);
+      setFormKey(k => k + 1);
+    }
     window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
   };
 
@@ -103,7 +117,7 @@ export default function PestControlForm() {
           </a>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form key={formKey} onSubmit={handleSubmit} className={styles.form}>
           
           {/* 1. Contact Information */}
           <div className={styles.formGroup}>
@@ -249,8 +263,8 @@ export default function PestControlForm() {
             </label>
           </div>
 
-          <button type="submit" className={styles.submitButton}>
-            Submit Request
+          <button type="submit" className={styles.submitButton} disabled={loading}>
+            {loading ? "Submitting..." : "Submit Request"}
           </button>
         </form>
       </div>

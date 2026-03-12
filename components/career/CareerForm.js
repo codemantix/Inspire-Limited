@@ -186,8 +186,40 @@ export default function CareerForm() {
       return;
     }
     setIsSubmitting(true);
-    // TODO: replace with real API/form-submission call
-    await new Promise((r) => setTimeout(r, 1200));
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form_type: "career",
+          data: {
+            fullName: form.fullName,
+            phone: form.phone,
+            whatsapp: form.whatsapp,
+            email: form.email,
+            gender: form.gender,
+            ageRange: form.ageRange,
+            location: form.location,
+            startDate: form.startDate,
+            workTime: form.workTime,
+            flexLocation: form.flexLocation,
+            workedBefore: form.workedBefore,
+            previousEmployer: form.previousEmployer,
+            cleaningPlaces: form.cleaningPlaces.join(", "),
+            willingToTrain: form.willingToTrain,
+            hasFuturePlans: form.hasFuturePlans,
+            futurePlans: form.futurePlans,
+            futurePlansText: form.futurePlansText,
+            openToGrowth: form.openToGrowth,
+            motivation: form.motivation,
+            followsInstructions: form.followsInstructions,
+            promisePunctual: form.promisePunctual,
+          },
+        }),
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+    }
     setIsSubmitting(false);
     setSubmitted(true);
     window.location.href = WHATSAPP_GROUP_URL;

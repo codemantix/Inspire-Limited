@@ -21,7 +21,9 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.brandColumn}>
           <div className={styles.logoWrapper}>
+            <Link href="/" className={styles.logoLink}>
             <img src="/InspireLogoWhite.svg" alt="Inspire" className={styles.logoImage} />
+            </Link>
           </div>
           <p className={styles.brandCopy}>
             Transforming spaces, transforming people. Professional facility services with a focus on workforce development and career transition.

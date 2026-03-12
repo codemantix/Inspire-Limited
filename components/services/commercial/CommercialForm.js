@@ -3,26 +3,30 @@ import styles from "./CommercialForm.module.css";
 
 const WHATSAPP_URL = "https://wa.me/message/FTINUCHUTZIPP1";
 
+const INITIAL_FORM_STATE = {
+  fullName: "",
+  orgName: "",
+  email: "",
+  phone: "",
+  address: "",
+  city: "",
+  contactMethod: "Phone",
+  facilityType: "",
+  otherFacilityType: "",
+  facilitySize: "",
+  serviceTypes: [],
+  frequency: "",
+  timing: "",
+  additionalInfo: "",
+  startDate: "",
+  urgency: "",
+  consent: false
+};
+
 export default function CommercialForm() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    orgName: "",
-    email: "",
-    phone: "",
-    address: "",
-    city: "",
-    contactMethod: "Phone",
-    facilityType: "",
-    otherFacilityType: "",
-    facilitySize: "",
-    serviceTypes: [],
-    frequency: "",
-    timing: "",
-    additionalInfo: "",
-    startDate: "",
-    urgency: "",
-    consent: false
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [loading, setLoading] = useState(false);
+  const [formKey, setFormKey] = useState(0);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -45,8 +49,9 @@ export default function CommercialForm() {
 
   const WHATSAPP_PHONE = "2349132736772";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const services = formData.serviceTypes.length > 0 ? formData.serviceTypes.join(", ") : "Not specified";
     const facilityType = formData.facilityType === "Other" ? `Other: ${formData.otherFacilityType}` : formData.facilityType;
     const msg = [
@@ -67,6 +72,22 @@ export default function CommercialForm() {
       `Urgency: ${formData.urgency}`,
       `Additional Info: ${formData.additionalInfo || "None"}`,
     ].join("\n");
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form_type: "commercial",
+          data: { ...formData, serviceTypes: services, facilityType },
+        }),
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+    } finally {
+      setLoading(false);
+      setFormData(INITIAL_FORM_STATE);
+      setFormKey(k => k + 1);
+    }
     window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
   };
 
@@ -92,7 +113,7 @@ export default function CommercialForm() {
           </a>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form key={formKey} onSubmit={handleSubmit} className={styles.form}>
           
           {/* 1. Contact Information */}
           <div className={styles.formGroup}>
@@ -274,8 +295,8 @@ export default function CommercialForm() {
             </label>
           </div>
 
-          <button type="submit" className={styles.submitButton}>
-           Submit Request
+          <button type="submit" className={styles.submitButton} disabled={loading}>
+            {loading ? "Submitting..." : "Submit Request"}
           </button>
         </form>
       </div>

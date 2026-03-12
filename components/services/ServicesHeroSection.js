@@ -20,10 +20,10 @@ export default function ServicesHeroSection() {
         animate="visible"
         variants={fadeInUp}
       >
-        <motion.div variants={fadeInUp} className={styles.badge}>
+        {/* <motion.div variants={fadeInUp} className={styles.badge}>
           <span className={styles.badgeDot} />
           Our Services
-        </motion.div>
+        </motion.div> */}
         <motion.h1 variants={fadeInUp} className={styles.heroTitle}>
           Structured facility and <span className={styles.heroTitleGreen}>environmental services</span>
         </motion.h1>

@@ -7,6 +7,8 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./ContactFormSection.module.css";
 
+const WHATSAPP_PHONE = "2349132736772";
+
 const contactDetails = [
   { icon: PhoneIcon, label: "Phone", value: "(+234) 813 567 8905", href: "tel:+2348135678905" },
   { icon: EmailIcon, label: "Email", value: "info@inspirelimited.com", href: "mailto:info@inspirelimited.com" },
@@ -32,10 +34,39 @@ const services = [
 
 export default function ContactFormSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", email: "", phone: "", company: "", service: "", message: "",
+  });
 
-  function handleSubmit(e) {
+  function handleChange(e) {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
+    setSubmitting(true);
+    try {
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form_type: "contact", data: form }),
+      });
+    } catch (err) {
+      console.error("Submit error:", err);
+    }
+    const msg = [
+      "*New Contact Inquiry – Inspire Limited*",
+      `Name: ${form.firstName} ${form.lastName}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || "Not provided"}`,
+      `Company: ${form.company || "Not provided"}`,
+      `Service: ${form.service || "Not specified"}`,
+      `Message: ${form.message}`,
+    ].join("\n");
+    setSubmitting(false);
     setSubmitted(true);
+    window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`, "_blank");
   }
 
   return (
@@ -68,28 +99,28 @@ export default function ContactFormSection() {
                 <div className={styles.formRow}>
                   <div className={styles.formGroup}>
                     <label className={styles.label}>First Name</label>
-                    <input type="text" className={styles.input} placeholder="Mike" required />
+                    <input type="text" name="firstName" value={form.firstName} onChange={handleChange} className={styles.input} placeholder="Mike" required />
                   </div>
                   <div className={styles.formGroup}>
                     <label className={styles.label}>Last Name</label>
-                    <input type="text" className={styles.input} placeholder="Babashola" required />
+                    <input type="text" name="lastName" value={form.lastName} onChange={handleChange} className={styles.input} placeholder="Babashola" required />
                   </div>
                 </div>
                 <div className={styles.formGroup}>
                   <label className={styles.label}>Email</label>
-                  <input type="email" className={styles.input} placeholder="mike@company.com" required />
+                  <input type="email" name="email" value={form.email} onChange={handleChange} className={styles.input} placeholder="mike@company.com" required />
                 </div>
                 <div className={styles.formGroup}>
                   <label className={styles.label}>Phone Number</label>
-                  <input type="tel" className={styles.input} placeholder="+234 XXX XXX XXXX" />
+                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} className={styles.input} placeholder="+234 XXX XXX XXXX" />
                 </div>
                 <div className={styles.formGroup}>
                   <label className={styles.label}>Company / Organisation</label>
-                  <input type="text" className={styles.input} placeholder="Your Company Name" />
+                  <input type="text" name="company" value={form.company} onChange={handleChange} className={styles.input} placeholder="Your Company Name" />
                 </div>
                 <div className={styles.formGroup}>
                   <label className={styles.label}>Service of Interest</label>
-                  <select className={styles.select} defaultValue="">
+                  <select name="service" value={form.service} onChange={handleChange} className={styles.select}>
                     {services.map((s) => (
                       <option
                         key={s}
@@ -104,13 +135,16 @@ export default function ContactFormSection() {
                 <div className={styles.formGroup}>
                   <label className={styles.label}>Message</label>
                   <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
                     className={`${styles.input} ${styles.textarea}`}
                     placeholder="Tell us about your requirements…"
                     required
                   />
                 </div>
-                <button type="submit" className={styles.submitBtn}>
-                  Send Message
+                <button type="submit" className={styles.submitBtn} disabled={submitting}>
+                  {submitting ? "Sending…" : "Send Message"}
                 </button>
               </form>
             )}
