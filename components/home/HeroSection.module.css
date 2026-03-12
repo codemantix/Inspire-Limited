@@ -72,11 +72,11 @@
 }
 
 .statsContainer {
-  @apply flex flex-wrap items-center justify-center gap-12 border-t border-white/20 pt-6 md:gap-20;
+  @apply flex flex-wrap sm:items-center mobile:flex-col sm:justify-center gap-12 border-t border-white/20 pt-6 md:gap-20;
 }
 
 .statItem {
-  @apply flex flex-row items-center gap-4;
+  @apply flex flex-row items-center gap-4 ;
 }
 
 .statIcon {
