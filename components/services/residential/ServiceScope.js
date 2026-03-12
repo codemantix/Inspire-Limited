@@ -30,28 +30,33 @@ export default function ServiceScope() {
   const services = [
     {
       icon: <CottageIcon fontSize="large" />,
-      title: "Routine Home Cleaning",
-      text: "Regular cleaning tailored to your household needs, ensuring a consistently pristine environment."
+      title: "Regular Home Cleaning",
+      text: "Scheduled daily, weekly, or bi-weekly cleaning of your home — living areas, bedrooms, bathrooms, kitchen, and common spaces. Consistent, reliable, and always the same standard."
     },
     {
       icon: <ConstructionIcon fontSize="large" />,
-      title: "Post-Renovation Cleaning",
-      text: "Specialized removal of dust and debris after construction or home improvement projects."
+      title: "One-Off Deep Cleaning",
+      text: "A thorough, room-by-room intensive clean when your home needs a proper reset — after a gathering, before a move, or just because it's been a while. We go into every corner."
     },
     {
       icon: <LocalShippingIcon fontSize="large" />,
-      title: "Move-In / Move-Out",
-      text: "Deep cleaning for transitions to ensure spaces are spotless for new occupants."
+      title: "Move-In / Move-Out Cleaning",
+      text: "Moving into a new property or leaving one? We clean the entire space — inside wardrobes, behind appliances, windows, floors, bathrooms — so it's fresh and ready."
+    },
+    {
+      icon: <ConstructionIcon fontSize="large" />,
+      title: "Post-Construction / Renovation Cleaning",
+      text: "Dust, cement residue, paint marks, and debris don't belong in your new space. Our post-construction clean removes all traces of building work so you can settle in immediately."
     },
     {
       icon: <HolidayVillageIcon fontSize="large" />,
-      title: "Estate-Wide Programs",
-      text: "Coordinated cleaning services for gated communities and residential estates."
+      title: "Estate & Managed Property Cleaning",
+      text: "For property managers and estate developers, we provide cleaning teams for common areas, stairwells, lobbies, gyms, and outdoor spaces on scheduled or retainer contracts."
     },
     {
       icon: <EventAvailableIcon fontSize="large" />,
-      title: "Scheduled & On-Demand",
-      text: "Flexible service models offering both recurring schedules and one-off deep cleans."
+      title: "Short-Let & Airbnb Turnaround Cleaning",
+      text: "Fast, thorough turnaround cleaning between guest check-outs and check-ins — restocking linens, sanitising surfaces, and leaving the property guest-ready every time."
     }
   ];
 
@@ -59,11 +64,10 @@ export default function ServiceScope() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
-          <p className={styles.eyebrow}>OUR SERVICES</p>
-          <h2 className={styles.sectionTitle}>Comprehensive Home Care Solutions</h2>
+          <p className={styles.eyebrow}>WHAT WE OFFER</p>
+          <h2 className={styles.sectionTitle}>Residential Cleaning Services</h2>
           <p className={styles.sectionDesc}>
-            From routine maintenance to specialized deep cleaning, we offer a complete range of 
-            residential cleaning services designed to support healthy living environments.
+            From routine maintenance to specialized deep cleaning, every service is delivered by vetted, supervised professionals.
           </p>
         </div>
 

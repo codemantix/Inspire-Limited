@@ -1,59 +1,48 @@
 import { motion } from "framer-motion";
+import TrackChangesIcon from "@mui/icons-material/TrackChanges";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import styles from "./VisionMission.module.css";
 
 export default function VisionMission() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
+        <div className={styles.header}>
+          <p className={styles.eyebrow}>OUR MISSION</p>
+          <h2 className={styles.sectionTitle}>Why We Exist and Where We&apos;re Going</h2>
+        </div>
         <div className={styles.grid}>
-          {/* Left Column: Vision & Mission Text */}
-          <motion.div 
-            className={styles.textCol}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className={styles.block}>
-              <div className={styles.iconHeading}>
-                <span className={styles.icon}>Our Vision</span>
-              </div>
-              <h2 className={styles.heading}>Transforming the Facility Services Industry</h2>
-              <p className={styles.text}>
-                To be the leading facility and environmental services company in Africa, 
-                recognized for professional excellence, workforce development, and creating 
-                lasting social impact in the communities we serve.
-              </p>
+            <div className={styles.iconWrapper}>
+              <TrackChangesIcon fontSize="large" />
             </div>
-
-            <div className={styles.block}>
-              <div className={styles.iconHeading}>
-                 <span className={styles.icon}>Our Mission</span>
-              </div>
-              <h2 className={styles.heading}>Excellence Through People</h2>
-              <p className={styles.text}>
-                To deliver professional, compliant, and reliable facility and environmental 
-                services while investing in the dignity of work and structured career 
-                transitions for our workforce.
-              </p>
-            </div>
+            <p className={styles.cardLabel}>Mission</p>
+            <p className={styles.cardText}>
+              To deliver excellent facility and environmental services while creating structured, dignified pathways
+              for workforce development and career transition across Africa.
+            </p>
           </motion.div>
-
-          {/* Right Column: Visual Element / Image */}
-          <motion.div 
-            className={styles.visualCol}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+          <motion.div
+            className={styles.card}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <div className={styles.imageWrapper}>
-              <img 
-                src="/images/about-1.jpg" 
-                alt="About Inspire Limited" 
-                className={styles.aboutImage} 
-              />
+            <div className={styles.iconWrapper}>
+              <VisibilityIcon fontSize="large" />
             </div>
+            <p className={styles.cardLabel}>Vision</p>
+            <p className={styles.cardText}>
+              To be Africa&apos;s most trusted facility services company — known equally for operational excellence
+              and the transformative impact we create in the people who power our work.
+            </p>
           </motion.div>
         </div>
       </div>

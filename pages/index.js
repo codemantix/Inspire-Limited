@@ -17,13 +17,13 @@ export default function Home() {
 
 			<ServicesSection />
 
-			<ApproachSection />
+			<WhoWeServeSection />
 
-			<ValuesSection />
+			<ApproachSection />
 
 			<WhyInspireSection />
 
-			<WhoWeServeSection />
+			<ValuesSection />
 
 			<CTASection />
 		</Layout>

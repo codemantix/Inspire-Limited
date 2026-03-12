@@ -51,15 +51,15 @@ export default function CTASection() {
 						className={styles.leftContent}
 						variants={fadeInLeft}
 					>
-						<h2 className={styles.title}>Partner with Inspire Limited</h2>
-						<p className={styles.description}>
-							Maintain clean, safe spaces while creating meaningful impact. Let's discuss how we can serve your facility needs.
+<h2 className={styles.title}>Ready to Remove Facility Management From Your To-Do List?</h2>
+					<p className={styles.description}>
+						Let’s talk about your space, your team size, and what reliable, fully managed facility services would look like for your organisation.
 						</p>
 						
 						<div className={styles.buttonGroup}>
 							<motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.98 }}>
-								<Link href="/services" className={styles.primaryButton}>
-									Explore Services
+							<Link href="/contact" className={styles.primaryButton}>
+								Request a Quote
 									<ArrowForwardIcon style={{ fontSize: 20, marginLeft: 8 }} />
 								</Link>
 							</motion.div>
@@ -97,8 +97,8 @@ export default function CTASection() {
 								<div className={styles.contactIcon}>
 									<EmailIcon style={{ fontSize: 24, color: "#228B22" }} />
 								</div>
-								<a href="mailto:info@inspirelimited.com" className={styles.contactText}>
-									info@inspirelimited.com
+								<a href="mailto:hello@inspireservicesltd.com" className={styles.contactText}>
+									hello@inspireservicesltd.com
 								</a>
 							</motion.div>
 						</div>

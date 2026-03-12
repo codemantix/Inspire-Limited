@@ -58,11 +58,10 @@ export default function MethodologySteps() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <p className={styles.eyebrow}>OUR METHODOLOGY</p>
-          <h2 className={styles.title}>The Inspire 8-Step Process</h2>
+          <p className={styles.eyebrow}>HOW IT WORKS</p>
+          <h2 className={styles.title}>Our Structured Pest Control Process</h2>
           <p className={styles.desc}>
-            Our approach prioritizes human safety, asset protection, regulatory compliance, 
-            and long‑term pest management effectiveness.
+            Every engagement starts with an inspection and ends with documentation — so you always know exactly what was done and why.
           </p>
         </div>
 

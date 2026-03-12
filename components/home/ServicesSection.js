@@ -59,60 +59,64 @@ export default function ServicesSection() {
     {
       category: "BPO Services",
       title: "Outsourced Cleaning Personnel",
-      desc: "Trained, supervised cleaning personnel for organizations that prefer to outsource recruitment, training, and day-to-day management.",
+      desc: "Stop recruiting, training, and managing cleaners in-house. We supply vetted, uniformed, and supervised cleaners directly to your organisation on a retainer basis — and handle everything from attendance to replacement.",
       icon: CleaningServicesIcon,
       color: "#228B22",
       features: [
         "Trained and vetted personnel",
-        "Ongoing supervision and monitoring",
-        "Continuous training and development",
-        "Reliable staff replacement",
+        "Daily supervision and monitoring",
+        "Instant staff replacement when needed",
+        "Monthly performance and attendance reports",
       ],
+      bestFor: "Offices, banks, schools, hospitals, co-working spaces, churches",
       image: "/images/services/outsourced-personnel.jpg",
       link: "/services/bpo-cleaning",
     },
     {
-      category: "Home Services",
-      title: "Residential Cleaning",
-      desc: "Professional cleaning services for homes, estates, and managed residential properties with reliability and attention to detail.",
-      icon: HomeIcon,
-      color: "#228B22",
-      features: [
-        "Home and apartment cleaning",
-        "Estate maintenance services",
-        "Discretion and reliability",
-        "Detailed attention to care",
-      ],
-      image: "/images/services/residential-cleaning.jpg",
-      link: "/services/residential-cleaning",
-    },
-    {
       category: "Facility Services",
-      title: "Commercial & Industrial Cleaning",
-      desc: "Structured cleaning services for offices, banks, industrial sites, and institutional facilities ensuring hygiene and compliance.",
+      title: "Corporate & Facility Cleaning",
+      desc: "Scheduled, thorough, and compliance-ready cleaning for offices, financial institutions, industrial sites, and institutional facilities. We work around your operations — not against them.",
       icon: ApartmentIcon,
       color: "#228B22",
       features: [
-        "Office and corporate cleaning",
-        "Industrial facility services",
-        "Bank and institutional care",
-        "Safety compliance standards",
+        "Routine office and corporate cleaning",
+        "Post-construction and deep cleaning",
+        "Industrial and warehouse facilities",
+        "Bank and institutional environments",
       ],
+      bestFor: "Corporate HQs, manufacturing plants, government facilities",
       image: "/images/services/commercial-cleaning.jpg",
       link: "/services/commercial-industrial",
     },
     {
+      category: "Home Services",
+      title: "Residential Cleaning",
+      desc: "Trusted home cleaning services for busy households, managed estates, and residential properties. Discreet, detail-oriented, and always reliable.",
+      icon: HomeIcon,
+      color: "#228B22",
+      features: [
+        "One-off and recurring home cleaning",
+        "Estate common-area maintenance",
+        "Move-in / move-out cleaning",
+        "Post-renovation clean-ups",
+      ],
+      bestFor: "Homes, duplexes, short-let apartments, estate managers",
+      image: "/images/services/residential-cleaning.jpg",
+      link: "/services/residential-cleaning",
+    },
+    {
       category: "Environmental Services",
       title: "Fumigation & Pest Control",
-      desc: "End-to-end fumigation and pest control services for all environments, delivered safely and in line with regulatory standards.",
+      desc: "End-to-end pest management for residential, commercial, and industrial environments. Every treatment follows an inspection-first, report-backed approach using approved methods and certified professionals.",
       icon: PestControlIcon,
       color: "#228B22",
       features: [
-        "Residential pest control",
-        "Commercial fumigation",
-        "Industrial pest management",
-        "Regulatory compliance",
+        "Rodents, cockroaches, bedbugs, termites, and more",
+        "Pre-treatment inspection and risk assessment",
+        "Safe, regulated treatment and post-service report",
+        "Scheduled follow-up and preventive programs",
       ],
+      bestFor: "Homes, offices, warehouses, food facilities, hotels",
       image: "/images/services/fumigation-pest-control.jpg",
       link: "/services/fumigation",
     },
@@ -130,11 +134,10 @@ export default function ServicesSection() {
         <div className={styles.sectionHeader}>
           <p className={styles.eyebrow}>WHAT WE DO</p>
           <h2 className={styles.sectionTitle}>
-            Comprehensive Facility Services
+            One Partner. Every Facility Need Covered.
           </h2>
           <p className={styles.sectionDesc}>
-            From personnel outsourcing to specialized cleaning and pest control,
-            we deliver excellence across all facility service needs.
+            From outsourced cleaning staff to fumigation, we deliver structured, supervised, and compliant facility services across Nigeria.
           </p>
         </div>
       </motion.div>
@@ -176,6 +179,9 @@ export default function ServicesSection() {
                 </div>
                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                 <p className={styles.serviceDesc}>{service.desc}</p>
+                {service.bestFor && (
+                  <p className={styles.serviceBestFor}><strong>Best for:</strong> {service.bestFor}</p>
+                )}
                 <motion.ul
                   className={styles.featureList}
                   variants={staggerContainer}

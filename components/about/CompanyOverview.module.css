@@ -1,8 +1,6 @@
 .section {
-  padding: 5rem 0;
-  background-color: var(--brand-ink);
-  color: white;
-  text-align: left;
+  padding: 6rem 0;
+  background-color: white;
 }
 
 .container {
@@ -16,7 +14,7 @@
 }
 
 .eyebrow {
-  color: var(--brand-lime);
+  color: var(--brand-green);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -25,19 +23,37 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.1;
-  color: white;
-  @apply mobile:text-[2rem]
+  color: var(--brand-ink);
+}
+
+@media (max-width: 640px) {
+  .title {
+   @apply text-2xl;
+  }
+}
+
+.pullquote {
+  font-size: 1.375rem;
+  font-style: italic;
+  color: var(--brand-green);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--brand-lime);
+  line-height: 1.4;
+  @apply mobile:text-sm
 }
 
 .textBlock {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: #cbd5e1; /* Slate 300 */
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--brand-muted);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  @apply mobile:text-sm;
 }

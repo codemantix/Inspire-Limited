@@ -26,6 +26,10 @@
   @apply text-3xl font-bold text-gray-900 md:text-4xl;
 }
 
+.sectionDesc {
+  @apply mt-3 text-base text-brand-muted max-w-xl;
+}
+
 .clientsGrid {
   @apply flex flex-wrap justify-center gap-6 md:justify-start;
 }

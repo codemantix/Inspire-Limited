@@ -9,11 +9,88 @@
   padding: 0 1.5rem;
 }
 
-.sectionHeader {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 4rem;
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
 }
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 2fr 3fr;
+    gap: 5rem;
+  }
+}
+
+
+
+.eyebrow {
+  color: var(--brand-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  @apply mobile:text-2xl
+}
+
+.sectionDesc {
+  color: var(--brand-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  @apply mobile:text-base
+}
+
+.listCol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .listCol {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.facilityItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.facilityItem:hover {
+  border-color: var(--brand-green);
+  transform: translateX(4px);
+}
+
+.iconBox {
+  color: var(--brand-green);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.facilityText {
+  font-weight: 600;
+  color: var(--brand-ink);
+  font-size: 0.9375rem;
+}
+
 
 .eyebrow {
   color: var(--brand-green);
@@ -29,13 +106,14 @@
   color: var(--brand-ink);
   font-weight: 700;
   margin-bottom: 1rem;
-  @apply mobile:text-3xl
+  @apply mobile:text-2xl
 }
 
 .sectionDesc {
   color: var(--brand-muted);
   font-size: 1.125rem;
   line-height: 1.6;
+   @apply mobile:text-base
 }
 
 .grid {
@@ -63,6 +141,7 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s;
   border: 1px solid #e2e8f0;
+   @apply mobile:p-4
 }
 
 .card:hover {
@@ -92,4 +171,5 @@
 .cardText {
   color: var(--brand-muted);
   line-height: 1.6;
+   @apply mobile:text-sm
 }

@@ -38,6 +38,7 @@
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.1;
+  @apply mobile:text-2xl
 }
 
 .desc {
@@ -46,6 +47,7 @@
   line-height: 1.6;
   margin-bottom: 2.5rem;
   max-width: 500px;
+  @apply mobile:text-base
 }
 
 .pestGrid {
@@ -122,10 +124,12 @@
   font-weight: 700;
   color: var(--brand-ink);
   margin-bottom: 0.5rem;
+  @apply mobile:text-base
 }
 
 .featureDesc {
   color: var(--brand-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+  @apply mobile:text-sm
 }

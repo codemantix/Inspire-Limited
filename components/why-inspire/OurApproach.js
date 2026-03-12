@@ -3,18 +3,18 @@ import styles from "./OurApproach.module.css";
 const steps = [
   {
     number: "01",
-    title: "Transform Spaces",
-    text: "We deliver clean, safe, and functional environments that support productivity and well-being."
+    title: "We Assess Your Facility",
+    text: "We visit your site, understand your requirements, and design a service plan that fits your facility, schedule, and compliance needs."
   },
   {
     number: "02",
-    title: "Be Transformed",
-    text: "We invest in training, mentorship, and supervision to build capable, professional service teams."
+    title: "We Deploy and Supervise",
+    text: "We assign trained, vetted staff and place a supervisor on-site to oversee quality, attendance, and performance — so you don’t have to."
   },
   {
     number: "03",
-    title: "Transition",
-    text: "We support clear career or business transitions for BPO cleaners within 12 months of engagement."
+    title: "We Report and Improve",
+    text: "You receive regular performance reports, and we resolve any issues proactively. Your facility standard only improves over time."
   }
 ];
 
@@ -23,9 +23,9 @@ export default function OurApproach() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <p className={styles.eyebrow}>OUR APPROACH</p>
-          <h2 className={styles.title}>How We Work</h2>
-          <p className={styles.subtitle}>Our operations are guided by a simple but disciplined framework.</p>
+          <p className={styles.eyebrow}>HOW WE WORK</p>
+          <h2 className={styles.title}>Simple, Supervised, and Accountable — Every Time</h2>
+          <p className={styles.subtitle}>Our operations follow a structured process that keeps your facility running smoothly.</p>
         </div>
 
         <div className={styles.grid}>

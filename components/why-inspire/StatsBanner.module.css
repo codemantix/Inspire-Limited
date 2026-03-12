@@ -1,7 +1,6 @@
 .section {
-  padding: 4rem 0;
-  background-color: var(--brand-ink); /* Dark Navy */
-  color: white;
+  padding: 6rem 0;
+  background-color: var(--brand-ink);
 }
 
 .container {
@@ -10,19 +9,78 @@
   padding: 0 1.5rem;
 }
 
-.statsGrid {
-@apply mobile:grid mobile:grid-cols-2 flex justify-between gap-4;
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
 }
 
-.statItem {
-@apply flex flex-col items-center text-center;
+.eyebrow {
+  color: var(--brand-lime);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  @apply mobile:text-2xl;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  transition: background 0.2s;
+  @apply mobile:px-4 mobile:py-6;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .value {
-  @apply text-2xl font-bold mb-1 text-white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--brand-lime);
+  line-height: 1;
+  @apply mobile:text-xl;
 }
 
 .label {
-@apply text-sm text-gray-400 uppercase tracking-wider;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
+  text-align: center;
+  @apply mobile:text-sm;
 }
-

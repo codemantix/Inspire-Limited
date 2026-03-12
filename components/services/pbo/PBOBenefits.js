@@ -1,30 +1,27 @@
 import { motion } from "framer-motion";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./PBOBenefits.module.css";
-import BPOForm from "./BPOForm";
 
 export default function PBOBenefits() {
   const benefits = [
-    "Reduce hiring, training, and management overhead",
-    "Access professionally trained cleaning staff on demand",
-    "Flexible scaling based on your operational needs",
-    "Maintain compliance with local and safety regulations",
-    "Benefit from our workforce development investment",
-    "Reliable backup and continuity assurance"
+    "Inconsistent attendance and no-shows with no backup plan",
+    "High cleaner turnover, requiring constant re-hiring",
+    "No structured training — standards slip over time",
+    "HR and payroll burden for non-core staff",
+    "No one to call when a cleaner underperforms or disappears",
+    "Compliance gaps — no documentation, no safety protocols"
   ];
 
   return (
-    <section className={styles.benefitsSection} id="request-service">
+    <section className={styles.benefitsSection}>
       <div className={styles.container}>
         <div className={styles.benefitsContainer}>
           {/* Benefits List */}
           <div>
-            <p className={styles.eyebrow}>WHY OUTSOURCE</p>
-            <h2 className={styles.sectionTitle}>Benefits for Your Organization</h2>
+            <p className={styles.eyebrow}>THE PROBLEM WE SOLVE</p>
+            <h2 className={styles.sectionTitle}>What Organisations Deal With When They Manage Cleaners In-House</h2>
             <p className={styles.sectionDesc}>
-              By partnering with Inspire Limited for your cleaning personnel needs, 
-              you gain more than just staff – you gain a committed partner invested 
-              in excellence and workforce development.
+              Inspire eliminates every one of these problems under one monthly contract.
             </p>
             <ul className={styles.benefitsList}>
               {benefits.map((benefit, index) => (
@@ -43,8 +40,6 @@ export default function PBOBenefits() {
             </ul>
           </div>
 
-          {/* Service Request Form */}
-          <BPOForm />
         </div>
       </div>
     </section>

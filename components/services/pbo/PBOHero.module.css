@@ -43,7 +43,7 @@
 
 .heroTitle {
   font-family: 'Inter', sans-serif;
-  font-size: 4.5rem; /* Massive, impactful title */
+  font-size: 3.5rem; /* Massive, impactful title */
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
@@ -54,7 +54,7 @@
 }
 
 .heroSubtitle {
-  font-size: 1.35rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 3rem;
@@ -119,11 +119,11 @@
 
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 2.75rem;
+    font-size: 2rem;
   }
   
   .heroSubtitle {
-    font-size: 1.125rem;
+    font-size: 0.875rem !important;
     padding-left: 1rem;
     border-left-width: 3px;
   }

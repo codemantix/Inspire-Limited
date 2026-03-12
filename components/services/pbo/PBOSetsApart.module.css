@@ -29,13 +29,14 @@
   color: var(--brand-ink);
   font-weight: 700;
   margin-bottom: 1rem;
-  @apply mobile:text-3xl
+  @apply mobile:text-2xl
 }
 
 .sectionDesc {
   color: var(--brand-muted); /* Assuming variable exists, typically gray */
   font-size: 1.125rem;
   line-height: 1.6;
+  @apply mobile:text-[15px]
 }
 
 .grid {
@@ -92,4 +93,5 @@
 .cardText {
   color: var(--brand-muted);
   line-height: 1.6;
+  @apply mobile:text-[15px]
 }

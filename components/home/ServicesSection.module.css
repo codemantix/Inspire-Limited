@@ -70,6 +70,10 @@
   @apply text-base text-brand-muted;
 }
 
+.serviceBestFor {
+  @apply mt-3 text-sm text-brand-muted italic;
+}
+
 .featureList {
   @apply mt-6 space-y-3;
 }

@@ -10,7 +10,7 @@ const mainBenefits = [
   {
     icon: <BoltIcon fontSize="large" />,
     title: "Fast Response",
-    text: "Quick deployment & support"
+    text: "Quick deployment & 48hr replacement"
   },
   {
     icon: <VerifiedIcon fontSize="large" />,
@@ -20,7 +20,7 @@ const mainBenefits = [
   {
     icon: <GroupWorkIcon fontSize="large" />,
     title: "Dedicated Teams",
-    text: "Consistent personnel"
+    text: "Supervised, consistent personnel"
   },
   {
     icon: <TrendingUpIcon fontSize="large" />,
@@ -30,12 +30,12 @@ const mainBenefits = [
 ];
 
 const listBenefits = [
-  "Reduced hiring and training costs",
-  "Consistent service quality",
-  "Reliable backup and continuity",
-  "Regulatory compliance assurance",
-  "Positive social impact partnership",
-  "Flexible scaling options"
+  "No hiring or HR management",
+  "Consistent, supervised service quality",
+  "Staff replacement within 48 hours",
+  "Full health & safety compliance documentation",
+  "Monthly performance reports",
+  "Scale up or down as your needs change"
 ];
 
 export default function Benefits() {
@@ -45,11 +45,11 @@ export default function Benefits() {
         <div className={styles.contentWrapper}>
           {/* Left: Text & List */}
           <div className={styles.textCol}>
-            <p className={styles.eyebrow}>BENEFITS</p>
-            <h2 className={styles.title}>What You Gain With Inspire</h2>
+            <p className={styles.eyebrow}>WHAT YOU GET</p>
+            <h2 className={styles.title}>What Working With Inspire Actually Means For You</h2>
             <p className={styles.description}>
-              Partnering with Inspire Limited means more than just contracting a service – 
-              it means aligning with a company that values excellence, compliance, and positive social impact.
+              When you partner with Inspire Limited, facility management disappears from your to-do list.
+              Here’s what that looks like in practice.
             </p>
             <ul className={styles.list}>
               {listBenefits.map((item, index) => (

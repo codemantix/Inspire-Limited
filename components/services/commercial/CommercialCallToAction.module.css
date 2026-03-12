@@ -1,0 +1,133 @@
+.section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f2117 0%, #1a3a24 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+  }
+}
+
+.eyebrow {
+  color: var(--brand-lime, #a3e635);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 1.75rem;
+  }
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primaryButton {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--brand-green);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.primaryButton:hover {
+  background-color: #1a6e1a;
+}
+
+.secondaryButton {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.contactCol {
+  border-left: none;
+  padding-left: 0;
+}
+
+@media (min-width: 1024px) {
+  .contactCol {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 3rem;
+  }
+}
+
+.contactLabel {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.contactIcon {
+  color: var(--brand-lime, #a3e635);
+  font-size: 1.25rem !important;
+  flex-shrink: 0;
+}

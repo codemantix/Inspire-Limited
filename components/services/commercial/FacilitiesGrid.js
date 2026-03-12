@@ -1,94 +1,48 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./FacilitiesGrid.module.css";
-
-// Icons
-import BusinessIcon from "@mui/icons-material/Business";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import FactoryIcon from "@mui/icons-material/Factory";
-import SchoolIcon from "@mui/icons-material/School";
-import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
-import StorefrontIcon from "@mui/icons-material/Storefront";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
 
 export default function FacilitiesGrid() {
   const facilities = [
-    {
-      icon: <BusinessIcon fontSize="large" />,
-      title: "Corporate Offices",
-      text: "Business premises and headquarters."
-    },
-    {
-      icon: <AccountBalanceIcon fontSize="large" />,
-      title: "Financial Institutions",
-      text: "Banks and secure financial facilities."
-    },
-    {
-      icon: <FactoryIcon fontSize="large" />,
-      title: "Industrial",
-      text: "Manufacturing plants and factories."
-    },
-    {
-      icon: <SchoolIcon fontSize="large" />,
-      title: "Education",
-      text: "Schools, universities, and institutions."
-    },
-    {
-      icon: <LocalHospitalIcon fontSize="large" />,
-      title: "Healthcare",
-      text: "Hospitals and allied medical facilities."
-    },
-    {
-      icon: <StorefrontIcon fontSize="large" />,
-      title: "Retail & Mixed-Use",
-      text: "Malls, shops, and hospitality venues."
-    }
+    "Corporate offices and open-plan workspaces",
+    "Banks, finance houses, and insurance firms",
+    "Industrial sites, warehouses, and manufacturing plants",
+    "Government ministries and public institutions",
+    "Schools, universities, and training centres",
+    "Hospitals, clinics, and health facilities",
+    "Event venues and conference centres",
   ];
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.eyebrow}>FACILITY TYPES</p>
-          <h2 className={styles.sectionTitle}>Facilities We Serve</h2>
-          <p className={styles.sectionDesc}>
-            We deliver comprehensive cleaning services for a wide range of facilities, 
-            ensuring hygiene, safety, and compliance across operational environments.
-          </p>
-        </div>
+        <div className={styles.layout}>
+          <div className={styles.textCol}>
+            <p className={styles.eyebrow}>WHO THIS IS FOR</p>
+            <h2 className={styles.sectionTitle}>Built for Environments Where Hygiene Is Non-Negotiable</h2>
+            <p className={styles.sectionDesc}>
+              We work with organisations that cannot afford cleaning failures — where compliance, consistency, and professionalism are essential.
+            </p>
+          </div>
 
-        <motion.div 
-          className={styles.grid}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={staggerContainer}
-        >
-          {facilities.map((item, index) => (
-            <motion.div key={index} variants={fadeInUp} className={styles.card}>
-              <div className={styles.iconWrapper}>{item.icon}</div>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardText}>{item.text}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+          <div className={styles.listCol}>
+            {facilities.map((item, index) => (
+              <motion.div
+                key={index}
+                className={styles.facilityItem}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.07 }}
+              >
+                <div className={styles.iconBox}>
+                  <CheckCircleOutlineIcon />
+                </div>
+                <span className={styles.facilityText}>{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

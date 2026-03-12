@@ -24,6 +24,24 @@
   display: block;
 }
 
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.whatsappButton:hover {
+  background-color: #1ebe5b;
+}
+
 .sectionTitle {
   font-family: 'Inter', sans-serif;
   font-size: 2rem; /* Reduced from 2.5rem */

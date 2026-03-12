@@ -56,36 +56,36 @@ const staggerItem = {
 export default function WhyInspireSection() {
 	const whyItems = [
 		{
-			title: "Professionally Trained Personnel",
-			desc: "Trained, vetted, and supervised staff equipped to meet professional service standards",
-			icon: CheckCircleIcon,
-		},
-		{
 			title: "Reliable Service Delivery",
-			desc: "Structured processes and quality controls ensure consistent and dependable outcomes.",
+			desc: "Structured processes, dedicated supervisors, and a staff replacement guarantee mean your facility is never left uncovered.",
 			icon: VerifiedIcon,
 		},
 		{
+			title: "Professionally Trained Personnel",
+			desc: "Every cleaner is vetted, trained, uniformed, and equipped before they enter your space — and continuously developed while on your contract.",
+			icon: CheckCircleIcon,
+		},
+		{
 			title: "Health & Safety Compliance",
-			desc: "Full adherence to hygiene, safety, and environmental regulations across all services",
+			desc: "We operate to ISO-aligned SOPs and adhere to hygiene, safety, and environmental regulations across all service types.",
 			icon: HealthAndSafetyIcon,
 		},
 		{
-			title: "Social Impact Focus",
-			desc: "Workforce development is embedded into our operations, creating real career pathways.",
-			icon: VolunteerActivismIcon,
+			title: "Clear Reporting and Accountability",
+			desc: "Transparent performance tracking, monthly reports, and a dedicated client contact — you always know exactly what you’re getting.",
+			icon: AssessmentIcon,
 		},
 		{
-			title: "Clear Reporting",
-			desc: "Transparent performance tracking and client accountability at every step.",
-			icon: AssessmentIcon,
+			title: "Embedded Social Value — At No Extra Cost",
+			desc: "Choosing Inspire means your contract supports real workforce development. Our staff transition into better careers — so you always have motivated, purpose-driven professionals in your facility.",
+			icon: VolunteerActivismIcon,
 		},
 	];
 
 	const stats = [
-		{ label: "Staff Training Completion", value: 100 },
 		{ label: "Client Satisfaction", value: 98 },
-		{ label: "Career Transition Success", value: 85 },
+		{ label: "SLA & Task Completion Rate", value: 97 },
+		{ label: "Personnel Trained & Certified", value: 100 },
 	];
 
 	return (
@@ -106,7 +106,7 @@ export default function WhyInspireSection() {
 							<p className={styles.eyebrow}>WHY CHOOSE US</p>
 							<h2 className={styles.sectionTitle}>The Inspire Difference</h2>
 							<p className={styles.sectionDesc}>
-								Where professional facility services meet purpose-driven impact.
+							Professional facility services, purpose-built for organisations that expect more.
 							</p>
 						</div>
 
@@ -147,8 +147,8 @@ export default function WhyInspireSection() {
 							<div className={styles.commitmentIcon}>
 								<CheckCircleOutlineIcon style={{ fontSize: 56, color: "#228B22", strokeWidth: 0.5 }} />
 							</div>
-							<h3 className={styles.commitmentTitle}>Our Commitment</h3>
-							<p className={styles.commitmentDesc}>Redefining facility services in Africa</p>
+<h3 className={styles.commitmentTitle}>Numbers That Speak for Themselves</h3>
+						<p className={styles.commitmentDesc}>Results our clients count on, every contract.</p>
 
 							<div className={styles.statsGrid}>
 								{stats.map((stat) => (

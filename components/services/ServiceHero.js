@@ -17,7 +17,9 @@ export default function ServiceHero({
   subtitle,
   backgroundImage,
   ctaText = "Request a Quote",
-  ctaLink = "#request-service"
+  ctaLink = "#request-service",
+  secondaryCtaText,
+  secondaryCtaLink = "/contact"
 }) {
   return (
     <section 
@@ -34,10 +36,17 @@ export default function ServiceHero({
         >
           <h1 className={styles.heroTitle}>{title}</h1>
           <p className={styles.heroSubtitle}>{subtitle}</p>
-          <Link href={ctaLink} className={styles.primaryButton}>
-            <span>{ctaText}</span>
-            <ArrowForwardIcon className={styles.btnIcon} />
-          </Link>
+          <div className={styles.buttonRow}>
+            <Link href={ctaLink} className={styles.primaryButton}>
+              <span>{ctaText}</span>
+              <ArrowForwardIcon className={styles.btnIcon} />
+            </Link>
+            {secondaryCtaText && (
+              <Link href={secondaryCtaLink} className={styles.secondaryButton}>
+                <span>{secondaryCtaText}</span>
+              </Link>
+            )}
+          </div>
         </motion.div>
       </div>
     </section>

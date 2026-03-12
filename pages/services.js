@@ -10,8 +10,8 @@ export default function Services() {
     <Layout>
       <ServicesHeroSection />
       <ServicesGridSection />
-      <BeforeAfterGallery />
-      <SocialProofSection />
+      {/* <BeforeAfterGallery />
+      <SocialProofSection /> */}
       <FAQSection />
     </Layout>
   );

@@ -10,16 +10,8 @@
 }
 
 .benefitsContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-}
-
-@media (min-width: 1024px) {
-  .benefitsContainer {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .eyebrow {
@@ -36,13 +28,14 @@
   color: var(--brand-ink);
   font-weight: 700;
   margin-bottom: 1rem;
-  @apply mobile:text-3xl
+  @apply mobile:!text-2xl
 }
 
 .sectionDesc {
   color: var(--brand-muted);
   font-size: 1.125rem;
   line-height: 1.6;
+  @apply mobile:!text-[15px]
 }
 
 .benefitsList {
@@ -56,6 +49,7 @@
   align-items: flex-start;
   margin-bottom: 1rem;
   color: var(--brand-ink);
+  @apply mobile:!text-[15px]
 }
 
 .checkIcon {

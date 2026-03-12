@@ -1,29 +1,32 @@
 import Layout from "../components/Layout";
 import ServiceHero from "../components/services/ServiceHero";
 import CompanyOverview from "../components/about/CompanyOverview";
+import AboutWhatWeBuilt from "../components/about/AboutWhatWeBuilt";
 import VisionMission from "../components/about/VisionMission";
+import AboutOurPeople from "../components/about/AboutOurPeople";
 import CoreValues from "../components/about/CoreValues";
+import AboutCommitment from "../components/about/AboutCommitment";
+import AboutCallToAction from "../components/about/AboutCallToAction";
 
 export default function About() {
   return (
     <Layout>
-      <ServiceHero 
+      <ServiceHero
         title="About Inspire Limited"
-        subtitle="Redefining facility and environmental services in Africa through professional excellence and meaningful workforce development."
-        backgroundImage="/images/hero/about-hero.jpg" // You might need to check if this image exists or use a generic one
-        ctaText="Talk to Our Team"
-        ctaLink="/contact"
+        subtitle="We deliver professional facility services to organisations across Nigeria - and invest in the development of every person on our team."
+        backgroundImage="/images/hero/about-hero.jpg"
+        ctaText="Explore Our Services"
+        ctaLink="/services"
+        secondaryCtaText="Talk to Our Team"
+        secondaryCtaLink="/contact"
       />
-      
-      {/* 
-        Note: The UI/UX image had "VisionMission" part of the hero logic visually, 
-        but implementation wise, separating them is cleaner. 
-        However, to match the darker hero transitioning to light sections:
-      */}
-      
       <CompanyOverview />
+      <AboutWhatWeBuilt />
       <VisionMission />
+      <AboutOurPeople />
       <CoreValues />
+      <AboutCommitment />
+      <AboutCallToAction />
     </Layout>
   );
 }

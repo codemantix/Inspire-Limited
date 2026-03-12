@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import SchoolIcon from "@mui/icons-material/School";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import SearchIcon from "@mui/icons-material/Search";
+import GroupsIcon from "@mui/icons-material/Groups";
+import AssessmentIcon from "@mui/icons-material/Assessment";
 import styles from "./ApproachSection.module.css";
 
 const fadeInUp = {
@@ -36,21 +36,21 @@ export default function ApproachSection() {
 	const approaches = [
 		{
 			number: "01",
-			icon: AutorenewIcon,
-			title: "Transform Spaces",
-			desc: "Trained, supervised cleaning personnel for organizations that prefer to outsource recruitment, training, and day-to-day management."
+			icon: SearchIcon,
+			title: "We Assess Your Facility",
+			desc: "We conduct a site inspection to understand your space, headcount, usage patterns, and cleaning requirements. You get a tailored scope — not a generic package."
 		},
 		{
 			number: "02",
-			icon: SchoolIcon,
-			title: "Be Transformed",
-			desc: "We provide structured training, mentorship, and supervision for our workforce, ensuring continuous growth and skill development."
+			icon: GroupsIcon,
+			title: "We Deploy and Supervise",
+			desc: "We place vetted, uniformed personnel on-site, supported by our field supervisors. Daily checklists, attendance logs, and quality checks keep standards consistent from day one."
 		},
 		{
 			number: "03",
-			icon: TrendingUpIcon,
-			title: "Transition",
-			desc: "We provide structured training, mentorship, and supervision for our workforce, ensuring continuous growth and skill development."
+			icon: AssessmentIcon,
+			title: "We Report and Improve",
+			desc: "Every client receives monthly performance reports with attendance records, task completion rates, and issue logs. We flag problems before you do — and fix them faster."
 		},
 	];
 
@@ -65,10 +65,7 @@ export default function ApproachSection() {
 			>
 				<div className={styles.sectionHeader}>
 					<p className={styles.eyebrow}>OUR APPROACH</p>
-					<h2 className={styles.sectionTitle}>Transform. Be Transformed. Transition.</h2>
-					<p className={styles.sectionDesc}>
-						This operational philosophy guides how we work, creating value for both spaces and people.
-					</p>
+					<h2 className={styles.sectionTitle}>Simple, Supervised, and Accountable — Every Time</h2>
 				</div>
 
 				<motion.div 
@@ -94,6 +91,10 @@ export default function ApproachSection() {
 						);
 					})}
 				</motion.div>
+
+				<p className={styles.missionThread}>
+					Every Inspire team member is enrolled in our career development program — so you&apos;re not just getting a cleaner, you&apos;re getting someone who shows up with purpose.
+				</p>
 			</motion.div>
 		</section>
 	);

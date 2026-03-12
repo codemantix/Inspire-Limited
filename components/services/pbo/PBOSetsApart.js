@@ -32,33 +32,33 @@ export default function PBOSetsApart() {
   const setsApart = [
     {
       icon: <BadgeIcon fontSize="large" />,
-      title: "Trained Personnel",
-      text: "Every team member undergoes comprehensive training in cleaning techniques, safety protocols, and professional conduct."
+      title: "Recruitment & Vetting",
+      text: "We source, screen, background-check, and reference-verify every cleaner before they step into your facility. You never interview a cleaner again."
     },
     {
       icon: <VerifiedUserIcon fontSize="large" />,
-      title: "Vetted & Verified",
-      text: "Thorough background checks and verification processes ensure you receive trustworthy, reliable personnel."
+      title: "Training & Certification",
+      text: "Every personnel member completes our structured cleaning, hygiene, health & safety, and workplace etiquette training before deployment. They arrive ready."
     },
     {
       icon: <SupervisorAccountIcon fontSize="large" />,
-      title: "Ongoing Supervision",
-      text: "Dedicated supervisors monitor performance, ensuring consistent quality and addressing issues proactively."
+      title: "On-Site Supervision",
+      text: "Our field supervisors conduct regular on-site checks, review daily task checklists, and ensure standards are maintained consistently."
     },
     {
       icon: <LoopIcon fontSize="large" />,
-      title: "Reliable Replacement",
-      text: "Seamless coverage with trained replacements ensures your operations never experience service gaps."
+      title: "Instant Replacement Guarantee",
+      text: "If a cleaner is absent, sick, or underperforming, we replace them within 48 hours — no disruption to your operations, no chasing from your end."
     },
     {
       icon: <AssessmentIcon fontSize="large" />,
-      title: "Performance Monitoring",
-      text: "Regular performance assessments and feedback loops maintain high standards across all deployments."
+      title: "Monthly Reporting",
+      text: "You receive a monthly report covering attendance logs, task completion records, supervisor visit notes, and any issues raised and resolved."
     },
     {
       icon: <TrendingUpIcon fontSize="large" />,
-      title: "Career Transition",
-      text: "Our personnel have structured pathways to grow into supervisory and management roles within the industry."
+      title: "Uniforms & Equipment",
+      text: "Personnel are uniformed, equipped, and presented professionally — representing your facility’s standards, not undercutting them."
     }
   ];
 
@@ -67,10 +67,9 @@ export default function PBOSetsApart() {
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <p className={styles.eyebrow}>BPO SERVICES</p>
-          <h2 className={styles.sectionTitle}>What Sets Our Personnel Apart</h2>
+          <h2 className={styles.sectionTitle}>Everything Included in Your BPO Contract</h2>
           <p className={styles.sectionDesc}>
-            We don't just supply cleaning staff – we deploy professionally developed team members 
-            who represent an extension of your organization.
+            Stop managing cleaners in-house. Under one contract, you get fully managed personnel — recruited, trained, supervised, and replaced by us.
           </p>
         </div>
 

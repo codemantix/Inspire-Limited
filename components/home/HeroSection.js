@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import TimelineIcon from "@mui/icons-material/Timeline";
+import TimerIcon from "@mui/icons-material/Timer";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import styles from "./HeroSection.module.css";
@@ -56,9 +56,9 @@ export default function HeroSection() {
 	}, [backgroundImages.length]);
 	
 	const stats = [
-		{ value: "12", label: "Months Career Transition", icon: TimelineIcon },
-		{ value: "100%", label: "Trained personnel", icon: VerifiedIcon },
-		{ value: "24/7", label: "Service Support", icon: SupportAgentIcon },
+		{ value: "48-Hour", label: "Staff Replacement Guarantee", icon: TimerIcon },
+		{ value: "100%", label: "Vetted & Certified Personnel", icon: VerifiedIcon },
+		{ value: "24/7", label: "Client Support", icon: SupportAgentIcon },
 	];
 
 	return (
@@ -84,32 +84,35 @@ export default function HeroSection() {
 					animate="visible"
 					variants={fadeInUp}
 				>
-					<motion.div className={styles.badge} variants={fadeInUp}>
+					{/* <motion.div className={styles.badge} variants={fadeInUp}>
 						<span className={styles.badgeDot} />
 						Professional Facility Services
-					</motion.div>
+					</motion.div> */}
 					
 					<motion.h1 className={styles.heroTitle} variants={fadeInUp}>
-						Transforming Spaces,<br />
-						<span className={styles.heroTitleGreen}>Transforming People</span>
-					</motion.h1>
-					
-					<motion.p className={styles.heroDescription} variants={fadeInUp}>
-						Delivering reliable, compliant cleaning solutions while creating structured<br />
-						pathways for workforce development and career transition across Africa.
-					</motion.p>
-					
-					<motion.div className={styles.heroButtons} variants={fadeInUp}>
-						<Link href="/contact" className={styles.primaryButton}>
-							Request a Quote
-							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4.16669 10H15.8334M15.8334 10L10 4.16666M15.8334 10L10 15.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-							</svg>
-						</Link>
-						<Link href="/services" className={styles.secondaryButton}>
-							Explore Our Services
-						</Link>
-					</motion.div>
+					Your Facility, Fully Managed.<br />
+					<span className={styles.heroTitleGreen}>Your Cleaners, Always Ready.</span>
+				</motion.h1>
+				
+				<motion.p className={styles.heroDescription} variants={fadeInUp}>
+					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control —<br />
+					all delivered by vetted, trained professionals under one reliable contract.
+				</motion.p>
+				
+				<motion.div className={styles.heroMission} variants={fadeInUp}>
+					Powered by a workforce development model that puts motivated, career-driven professionals in your space.
+				</motion.div>
+
+				<motion.div className={styles.heroButtons} variants={fadeInUp}>
+					<Link href="/contact" className={styles.primaryButton}>
+						Request a Quote
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4.16669 10H15.8334M15.8334 10L10 4.16666M15.8334 10L10 15.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+						</svg>
+					</Link>
+					<Link href="/services" className={styles.secondaryButton}>
+						Explore Our Services
+					</Link>
 				</motion.div>
 
 				<motion.div 
@@ -126,18 +129,19 @@ export default function HeroSection() {
 								className={styles.statItem}
 								variants={staggerItem}
 							>
-								<div className={styles.statRow}>
-									<div className={styles.statIcon}>
-										<Icon sx={{fontSize: {xs: 16} }} style={{ fontSize: 32, color: "#02CE02" }} />
-									</div>
-									<div className={styles.statValue}>{stat.value}</div>
-								</div>
+							<div className={styles.statIcon}>
+								<Icon style={{ fontSize: 28, color: "#02CE02" }} />
+							</div>
+							<div className={styles.statText}>
+								<div className={styles.statValue}>{stat.value}</div>
 								<div className={styles.statLabel}>{stat.label}</div>
+							</div>
 							</motion.div>
 						);
 					})}
 				</motion.div>
-			</div>
+			</motion.div>
+		</div>
 		</section>
 	);
 }

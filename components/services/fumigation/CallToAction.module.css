@@ -1,69 +1,108 @@
 .section {
-  background-color: #1e293b; /* Dark slate/navy from image */
-  padding: 3rem 0;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(135deg, #0f2117 0%, #1a3a24 100%);
+  padding: 5rem 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2rem;
-  @apply mobile:flex-col mobile:items-center mobile:justify-center mobile:text-center
+  text-align: center;
 }
 
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  @apply mobile:flex-col mobile:items-center mobile:justify-center mobile:text-center
-}
-
-.iconWrapper {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.eyebrow {
+  color: var(--brand-lime);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 .title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 0.25rem;
-  @apply mobile:text-2xl
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
 }
 
-.text {
-  color: #94a3b8; /* Slate 400 */
-  font-size: 1rem;
+@media (max-width: 640px) {
+  .title {
+    font-size: 1.5rem;
+  }
 }
 
-.button {
+.subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  @apply mobile:text-base
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.primaryBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   background-color: var(--brand-green);
   color: white;
   padding: 1rem 2rem;
-  border-radius: 8px; /* Slightly rounded, not full pill */
+  border-radius: 8px;
   font-weight: 700;
+  font-size: 1rem;
   transition: all 0.2s;
-  white-space: nowrap;
 }
 
-.button:hover {
+.primaryBtn:hover {
   background-color: var(--brand-lime);
+  color: var(--brand-ink);
   transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.2s;
+}
+
+.secondaryBtn:hover {
+  border-color: white;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9375rem;
+  transition: color 0.2s;
+}
+
+.contactItem:hover {
+  color: white;
 }

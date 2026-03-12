@@ -14,6 +14,24 @@
   margin-bottom: 2rem;
 }
 
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.25rem;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.whatsappButton:hover {
+  background-color: #1ebe5b;
+}
+
 .eyebrow {
   color: var(--brand-green);
   font-weight: 700;
@@ -220,6 +238,7 @@
   border-radius: 8px;
   border: 1px solid #f0f0f0;
   font-size: 0.9rem;
+  @apply mobile:text-sm
 }
 
 .submitButton {

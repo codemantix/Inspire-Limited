@@ -55,31 +55,11 @@ const staggerItem = {
 
 export default function WhoWeServeSection() {
 	const clients = [
-		{
-			title: "Corporate Organizations",
-			desc: "Office spaces and headquarters",
-			icon: BusinessIcon,
-		},
-		{
-			title: "Banks & Financial Institutions",
-			desc: "Secure financial environments",
-			icon: AccountBalanceIcon,
-		},
-		{
-			title: "Real Estate & Property Managers",
-			desc: "Managed properties and developments",
-			icon: ApartmentIcon,
-		},
-		{
-			title: "Industrial & Manufacturing",
-			desc: "Production facilities and plants",
-			icon: FactoryIcon,
-		},
-		{
-			title: "Residential Estates",
-			desc: "Homes and residential communities",
-			icon: HomeWorkIcon,
-		},
+		{ title: "Corporate Organisations", desc: "Office spaces and headquarters", icon: BusinessIcon },
+		{ title: "Banks & Financial Institutions", desc: "Secure, compliant environments", icon: AccountBalanceIcon },
+		{ title: "Real Estate & Property Managers", desc: "Managed properties and developments", icon: ApartmentIcon },
+		{ title: "Industrial & Manufacturing", desc: "Production facilities and plants", icon: FactoryIcon },
+		{ title: "Residential Estates", desc: "Homes and residential communities", icon: HomeWorkIcon },
 	];
 
 	return (
@@ -98,9 +78,9 @@ export default function WhoWeServeSection() {
 					>
 						<div className={styles.sectionHeader}>
 							<p className={styles.eyebrow}>WHO WE SERVE</p>
-							<h2 className={styles.sectionTitle}>Target Clients</h2>
-						</div>
-
+							</div>
+						<h2 className={styles.sectionTitle}>Built for Organisations That Demand Reliability</h2>
+						<p className={styles.sectionDesc}>We work with organisations that can’t afford cleaning failures — where hygiene, compliance, and consistency are non-negotiable.</p>
 						<motion.div 
 							className={styles.clientsGrid}
 							variants={staggerContainer}

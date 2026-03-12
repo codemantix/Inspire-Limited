@@ -41,7 +41,7 @@
   font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  @apply mobile:text-3xl
+  @apply mobile:text-2xl
 }
 
 .text {
@@ -49,6 +49,7 @@
   font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
+  @apply mobile:text-base;
 }
 
 .button {

@@ -18,6 +18,7 @@ const initialForm = {
   willingToTrain: "",
   hasFuturePlans: "",
   futurePlans: "",
+  futurePlansText: "",
   openToGrowth: "",
   idDocument: null,
   passport: null,
@@ -45,7 +46,10 @@ const REQUIRED_FIELDS = [
   "idDocument", "passport", "proofOfAddress",
   "motivation", "followsInstructions", "promisePunctual",
 ];
+
 const TOTAL_REQUIRED = REQUIRED_FIELDS.length + 1; // +1 for confirmed
+
+const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/IxaTW7NvaCj22LgHfEnZoI?mode=hq2tcla";
 
 const SECTIONS = [
   { label: "About You",       fields: ["fullName", "phone", "gender", "ageRange", "location"] },
@@ -186,7 +190,7 @@ export default function CareerForm() {
     await new Promise((r) => setTimeout(r, 1200));
     setIsSubmitting(false);
     setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.location.href = WHATSAPP_GROUP_URL;
   }
 
   if (submitted) {
@@ -386,7 +390,7 @@ export default function CareerForm() {
               <div className={styles.field} data-field="startDate">
                 <label className={styles.label}>When can you start work? <span className={styles.req}>*</span></label>
                 <div className={styles.radioGroup}>
-                  {["Immediately", "In 1 week", "In 2 weeks"].map((s) => (
+                  {["Immediately", "In 1-2 weeks", "In 1 month"].map((s) => (
                     <label key={s} className={styles.radioLabel}>
                       <input
                         type="radio"
@@ -429,7 +433,7 @@ export default function CareerForm() {
               </div>
               <div className={styles.field} data-field="flexLocation">
                 <label className={styles.label}>
-                  Are you okay working at different places if needed? <span className={styles.req}>*</span>
+                  Are you okay working at different locations if needed? <span className={styles.req}>*</span>
                 </label>
                 <div className={styles.radioGroup}>
                   {["Yes", "No"].map((v) => (
@@ -587,6 +591,18 @@ export default function CareerForm() {
                   />
                 </div>
               )}
+              <div className={`${styles.field} ${styles.fullWidth}`}>
+                <label htmlFor="cf-futurePlansText" className={styles.label}>What would you like to be in future?</label>
+                <p className={styles.hint}>Tell us your dream or career goal. You can write anything — no answer is wrong.</p>
+                <textarea
+                  id="cf-futurePlansText"
+                  name="futurePlansText"
+                  value={form.futurePlansText}
+                  onChange={handleChange}
+                  className={`${styles.input} ${styles.textarea}`}
+                  rows={3}
+                />
+              </div>
               <div className={`${styles.field} ${styles.fullWidth}`} data-field="openToGrowth">
                 <label className={styles.label}>
                   Are you open to learning and moving into another job or business within 1 year if we support you? <span className={styles.req}>*</span>

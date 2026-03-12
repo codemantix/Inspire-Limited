@@ -52,11 +52,15 @@
 }
 
 .heroDescription {
-  @apply mb-8 max-w-4xl text-base text-white/90 md:text-lg;
+  @apply mb-4 max-w-4xl text-base text-white/90 md:text-lg;
+}
+
+.heroMission {
+  @apply mb-8 max-w-3xl text-sm italic text-white/70 md:text-base;
 }
 
 .heroButtons {
-  @apply mb-16 flex flex-wrap items-center justify-center gap-4;
+  @apply mb-8 flex flex-wrap items-center justify-center gap-4;
 }
 
 .primaryButton {
@@ -72,23 +76,23 @@
 }
 
 .statItem {
-  @apply flex flex-col items-center text-center max-w-[150px];
-}
-
-.statRow {
-  @apply flex items-center gap-3 mb-2;
+  @apply flex flex-row items-center gap-4;
 }
 
 .statIcon {
-  @apply flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm;
+  @apply flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm;
+}
+
+.statText {
+  @apply flex flex-col items-start;
 }
 
 .statValue {
-  @apply text-xl font-black mobile:font-extrabold text-brand-lime md:text-4xl;
+  @apply text-xl font-black text-brand-lime md:text-2xl leading-tight;
 }
 
 .statLabel {
-  @apply text-xs font-medium text-white/80 md:text-base;
+  @apply text-xs font-medium text-white/80 md:text-sm leading-snug mt-0.5;
 }
 
 @screen mobile {

@@ -46,6 +46,10 @@
   @apply text-sm leading-relaxed text-brand-muted md:text-base;
 }
 
+.missionThread {
+  @apply mt-10 text-center text-sm italic text-brand-muted max-w-2xl mx-auto px-4;
+}
+
 @screen mobile {
   .section {
     @apply py-12;

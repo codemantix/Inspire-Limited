@@ -4,23 +4,26 @@ import styles from "./ClientSegments.module.css";
 
 export default function ClientSegments() {
   const segments = [
-    "Individual Homeowners",
-    "Residential Estates & Gated Communities",
-    "Real Estate Developers",
-    "Property & Facility Management Firms"
+    "Busy professionals who need a reliable weekly cleaner",
+    "Estate managers maintaining shared and common areas",
+    "Families needing a thorough one-off deep clean",
+    "Short-let and Airbnb property owners",
+    "Landlords and tenants preparing for move-in or move-out",
+    "New homeowners after construction or renovation"
   ];
 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <p className={styles.eyebrow}>WHO WE SERVE</p>
-          <h2 className={styles.sectionTitle}>Trusted by Homeowners & Managers</h2>
-          <p className={styles.sectionDesc}>
-            Our residential services emphasize discretion, reliability, and attention to detail, 
-            delivered by vetted personnel under structured supervision.
-          </p>
-          
+          <div className={styles.textCol}>
+            <p className={styles.eyebrow}>WHO WE SERVE</p>
+            <h2 className={styles.sectionTitle}>You'll Feel Right at Home With Us</h2>
+            <p className={styles.sectionDesc}>
+              Vetted, trained, and accountable — every time. Our residential teams are assigned specifically to your property and managed throughout.
+            </p>
+          </div>
+
           <div className={styles.segmentList}>
             {segments.map((item, index) => (
               <motion.div 

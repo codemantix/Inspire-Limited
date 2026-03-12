@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import AssessmentIcon from "@mui/icons-material/Assessment";
+import BoltIcon from "@mui/icons-material/Bolt";
+import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import styles from "./IntroSection.module.css";
 
 const fadeInUp = {
@@ -48,18 +52,18 @@ const staggerItem = {
 };
 
 const listItems = [
-	"Professionally trained and supervised personnel",
-	"Consistent quality assurance and reporting",
+	"Recruitment, vetting, training, and supervision",
+	"Instant staff replacement within 48 hours",
 	"Health, safety, and environmental compliance",
-	"Embedded workforce development and impact",
-	"Client-focused delivery and accountability",
+	"Monthly performance reports and accountability",
+	"Workforce development embedded in every contract",
 ];
 
 const chips = [
-	"ISO-aligned SOPs",
-	"Transparent reporting",
-	"Impact-first hiring",
-	"Fast response teams",
+	{ label: "ISO-Aligned SOPs", icon: VerifiedIcon },
+	{ label: "Transparent Reporting", icon: AssessmentIcon },
+	{ label: "Fast Response Teams", icon: BoltIcon },
+	{ label: "Health & Safety Compliant", icon: HealthAndSafetyIcon },
 ];
 
 
@@ -78,23 +82,30 @@ export default function IntroSection() {
 					variants={fadeInUp}
 				>
 					<motion.div className={styles.copy} variants={fadeInLeft}>
-						<p className={styles.eyebrow}>Intro</p>
-						<h2 className={styles.title}>
-							Reliable facility services with
-							<span className={styles.titleAccent}> measurable social impact.</span>
-						</h2>
-						<p className={styles.body}>
-							Inspire Limited delivers professional facility and environmental
-							services across cleaning, outsourced personnel, and pest control.
-							We combine rigorous operations with workforce development to keep
-							spaces safe while creating real career pathways.
+					<p className={styles.eyebrow}>WHO WE ARE</p>
+					<h2 className={styles.title}>
+						Reliable Facility Services.
+						<span className={styles.titleAccent}> Zero HR Headaches.</span>
+					</h2>
+					<p className={styles.body}>
+						Inspire Limited takes the burden of cleaning management off your organisation — completely. We handle recruitment, vetting, training, supervision, replacements, compliance reporting, and quality assurance, all under one contract.
+					</p>
+					<p className={styles.body}>
+						Whether you need a dedicated team of outsourced cleaners deployed to your office, a deep clean of your facility, pest control for your property, or professional residential cleaning — we show up, we deliver, and we report back.
+					</p>
+					<p className={styles.body}>
+						And because every member of our workforce is on a structured career development program, you don’t just get cleaners. You get motivated, growing professionals invested in doing excellent work.
 						</p>
 						<div className={styles.chipRow}>
-							{chips.map((chip) => (
-								<span key={chip} className={styles.chip}>
-									{chip}
-								</span>
-							))}
+							{chips.map((chip) => {
+								const Icon = chip.icon;
+								return (
+									<span key={chip.label} className={styles.chip}>
+										<Icon style={{ fontSize: 14 }} />
+										{chip.label}
+									</span>
+								);
+							})}
 						</div>
 						
 						

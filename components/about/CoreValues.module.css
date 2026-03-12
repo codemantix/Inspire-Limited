@@ -27,7 +27,7 @@
   font-size: 2.5rem;
   color: var(--brand-ink);
   font-weight: 800;
-  @apply mobile:text-[2rem]
+  @apply mobile:text-2xl
 }
 
 .grid {
@@ -69,6 +69,7 @@
   align-items: flex-start;
   height: auto; /* Flex items stretch by default in row, but we want them to be same height? yes. */
   min-height: 100%;
+  @apply mobile:p-4
 }
 
 .iconWrapper {
@@ -88,10 +89,12 @@
   font-weight: 700;
   color: var(--brand-ink);
   margin-bottom: 0.75rem;
+  @apply mobile:text-base
 }
 
 .cardText {
   color: var(--brand-muted);
   font-size: 0.95rem;
   line-height: 1.5;
+  @apply mobile:text-sm
 }

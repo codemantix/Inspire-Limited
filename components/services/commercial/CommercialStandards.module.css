@@ -1,0 +1,75 @@
+.section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 2fr 3fr;
+    gap: 5rem;
+  }
+}
+
+.eyebrow {
+  color: var(--brand-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  color: var(--brand-ink);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  @apply mobile:text-2xl
+}
+
+.sectionDesc {
+  color: var(--brand-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.standardsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+.standardItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  background: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--brand-ink);
+  line-height: 1.5;
+}
+
+.checkIcon {
+  color: var(--brand-green);
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 1.1rem !important;
+}

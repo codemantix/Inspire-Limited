@@ -13,6 +13,7 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto 4rem;
+  @apply mobile:text-left
 }
 
 .eyebrow {
@@ -36,6 +37,7 @@
   color: var(--brand-muted);
   font-size: 1.125rem;
   line-height: 1.6;
+  @apply mobile:text-base
 }
 
 .grid {
@@ -68,7 +70,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  @apply mobile:px-4 mobile:items-center mobile:justify-center mobile:text-center
+  @apply mobile:px-4 
 }
 
 .card:hover {
@@ -112,10 +114,12 @@
   font-weight: 800;
   color: var(--brand-ink);
   margin-bottom: 1rem;
+  @apply mobile:text-base
 }
 
 .cardDesc {
   color: var(--brand-muted);
   font-size: 0.95rem;
   line-height: 1.6;
+  @apply mobile:text-sm
 }

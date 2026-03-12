@@ -1,25 +1,16 @@
 import { motion } from "framer-motion";
 import styles from "./PestExpertise.module.css";
-// Icons
-import BugReportIcon from "@mui/icons-material/BugReport"; // General/Cockroach
-import PestControlIcon from "@mui/icons-material/PestControl"; // Rodents/Termites
-import CoronavirusIcon from "@mui/icons-material/Coronavirus"; // Virus/Mosquito?
-import GrassIcon from "@mui/icons-material/Grass"; // Ants
+import HomeIcon from "@mui/icons-material/Home";
+import BusinessIcon from "@mui/icons-material/Business";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import WarehouseIcon from "@mui/icons-material/Warehouse";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
+import HotelIcon from "@mui/icons-material/Hotel";
+import ConstructionIcon from "@mui/icons-material/Construction";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import ScienceIcon from "@mui/icons-material/Science";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
-
-// Reusing icons or picking best matches
-const pests = [
-  { name: "Cockroaches", icon: <BugReportIcon /> },
-  { name: "Rodents", icon: <PestControlIcon /> },
-  { name: "Termites", icon: <BugReportIcon /> }, // Placeholder
-  { name: "Bed Bugs", icon: <BugReportIcon /> }, // Placeholder
-  { name: "Mosquitoes", icon: <CoronavirusIcon /> },
-  { name: "Ants", icon: <GrassIcon /> },
-  { name: "Flies", icon: <BugReportIcon /> }, // Placeholder
-  { name: "Stored Product Pests", icon: <PestControlIcon /> },
-];
 
 const features = [
   {
@@ -40,22 +31,32 @@ const features = [
 ];
 
 export default function PestExpertise() {
+  const environments = [
+    { icon: <HomeIcon />, title: "Homes and apartments", desc: "Safe, discreet residential treatment" },
+    { icon: <BusinessIcon />, title: "Offices and corporate facilities", desc: "Minimal disruption, full compliance" },
+    { icon: <AccountBalanceIcon />, title: "Banks and financial institutions", desc: "Vetted technicians, documented service" },
+    { icon: <WarehouseIcon />, title: "Warehouses and manufacturing plants", desc: "Industrial-grade programs" },
+    { icon: <RestaurantIcon />, title: "Restaurants and food businesses", desc: "Regulatory-compliant pest management" },
+    { icon: <LocalHospitalIcon />, title: "Hospitals and clinics", desc: "Infection-risk-aware treatment protocols" },
+    { icon: <HotelIcon />, title: "Hotels and short-let properties", desc: "Fast turnaround, guest-safe chemicals" },
+    { icon: <ConstructionIcon />, title: "New constructions", desc: "Pre-occupancy treatment and termite prevention" },
+  ];
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.grid}>
           
-          {/* Left Column: Pests We Handle */}
+          {/* Left Column: Environments We Protect */}
           <div className={styles.pestsCol}>
-            <p className={styles.eyebrow}>EXPERTISE</p>
-            <h2 className={styles.title}>Pests We Handle</h2>
+            <p className={styles.eyebrow}>WHO THIS IS FOR</p>
+            <h2 className={styles.title}>We Protect Every Kind of Environment</h2>
             <p className={styles.desc}>
-              Our certified professionals are trained to handle a wide range of pest infestations, 
-              using targeted treatment methods appropriate for each pest type.
+              Our certified pest control professionals are equipped to handle every environment type — residential, commercial, or industrial.
             </p>
             
             <div className={styles.pestGrid}>
-              {pests.map((pest, index) => (
+              {environments.map((item, index) => (
                 <motion.div 
                   key={index}
                   className={styles.pestCard}
@@ -64,8 +65,11 @@ export default function PestExpertise() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <div className={styles.pestIcon}>{pest.icon}</div>
-                  <span className={styles.pestName}>{pest.name}</span>
+                  <div className={styles.pestIcon}>{item.icon}</div>
+                  <div>
+                    <span className={styles.pestName}>{item.title}</span>
+                    <p style={{ fontSize: '0.75rem', color: '#666', margin: 0 }}>{item.desc}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>

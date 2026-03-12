@@ -10,17 +10,19 @@ export default function Fumigation() {
   return (
     <Layout>
       <ServiceHero 
-        title="Fumigation & Pest Control"
-        subtitle="Professional pest management with certified professionals using safe, approved treatment methods to protect your property and health."
+        title="Pest Problems Don't Wait. Neither Do We."
+        subtitle="Whether it's cockroaches in your kitchen, rodents in your warehouse, termites in your walls, or bedbugs in your rooms — pest infestations escalate fast and damage more than just property. Inspire Limited delivers professional, inspection-first fumigation and pest control services for residential, commercial, and industrial environments — safely, thoroughly, and with full documentation."
         backgroundImage="/images/services/fumigation-hero.jpg"
-        ctaText="Schedule an Inspection"
+        ctaText="Request a Treatment"
         ctaLink="#request-quote"
+        secondaryCtaText="Talk to Our Team"
+        secondaryCtaLink="/contact"
       />
       <MethodologySteps />
       <PestExpertise />
-      <BeforeAfterGallery/>
-      <CallToAction />
+      {/* <BeforeAfterGallery/> */}
       <PestControlForm />
+      <CallToAction />
     </Layout>
   );
 }

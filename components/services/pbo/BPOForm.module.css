@@ -1,8 +1,21 @@
+.formWrapper {
+  padding: 4rem 0;
+  background-color: #f8fafc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 /* Form Section */
 .formSection {
-  background-color: #f1f5f9;
+  background-color: #ffffff;
   padding: 2.5rem;
   border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
 }
 
 /* Mobile responsive adjustments */
@@ -17,6 +30,38 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--brand-ink);
+}
+
+.whatsappRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.whatsappNote {
+  font-size: 0.875rem;
+  color: var(--brand-muted);
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.whatsappButton:hover {
+  background-color: #1ebe5b;
 }
 
 .formGrid {

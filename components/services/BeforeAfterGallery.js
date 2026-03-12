@@ -149,12 +149,12 @@ export default function BeforeAfterGallery() {
           variants={fadeInUp}
           className={styles.sectionHeader}
         >
-          <p className={styles.eyebrow}>Our Work Speaks</p>
+          <p className={styles.eyebrow}>Our Work</p>
           <h2 className={styles.sectionTitle}>
-            See the <span className={styles.titleAccent}>transformation</span>
+            Real Results, Real Projects
           </h2>
           <p className={styles.sectionDescription}>
-            Use the slider to compare the before and after states.
+            Use the slider to compare before and after states.
             Real results from real projects across Nigeria.
           </p>
         </motion.div>
