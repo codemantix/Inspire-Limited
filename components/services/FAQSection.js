@@ -153,10 +153,10 @@ export default function FAQSection() {
             Our team is ready to help. Contact us for personalized assistance.
           </p>
           <div className={styles.ctaButtons}>
-            <a href="tel:+2348012345678" className={styles.primaryButton}>
+            <a href="tel:+2349132736772" className={styles.primaryButton}>
               Call Us Now
             </a>
-            <a href="https://wa.me/2348012345678" className={styles.secondaryButton}>
+            <a href="https://wa.me/2349132736772" className={styles.secondaryButton}>
               WhatsApp Chat
             </a>
           </div>
