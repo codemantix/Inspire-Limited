@@ -95,8 +95,7 @@ export default function HeroSection() {
 				</motion.h1>
 				
 				<motion.p className={styles.heroDescription} variants={fadeInUp}>
-					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control -<br />
-					all delivered by vetted, trained professionals under one reliable contract.
+					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control - all delivered by vetted, trained professionals under one reliable contract.
 				</motion.p>
 				
 				<motion.div className={styles.heroMission} variants={fadeInUp}>
@@ -130,7 +129,7 @@ export default function HeroSection() {
 								variants={staggerItem}
 							>
 							<div className={styles.statIcon}>
-								<Icon style={{ fontSize: 28, color: "#02CE02" }} />
+								<Icon style={{ fontSize: 18, color: "#02CE02" }} className={styles.statIconSvg} />
 							</div>
 							<div className={styles.statText}>
 								<div className={styles.statValue}>{stat.value}</div>

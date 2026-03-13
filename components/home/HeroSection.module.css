@@ -1,5 +1,5 @@
 .heroSection {
-  @apply relative min-h-[700px] py-16 mobile:pt-10 flex items-center justify-center overflow-x-hidden;
+  @apply relative min-h-[70dvh] py-16 mobile:pt-10 flex items-center justify-center overflow-x-hidden;
 }
 
 .backgroundSlider {
@@ -44,7 +44,7 @@
 }
 
 .heroTitle {
-  @apply mb-6 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl;
+  @apply mb-6 font-bold leading-tight text-white md:text-6xl lg:text-7xl;
 }
 
 .heroTitleGreen {
@@ -72,36 +72,46 @@
 }
 
 .statsContainer {
-  @apply flex flex-wrap sm:items-center mobile:flex-col sm:justify-center gap-12 border-t border-white/20 pt-6 md:gap-20;
+  @apply grid grid-cols-3 sm:flex sm:flex-wrap sm:items-center sm:justify-center gap-4 sm:gap-12 border-t border-white/20 pt-6 md:gap-20;
 }
 
 .statItem {
-  @apply flex flex-row items-center gap-4 ;
+  @apply flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-4 text-center sm:text-left;
 }
 
 .statIcon {
-  @apply flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm;
+  @apply flex-shrink-0 flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm;
+}
+
+.statIconSvg {
+  font-size: 18px !important;
+}
+
+@media (min-width: 640px) {
+  .statIconSvg {
+    font-size: 26px !important;
+  }
 }
 
 .statText {
-  @apply flex flex-col items-start;
+  @apply flex flex-col items-center sm:items-start;
 }
 
 .statValue {
-  @apply text-xl font-black text-brand-lime md:text-2xl leading-tight;
+  @apply text-base font-black text-brand-lime sm:text-xl md:text-2xl leading-tight;
 }
 
 .statLabel {
-  @apply text-xs font-medium text-white/80 md:text-sm leading-snug mt-0.5;
+  @apply text-[10px] sm:text-xs font-medium text-white/80 md:text-sm leading-snug mt-0.5;
 }
 
 @screen mobile {
   .heroTitle {
-    @apply text-3xl font-black;
+    @apply !text-[22px] font-black;
   }
   
   .heroDescription {
-    @apply text-base;
+    @apply text-sm;
   }
   
   .heroButtons {
@@ -110,14 +120,14 @@
   
   .primaryButton,
   .secondaryButton {
-    @apply w-full;
+    @apply w-full !py-3 !px-6 !text-sm;
   }
   
   .statsContainer {
-    @apply gap-8;
+    @apply gap-3;
   }
   
   .statValue {
-    @apply text-2xl;
+    @apply text-base;
   }
 }
