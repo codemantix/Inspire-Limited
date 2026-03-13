@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { motion } from "framer-motion";
 import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
 import ApartmentIcon from "@mui/icons-material/Apartment";
@@ -59,7 +59,7 @@ export default function ServicesSection() {
     {
       category: "BPO Services",
       title: "Outsourced Cleaning Personnel",
-      desc: "Stop recruiting, training, and managing cleaners in-house. We supply vetted, uniformed, and supervised cleaners directly to your organisation on a retainer basis — and handle everything from attendance to replacement.",
+      desc: "Stop recruiting, training, and managing cleaners in-house. We supply vetted, uniformed, and supervised cleaners directly to your organisation on a retainer basis - and handle everything from attendance to replacement.",
       icon: CleaningServicesIcon,
       color: "#228B22",
       features: [
@@ -75,7 +75,7 @@ export default function ServicesSection() {
     {
       category: "Facility Services",
       title: "Corporate & Facility Cleaning",
-      desc: "Scheduled, thorough, and compliance-ready cleaning for offices, financial institutions, industrial sites, and institutional facilities. We work around your operations — not against them.",
+      desc: "Scheduled, thorough, and compliance-ready cleaning for offices, financial institutions, industrial sites, and institutional facilities. We work around your operations - not against them.",
       icon: ApartmentIcon,
       color: "#228B22",
       features: [

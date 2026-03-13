@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import styles from "./CompanyOverview.module.css";
 
 export default function CompanyOverview() {
@@ -19,14 +19,14 @@ export default function CompanyOverview() {
           </p>
           <div className={styles.textBlock}>
             <p>
-              Inspire Limited was founded on the belief that the facility services industry — one of the largest
-              employers of entry-level and informal labour in Africa — could be structured differently. Not just as
+              Inspire Limited was founded on the belief that the facility services industry - one of the largest
+              employers of entry-level and informal labour in Africa - could be structured differently. Not just as
               a business that cleans spaces, but as a platform that transforms the people doing the cleaning.
             </p>
             <p>
               We saw an industry where cleaners were treated as interchangeable, underpaid, and invisible. Where
               organisations struggled to find reliable cleaning staff. Where quality was inconsistent, turnover was
-              high, and nobody was winning — not the client, not the worker.
+              high, and nobody was winning - not the client, not the worker.
             </p>
             <p>So we built something different.</p>
           </div>

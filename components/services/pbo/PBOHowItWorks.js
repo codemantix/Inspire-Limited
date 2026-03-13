@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import PhoneCallbackIcon from "@mui/icons-material/PhoneCallback";
 import SearchIcon from "@mui/icons-material/Search";
 import HandshakeIcon from "@mui/icons-material/Handshake";
@@ -35,7 +35,7 @@ const steps = [
     number: "05",
     icon: ManageAccountsIcon,
     title: "Ongoing Management",
-    desc: "Supervision, reporting, replacements, and quality checks run in the background — you focus on your core business.",
+    desc: "Supervision, reporting, replacements, and quality checks run in the background - you focus on your core business.",
   },
 ];
 

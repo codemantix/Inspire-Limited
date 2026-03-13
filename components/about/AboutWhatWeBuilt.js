@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import styles from "./AboutWhatWeBuilt.module.css";
 
 export default function AboutWhatWeBuilt() {
@@ -25,7 +25,7 @@ export default function AboutWhatWeBuilt() {
             <p>
               Every person we deploy goes through rigorous technical training, soft skills development, and a
               12-month career transition program designed to help them move into the career path they genuinely
-              want — whether that is a trade, a business, a professional role, or a leadership track within
+              want - whether that is a trade, a business, a professional role, or a leadership track within
               Inspire itself.
             </p>
             <p>

@@ -42,8 +42,8 @@ export default function PBOCallToAction() {
             <div className={styles.contactList}>
               <div className={styles.contactItem}>
                 <PhoneIcon style={{ fontSize: 22, color: "var(--brand-green)" }} />
-                <a href="tel:+2348135678905" className={styles.contactText}>
-                  (+234) 813 567 8905
+                <a href="tel:+2349132736772" className={styles.contactText}>
+                  (+234) 913 273 6772
                 </a>
               </div>
               <div className={styles.contactItem}>

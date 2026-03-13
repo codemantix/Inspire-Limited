@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./PBOBenefits.module.css";
 
@@ -6,10 +6,10 @@ export default function PBOBenefits() {
   const benefits = [
     "Inconsistent attendance and no-shows with no backup plan",
     "High cleaner turnover, requiring constant re-hiring",
-    "No structured training — standards slip over time",
+    "No structured training - standards slip over time",
     "HR and payroll burden for non-core staff",
     "No one to call when a cleaner underperforms or disappears",
-    "Compliance gaps — no documentation, no safety protocols"
+    "Compliance gaps - no documentation, no safety protocols"
   ];
 
   return (

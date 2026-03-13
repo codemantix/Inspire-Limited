@@ -11,7 +11,7 @@ export default function WhyInspire() {
     <Layout>
       <ServiceHero
         title="Why Choose Inspire Limited"
-        subtitle="We don't just send cleaners. We manage your facility — with trained teams, on-site supervisors, regular audits, and full accountability."
+        subtitle="We don't just send cleaners. We manage your facility - with trained teams, on-site supervisors, regular audits, and full accountability."
         backgroundImage="/images/hero/why-hero.jpg"
         ctaText="Request a Quote"
         ctaLink="/contact"

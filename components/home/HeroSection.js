@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import TimerIcon from "@mui/icons-material/Timer";
@@ -95,7 +95,7 @@ export default function HeroSection() {
 				</motion.h1>
 				
 				<motion.p className={styles.heroDescription} variants={fadeInUp}>
-					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control —<br />
+					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control -<br />
 					all delivered by vetted, trained professionals under one reliable contract.
 				</motion.p>
 				

@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -11,7 +11,7 @@ export default function AboutCallToAction() {
         <p className={styles.eyebrow}>GET IN TOUCH</p>
         <h2 className={styles.title}>Want to Know More About How We Work?</h2>
         <p className={styles.subtitle}>
-          Explore our services, meet our team, or reach out directly — we&apos;d love to tell you more about
+          Explore our services, meet our team, or reach out directly - we&apos;d love to tell you more about
           what Inspire can do for your organisation.
         </p>
 

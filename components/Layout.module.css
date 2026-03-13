@@ -5,3 +5,51 @@
 .main {
   @apply min-h-screen;
 }
+
+/* ── Scroll to top button ── */
+.scrollTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-navy);
+
+  /* neomorphic base */
+  background: #f6f7f9;
+  box-shadow:
+    6px 6px 12px rgba(163, 177, 198, 0.6),
+    -6px -6px 12px rgba(255, 255, 255, 0.9);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.15s ease;
+}
+
+.scrollTopVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scrollTop:hover {
+  box-shadow:
+    3px 3px 7px rgba(163, 177, 198, 0.7),
+    -3px -3px 7px rgba(255, 255, 255, 1);
+  color: var(--brand-green);
+}
+
+.scrollTop:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(163, 177, 198, 0.6),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transform: translateY(0) scale(0.97);
+}

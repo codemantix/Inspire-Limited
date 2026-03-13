@@ -100,6 +100,10 @@
   font-size: 1.3rem !important;
 }
 
+.whatsappIcon {
+  color: #25d366 !important;
+}
+
 .infoLabel {
   @apply text-xs font-semibold uppercase tracking-[0.15em] text-brand-muted;
 }

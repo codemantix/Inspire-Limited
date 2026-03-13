@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import styles from "./AboutOurPeople.module.css";
 
 export default function AboutOurPeople() {
@@ -16,7 +16,7 @@ export default function AboutOurPeople() {
           <h2 className={styles.title}>The Team Behind the Work</h2>
           <div className={styles.textBlock}>
             <p>
-              Inspire Limited is built by people who take both sides of our mission seriously — the service
+              Inspire Limited is built by people who take both sides of our mission seriously - the service
               side and the people side.
             </p>
             <p>
@@ -26,7 +26,7 @@ export default function AboutOurPeople() {
             </p>
             <p>
               Together, we run a business where excellence in delivery and investment in people are not in
-              tension — they reinforce each other.
+              tension - they reinforce each other.
             </p>
           </div>
         </motion.div>

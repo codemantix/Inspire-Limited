@@ -8,7 +8,7 @@ export default function Career() {
     <Layout>
       <ServiceHero
         title="Build a Future While You Work"
-        subtitle="Join Inspire Limited — where honest work comes with real training, mentorship, and the chance to grow into something more."
+        subtitle="Join Inspire Limited - where honest work comes with real training, mentorship, and the chance to grow into something more."
         backgroundImage="/images/hero/why-hero.jpg"
         ctaText="Start Your Application"
         ctaLink="#application-form"

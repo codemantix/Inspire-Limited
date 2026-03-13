@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import styles from "./PBOSetsApart.module.css";
 
 // Icons
@@ -48,7 +48,7 @@ export default function PBOSetsApart() {
     {
       icon: <LoopIcon fontSize="large" />,
       title: "Instant Replacement Guarantee",
-      text: "If a cleaner is absent, sick, or underperforming, we replace them within 48 hours — no disruption to your operations, no chasing from your end."
+      text: "If a cleaner is absent, sick, or underperforming, we replace them within 48 hours - no disruption to your operations, no chasing from your end."
     },
     {
       icon: <AssessmentIcon fontSize="large" />,
@@ -58,7 +58,7 @@ export default function PBOSetsApart() {
     {
       icon: <TrendingUpIcon fontSize="large" />,
       title: "Uniforms & Equipment",
-      text: "Personnel are uniformed, equipped, and presented professionally — representing your facility’s standards, not undercutting them."
+      text: "Personnel are uniformed, equipped, and presented professionally - representing your facility’s standards, not undercutting them."
     }
   ];
 
@@ -69,7 +69,7 @@ export default function PBOSetsApart() {
           <p className={styles.eyebrow}>BPO SERVICES</p>
           <h2 className={styles.sectionTitle}>Everything Included in Your BPO Contract</h2>
           <p className={styles.sectionDesc}>
-            Stop managing cleaners in-house. Under one contract, you get fully managed personnel — recruited, trained, supervised, and replaced by us.
+            Stop managing cleaners in-house. Under one contract, you get fully managed personnel - recruited, trained, supervised, and replaced by us.
           </p>
         </div>
 

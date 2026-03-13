@@ -4,16 +4,18 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./ContactFormSection.module.css";
 
 const WHATSAPP_PHONE = "2349132736772";
 
 const contactDetails = [
-  { icon: PhoneIcon, label: "Phone", value: "(+234) 813 567 8905", href: "tel:+2348135678905" },
+  { icon: PhoneIcon, label: "Phone", value: "(+234) 913 273 6772", href: "tel:+2349132736772" },
+  { icon: WhatsAppIcon, label: "WhatsApp", value: "+234 913 273 6772", href: `https://wa.me/${WHATSAPP_PHONE}` },
   { icon: EmailIcon, label: "Email", value: "info@inspirelimited.com", href: "mailto:info@inspirelimited.com" },
   { icon: LocationOnIcon, label: "Address", value: "Lagos, Nigeria", href: null },
-  { icon: AccessTimeIcon, label: "Business Hours", value: "Mon – Fri: 8am – 6pm", href: null },
+  { icon: AccessTimeIcon, label: "Business Hours", value: "Mon - Fri: 8am - 6pm", href: null },
 ];
 
 const steps = [
@@ -167,12 +169,18 @@ export default function ContactFormSection() {
               {contactDetails.map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className={styles.infoCard}>
                   <div className={styles.infoIconWrap}>
-                    <Icon className={styles.infoIcon} />
+                    <Icon className={`${styles.infoIcon}${label === "WhatsApp" ? ` ${styles.whatsappIcon}` : ""}`} />
                   </div>
                   <div>
                     <p className={styles.infoLabel}>{label}</p>
                     {href ? (
-                      <a href={href} className={styles.infoValue}>{value}</a>
+                      <a
+                        href={href}
+                        className={styles.infoValue}
+                        {...(label === "WhatsApp" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      >
+                        {value}
+                      </a>
                     ) : (
                       <p className={styles.infoValue}>{value}</p>
                     )}

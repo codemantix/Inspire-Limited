@@ -13,7 +13,7 @@ export default function BPO_Cleaning() {
     <Layout>
       <ServiceHero 
         title="Stop Managing Cleaners. Start Managing Your Business."
-        subtitle="Recruiting, training, supervising, and replacing cleaning staff is a full-time job — and it's not yours. Inspire Limited takes that entire function off your plate, supplying vetted, trained, and supervised cleaning personnel directly to your organisation on a structured retainer contract. You get the cleaners. We handle everything else."
+        subtitle="Recruiting, training, supervising, and replacing cleaning staff is a full-time job - and it's not yours. Inspire Limited takes that entire function off your plate, supplying vetted, trained, and supervised cleaning personnel directly to your organisation on a structured retainer contract. You get the cleaners. We handle everything else."
         backgroundImage="/images/services/bpo.jpg"
         ctaText="Request a Quote"
         ctaLink="#request-service"

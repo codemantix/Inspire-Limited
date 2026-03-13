@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -62,7 +62,7 @@ export default function WhyInspireSection() {
 		},
 		{
 			title: "Professionally Trained Personnel",
-			desc: "Every cleaner is vetted, trained, uniformed, and equipped before they enter your space — and continuously developed while on your contract.",
+			desc: "Every cleaner is vetted, trained, uniformed, and equipped before they enter your space - and continuously developed while on your contract.",
 			icon: CheckCircleIcon,
 		},
 		{
@@ -72,12 +72,12 @@ export default function WhyInspireSection() {
 		},
 		{
 			title: "Clear Reporting and Accountability",
-			desc: "Transparent performance tracking, monthly reports, and a dedicated client contact — you always know exactly what you’re getting.",
+			desc: "Transparent performance tracking, monthly reports, and a dedicated client contact - you always know exactly what you’re getting.",
 			icon: AssessmentIcon,
 		},
 		{
-			title: "Embedded Social Value — At No Extra Cost",
-			desc: "Choosing Inspire means your contract supports real workforce development. Our staff transition into better careers — so you always have motivated, purpose-driven professionals in your facility.",
+			title: "Embedded Social Value - At No Extra Cost",
+			desc: "Choosing Inspire means your contract supports real workforce development. Our staff transition into better careers - so you always have motivated, purpose-driven professionals in your facility.",
 			icon: VolunteerActivismIcon,
 		},
 	];

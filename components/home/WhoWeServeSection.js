@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import BusinessIcon from "@mui/icons-material/Business";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
@@ -80,7 +80,7 @@ export default function WhoWeServeSection() {
 							<p className={styles.eyebrow}>WHO WE SERVE</p>
 							</div>
 						<h2 className={styles.sectionTitle}>Built for Organisations That Demand Reliability</h2>
-						<p className={styles.sectionDesc}>We work with organisations that can’t afford cleaning failures — where hygiene, compliance, and consistency are non-negotiable.</p>
+						<p className={styles.sectionDesc}>We work with organisations that can’t afford cleaning failures - where hygiene, compliance, and consistency are non-negotiable.</p>
 						<motion.div 
 							className={styles.clientsGrid}
 							variants={staggerContainer}
@@ -113,7 +113,7 @@ export default function WhoWeServeSection() {
 					>
 						<div className={styles.imageWrapper}>
 							<img 
-								src="/images/hero/about-hero.jpg" 
+								src="/images/services/professional-cleaning.jpg" 
 								alt="Modern office building and corporate spaces" 
 								className={styles.image}
 							/>

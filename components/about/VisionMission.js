@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import TrackChangesIcon from "@mui/icons-material/TrackChanges";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import styles from "./VisionMission.module.css";
@@ -40,7 +40,7 @@ export default function VisionMission() {
             </div>
             <p className={styles.cardLabel}>Vision</p>
             <p className={styles.cardText}>
-              To be Africa&apos;s most trusted facility services company — known equally for operational excellence
+              To be Africa&apos;s most trusted facility services company - known equally for operational excellence
               and the transformative impact we create in the people who power our work.
             </p>
           </motion.div>

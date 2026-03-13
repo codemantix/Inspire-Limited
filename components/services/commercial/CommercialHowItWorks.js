@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import SearchIcon from "@mui/icons-material/Search";
 import DescriptionIcon from "@mui/icons-material/Description";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
@@ -21,7 +21,7 @@ export default function CommercialHowItWorks() {
       number: "01",
       icon: <SearchIcon fontSize="large" />,
       title: "Facility Assessment",
-      desc: "We visit your site, assess the areas, usage level, risk profile, and cleaning frequency required. No guesswork — we scope it precisely.",
+      desc: "We visit your site, assess the areas, usage level, risk profile, and cleaning frequency required. No guesswork - we scope it precisely.",
     },
     {
       number: "02",
@@ -50,7 +50,7 @@ export default function CommercialHowItWorks() {
           <p className={styles.eyebrow}>HOW WE WORK</p>
           <h2 className={styles.sectionTitle}>Our Structured Cleaning Process</h2>
           <p className={styles.sectionDesc}>
-            Every engagement follows a documented process — from first visit to ongoing reporting.
+            Every engagement follows a documented process - from first visit to ongoing reporting.
           </p>
         </div>
 

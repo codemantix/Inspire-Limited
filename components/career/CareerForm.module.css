@@ -1,9 +1,9 @@
-/* ── Form section ─────────────────────────────────────── */
+﻿/* ── Form section ─────────────────────────────────────── */
 .formSection {
   @apply pb-24;
 }
 
-/* Mobile sticky strip — hidden on lg+ */
+/* Mobile sticky strip - hidden on lg+ */
 .mobileProgress {
   position: sticky;
   top: 69px; /* sit flush below the sticky header (py-3 × 2 + logo h-[45px] ≈ 69 px) */
@@ -20,7 +20,7 @@
   @apply mx-auto w-full max-w-5xl px-5 pt-6 md:px-8 lg:grid lg:grid-cols-[220px_1fr] lg:items-start lg:gap-8;
 }
 
-/* Sidebar — hidden on mobile */
+/* Sidebar - hidden on mobile */
 .sidebar {
   @apply hidden lg:block;
   position: sticky;
