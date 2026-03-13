@@ -61,7 +61,7 @@ export default function MethodologySteps() {
           <p className={styles.eyebrow}>HOW IT WORKS</p>
           <h2 className={styles.title}>Our Structured Pest Control Process</h2>
           <p className={styles.desc}>
-            Every engagement starts with an inspection and ends with documentation - so you always know exactly what was done and why.
+            Every engagement starts with an inspection and ends with documentation, so you always know exactly what was done and why.
           </p>
         </div>
 

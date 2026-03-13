@@ -36,7 +36,7 @@ export default function ResidentialTrust() {
     {
       icon: <PersonPinIcon fontSize="large" />,
       title: "Consistent Assigned Cleaner",
-      text: "For regular bookings, we assign the same cleaner to your home wherever possible — so you build familiarity and comfort over time.",
+      text: "For regular bookings, we assign the same cleaner to your home wherever possible, so you build familiarity and comfort over time.",
     },
     {
       icon: <StarRateIcon fontSize="large" />,
@@ -50,7 +50,7 @@ export default function ResidentialTrust() {
       <div className={styles.container}>
         <div className={styles.sectionHeader}>
           <p className={styles.eyebrow}>WHY TRUST US IN YOUR HOME</p>
-          <h2 className={styles.sectionTitle}>Vetted, Trained, and Accountable — Every Time</h2>
+          <h2 className={styles.sectionTitle}>Vetted, Trained, and Accountable, Every Time</h2>
           <p className={styles.sectionDesc}>
             We take the responsibility of being in your home seriously. Every precaution is taken so you can feel comfortable from day one.
           </p>

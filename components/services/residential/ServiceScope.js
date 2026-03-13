@@ -31,17 +31,17 @@ export default function ServiceScope() {
     {
       icon: <CottageIcon fontSize="large" />,
       title: "Regular Home Cleaning",
-      text: "Scheduled daily, weekly, or bi-weekly cleaning of your home — living areas, bedrooms, bathrooms, kitchen, and common spaces. Consistent, reliable, and always the same standard."
+      text: "Scheduled daily, weekly, or bi-weekly cleaning of your home, living areas, bedrooms, bathrooms, kitchen, and common spaces. Consistent, reliable, and always the same standard."
     },
     {
       icon: <ConstructionIcon fontSize="large" />,
       title: "One-Off Deep Cleaning",
-      text: "A thorough, room-by-room intensive clean when your home needs a proper reset — after a gathering, before a move, or just because it's been a while. We go into every corner."
+      text: "A thorough, room-by-room intensive clean when your home needs a proper reset, after a gathering, before a move, or just because it's been a while. We go into every corner."
     },
     {
       icon: <LocalShippingIcon fontSize="large" />,
       title: "Move-In / Move-Out Cleaning",
-      text: "Moving into a new property or leaving one? We clean the entire space — inside wardrobes, behind appliances, windows, floors, bathrooms — so it's fresh and ready."
+      text: "Moving into a new property or leaving one? We clean the entire space, inside wardrobes, behind appliances, windows, floors, bathrooms, so it's fresh and ready."
     },
     {
       icon: <ConstructionIcon fontSize="large" />,
@@ -56,7 +56,7 @@ export default function ServiceScope() {
     {
       icon: <EventAvailableIcon fontSize="large" />,
       title: "Short-Let & Airbnb Turnaround Cleaning",
-      text: "Fast, thorough turnaround cleaning between guest check-outs and check-ins — restocking linens, sanitising surfaces, and leaving the property guest-ready every time."
+      text: "Fast, thorough turnaround cleaning between guest check-outs and check-ins, restocking linens, sanitising surfaces, and leaving the property guest-ready every time."
     }
   ];
 

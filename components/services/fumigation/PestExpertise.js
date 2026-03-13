@@ -52,7 +52,7 @@ export default function PestExpertise() {
             <p className={styles.eyebrow}>WHO THIS IS FOR</p>
             <h2 className={styles.title}>We Protect Every Kind of Environment</h2>
             <p className={styles.desc}>
-              Our certified pest control professionals are equipped to handle every environment type - residential, commercial, or industrial.
+              Our certified pest control professionals are equipped to handle every environment type, residential, commercial, or industrial.
             </p>
             
             <div className={styles.pestGrid}>

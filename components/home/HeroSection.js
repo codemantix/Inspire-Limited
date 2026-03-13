@@ -56,7 +56,7 @@ export default function HeroSection() {
 	}, [backgroundImages.length]);
 	
 	const stats = [
-		{ value: "48-Hour", label: "Staff Replacement Guarantee", icon: TimerIcon },
+		// { value: "48-Hour", label: "Staff Replacement Guarantee", icon: TimerIcon },
 		{ value: "100%", label: "Vetted & Certified Personnel", icon: VerifiedIcon },
 		{ value: "24/7", label: "Client Support", icon: SupportAgentIcon },
 	];
@@ -95,7 +95,7 @@ export default function HeroSection() {
 				</motion.h1>
 				
 				<motion.p className={styles.heroDescription} variants={fadeInUp}>
-					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control - all delivered by vetted, trained professionals under one reliable contract.
+					Outsourced cleaning personnel, commercial facility services, residential cleaning, and pest control, all delivered by vetted, trained professionals under one reliable contract.
 				</motion.p>
 				
 				<motion.div className={styles.heroMission} variants={fadeInUp}>

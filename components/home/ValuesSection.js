@@ -71,13 +71,13 @@ export default function ValuesSection() {
 						<p className={styles.eyebrow}>OUR COMMITMENT</p>
 						<h2 className={styles.sectionTitle}>Redefining What a Cleaning Company Can Be</h2>
 						<p className={styles.bodyText}>
-							At Inspire Limited, we believe the facility services industry can do more than clean spaces - it can change lives. Every cleaner in our workforce is enrolled in a structured 12-month career development and transition program, designed to help them build skills, shift their mindset, and move into the career paths they&apos;ve always wanted.
+							At Inspire Limited, we believe the facility services industry can do more than clean spaces, it can change lives. Every cleaner in our workforce is enrolled in a structured 12-month career development and transition program, designed to help them build skills, shift their mindset, and move into the career paths they&apos;ve always wanted.
 						</p>
 						<p className={styles.bodyText}>
 							This isn&apos;t charity. It&apos;s strategy. Motivated, growing workers deliver better service. Clients get more engaged professionals. And the industry gets a new standard.
 						</p>
 						<p className={styles.bodyText}>
-							When you partner with Inspire, you&apos;re not just outsourcing a cleaning problem - you&apos;re contributing to something bigger.
+							When you partner with Inspire, you&apos;re not just outsourcing a cleaning problem, you&apos;re contributing to something bigger.
 						</p>
 					</motion.div>
 

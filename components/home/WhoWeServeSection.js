@@ -80,7 +80,7 @@ export default function WhoWeServeSection() {
 							<p className={styles.eyebrow}>WHO WE SERVE</p>
 							</div>
 						<h2 className={styles.sectionTitle}>Built for Organisations That Demand Reliability</h2>
-						<p className={styles.sectionDesc}>We work with organisations that can’t afford cleaning failures - where hygiene, compliance, and consistency are non-negotiable.</p>
+						<p className={styles.sectionDesc}>We work with organisations that can’t afford cleaning failures, where hygiene, compliance, and consistency are non-negotiable.</p>
 						<motion.div 
 							className={styles.clientsGrid}
 							variants={staggerContainer}

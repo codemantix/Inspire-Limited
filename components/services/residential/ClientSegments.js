@@ -20,7 +20,7 @@ export default function ClientSegments() {
             <p className={styles.eyebrow}>WHO WE SERVE</p>
             <h2 className={styles.sectionTitle}>You'll Feel Right at Home With Us</h2>
             <p className={styles.sectionDesc}>
-              Vetted, trained, and accountable - every time. Our residential teams are assigned specifically to your property and managed throughout.
+              Vetted, trained, and accountable, every time. Our residential teams are assigned specifically to your property and managed throughout.
             </p>
           </div>
 

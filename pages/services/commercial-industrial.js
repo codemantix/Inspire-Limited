@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+﻿import Layout from "../../components/Layout";
 import ServiceHero from "../../components/services/ServiceHero";
 import FacilitiesGrid from "../../components/services/commercial/FacilitiesGrid";
 import CleaningSolutions from "../../components/services/commercial/CleaningSolutions";
@@ -12,7 +12,7 @@ export default function CommercialIndustrial() {
     <Layout>
       <ServiceHero
         title="Commercial and Industrial Cleaning That Passes Any Audit"
-        subtitle="Your facility reflects your organisation. Dirty floors, neglected washrooms, and cluttered workspaces erode confidence - from staff, clients, and regulators alike. Inspire Limited delivers structured, supervised commercial and industrial cleaning services that meet the hygiene and compliance standards your environment demands."
+        subtitle="Your facility reflects your organisation. Dirty floors, neglected washrooms, and cluttered workspaces erode confidence, from staff, clients, and regulators alike. Inspire Limited delivers structured, supervised commercial and industrial cleaning services that meet the hygiene and compliance standards your environment demands."
         backgroundImage="/images/services/commercial.jpg"
         ctaText="Request a Quote"
         ctaLink="#request-quote"

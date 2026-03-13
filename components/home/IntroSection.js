@@ -88,10 +88,10 @@ export default function IntroSection() {
 						<span className={styles.titleAccent}> Zero HR Headaches.</span>
 					</h2>
 					<p className={styles.body}>
-						Inspire Limited takes the burden of cleaning management off your organisation - completely. We handle recruitment, vetting, training, supervision, replacements, compliance reporting, and quality assurance, all under one contract.
+						Inspire Limited takes the burden of cleaning management off your organisation, completely. We handle recruitment, vetting, training, supervision, replacements, compliance reporting, and quality assurance, all under one contract.
 					</p>
 					<p className={styles.body}>
-						Whether you need a dedicated team of outsourced cleaners deployed to your office, a deep clean of your facility, pest control for your property, or professional residential cleaning - we show up, we deliver, and we report back.
+						Whether you need a dedicated team of outsourced cleaners deployed to your office, a deep clean of your facility, pest control for your property, or professional residential cleaning, we show up, we deliver, and we report back.
 					</p>
 					<p className={styles.body}>
 						And because every member of our workforce is on a structured career development program, you don’t just get cleaners. You get motivated, growing professionals invested in doing excellent work.

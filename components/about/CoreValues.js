@@ -10,7 +10,7 @@ const values = [
   {
     icon: <EmojiPeopleIcon fontSize="large" />,
     title: "Dignity of Work",
-    text: "Every role in our organisation is treated with respect. A cleaner is not a lesser professional - they are a trained, supervised, accountable member of a service team. We build this into how we hire, train, pay, and develop our people.",
+    text: "Every role in our organisation is treated with respect. A cleaner is not a lesser professional, they are a trained, supervised, accountable member of a service team. We build this into how we hire, train, pay, and develop our people.",
   },
   {
     icon: <StarIcon fontSize="large" />,
@@ -20,12 +20,12 @@ const values = [
   {
     icon: <AssignmentTurnedInIcon fontSize="large" />,
     title: "Accountability",
-    text: "We take ownership of outcomes. When something goes wrong, we fix it - not make excuses. Clients receive transparent reporting precisely because we believe in being held to what we promise.",
+    text: "We take ownership of outcomes. When something goes wrong, we fix it, not make excuses. Clients receive transparent reporting precisely because we believe in being held to what we promise.",
   },
   {
     icon: <VerifiedUserIcon fontSize="large" />,
     title: "Integrity",
-    text: "We act ethically in every relationship - with clients, with workers, with suppliers, and with the public. No shortcuts. No dishonesty. No looking the other way.",
+    text: "We act ethically in every relationship, with clients, with workers, with suppliers, and with the public. No shortcuts. No dishonesty. No looking the other way.",
   },
   {
     icon: <VolunteerActivismIcon fontSize="large" />,

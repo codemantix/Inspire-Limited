@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+﻿import Layout from "../components/Layout";
 import ServiceHero from "../components/services/ServiceHero";
 import CompanyOverview from "../components/about/CompanyOverview";
 import AboutWhatWeBuilt from "../components/about/AboutWhatWeBuilt";
@@ -13,7 +13,7 @@ export default function About() {
     <Layout>
       <ServiceHero
         title="About Inspire Limited"
-        subtitle="We deliver professional facility services to organisations across Nigeria - and invest in the development of every person on our team."
+        subtitle="We deliver professional facility services to organisations across Nigeria, and invest in the development of every person on our team."
         backgroundImage="/images/hero/about-hero.jpg"
         ctaText="Explore Our Services"
         ctaLink="/services"

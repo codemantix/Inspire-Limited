@@ -35,7 +35,7 @@ const steps = [
     number: "05",
     icon: ManageAccountsIcon,
     title: "Ongoing Management",
-    desc: "Supervision, reporting, replacements, and quality checks run in the background - you focus on your core business.",
+    desc: "Supervision, reporting, replacements, and quality checks run in the background, you focus on your core business.",
   },
 ];
 

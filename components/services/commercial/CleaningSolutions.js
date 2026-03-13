@@ -22,7 +22,7 @@ export default function CleaningSolutions() {
     {
       icon: <CleaningServicesIcon fontSize="large" />,
       title: "Routine Office Cleaning",
-      text: "Daily or weekly scheduled cleaning of workspaces, boardrooms, lobbies, kitchens, and washrooms - maintaining a consistently clean and professional environment.",
+      text: "Daily or weekly scheduled cleaning of workspaces, boardrooms, lobbies, kitchens, and washrooms, maintaining a consistently clean and professional environment.",
     },
     {
       icon: <AutoFixHighIcon fontSize="large" />,
@@ -32,7 +32,7 @@ export default function CleaningSolutions() {
     {
       icon: <ConstructionIcon fontSize="large" />,
       title: "Post-Construction & Renovation Cleaning",
-      text: "Dust, debris, paint residue, and construction waste removed from all surfaces, fixtures, floors, and fittings - leaving the space ready for handover or occupation.",
+      text: "Dust, debris, paint residue, and construction waste removed from all surfaces, fixtures, floors, and fittings, leaving the space ready for handover or occupation.",
     },
     {
       icon: <FactoryIcon fontSize="large" />,

@@ -23,7 +23,7 @@ export default function SetsApart() {
               matters beyond the invoice. That is the standard we have built Inspire around.
             </p>
             <p className={styles.lead}>
-              Here is why organisations choose us &mdash; and stay with us.
+              Here is why organisations choose us, and stay with us.
             </p>
           </div>
         </motion.div>

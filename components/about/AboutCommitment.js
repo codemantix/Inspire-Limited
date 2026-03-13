@@ -40,7 +40,7 @@ export default function AboutCommitment() {
             </h2>
             <div className={styles.textBlock}>
               <p>
-                The facility services industry in Africa employs millions of people - and most of them are
+                The facility services industry in Africa employs millions of people, and most of them are
                 trapped in a cycle of low pay, no development, and no pathway forward. We are building a model
                 that breaks that cycle.
               </p>

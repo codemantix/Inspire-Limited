@@ -625,7 +625,7 @@ export default function CareerForm() {
               )}
               <div className={`${styles.field} ${styles.fullWidth}`}>
                 <label htmlFor="cf-futurePlansText" className={styles.label}>What would you like to be in future?</label>
-                <p className={styles.hint}>Tell us your dream or career goal. You can write anything - no answer is wrong.</p>
+                <p className={styles.hint}>Tell us your dream or career goal. You can write anything, no answer is wrong.</p>
                 <textarea
                   id="cf-futurePlansText"
                   name="futurePlansText"

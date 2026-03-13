@@ -21,7 +21,7 @@ export default function FacilitiesGrid() {
             <p className={styles.eyebrow}>WHO THIS IS FOR</p>
             <h2 className={styles.sectionTitle}>Built for Environments Where Hygiene Is Non-Negotiable</h2>
             <p className={styles.sectionDesc}>
-              We work with organisations that cannot afford cleaning failures - where compliance, consistency, and professionalism are essential.
+              We work with organisations that cannot afford cleaning failures, where compliance, consistency, and professionalism are essential.
             </p>
           </div>
 
