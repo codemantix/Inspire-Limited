@@ -53,7 +53,7 @@ export default function ServicesGridSection() {
       description: "Reliable cleaning services for homes, estates, and managed residential properties.",
       features: ["Discreet service", "Attention to detail", "Flexible scheduling"],
       image: "/images/services/residential-cleaning.jpg",
-      link: "/services/residential",
+      link: "/services/residential-cleaning",
       reverse: false
     },
     {

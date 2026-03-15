@@ -49,8 +49,8 @@ export default function ApproachSection() {
 		{
 			number: "03",
 			icon: AssessmentIcon,
-			title: "We Report and Improve",
-			desc: "Every client receives monthly performance reports with attendance records, task completion rates, and issue logs. We flag problems before you do, and fix them faster."
+			title: "We Assess and Improve",
+			desc: "Every client receives monthly performance surveys to assess attendance records, task completion rates, and issue logs. We flag problems before you do, and fix them faster."
 		},
 	];
 
@@ -65,7 +65,7 @@ export default function ApproachSection() {
 			>
 				<div className={styles.sectionHeader}>
 					<p className={styles.eyebrow}>OUR APPROACH</p>
-					<h2 className={styles.sectionTitle}>Simple, Supervised, and Accountable, Every Time</h2>
+					<h2 className={styles.sectionTitle}>Simple, Supervised, and Accountable - Every Time!</h2>
 				</div>
 
 				<motion.div 
