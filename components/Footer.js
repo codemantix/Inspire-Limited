@@ -2,10 +2,10 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 
 const serviceLinks = [
-  { href: "/services/outsourced-personnel", label: "Outsourced Personnel" },
-  { href: "/services/commercial-cleaning", label: "Commercial Cleaning" },
+  { href: "/services/bpo-cleaning", label: "Outsourced Personnel" },
+  { href: "/services/commercial-industrial", label: "Commercial Cleaning" },
   { href: "/services/residential-cleaning", label: "Residential Cleaning" },
-  { href: "/services/pest-control", label: "Pest Control" },
+  { href: "/services/fumigation", label: "Pest Control" },
 ];
 
 const companyLinks = [
