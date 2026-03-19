@@ -190,7 +190,7 @@ export default function ContactFormSection() {
             </div>
 
             <div className={styles.stepsCard}>
-              <h3 className={styles.stepsTitle}>How to Start a Partnership</h3>
+              <h3 className={styles.stepsTitle}>How To Get Our Services</h3>
               <ol className={styles.stepsList}>
                 {steps.map((step, i) => (
                   <li key={i} className={styles.stepItem}>
