@@ -1,4 +1,5 @@
 ﻿import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import ServiceHero from "../components/services/ServiceHero";
 import CompanyOverview from "../components/about/CompanyOverview";
 import AboutWhatWeBuilt from "../components/about/AboutWhatWeBuilt";
@@ -11,6 +12,11 @@ import AboutCallToAction from "../components/about/AboutCallToAction";
 export default function About() {
   return (
     <Layout>
+      <SEO
+        title="About Inspire Limited | Our Story, Mission & Values"
+        description="Learn about Inspire Limited — a professional facility services company in Nigeria focused on delivering excellence in cleaning and workforce development."
+        canonical="/about"
+      />
       <ServiceHero
         title="About Inspire Limited"
         subtitle="We deliver professional facility services to organisations across Nigeria, and invest in the development of every person on our team."

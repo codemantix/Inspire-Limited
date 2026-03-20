@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 import styles from "./Approach.module.css";
 
 const pillars = [
@@ -19,6 +20,11 @@ const pillars = [
 export default function Approach() {
   return (
     <Layout>
+      <SEO
+        title="Our Approach | How Inspire Limited Delivers Excellence"
+        description="Learn about Inspire Limited's disciplined operational framework — combining service excellence with workforce development and lasting social impact in Nigeria."
+        canonical="/approach"
+      />
       <section className={styles.section}>
         <div className={`${styles.container} ${styles.sectionStack}`}>
           <div className={styles.stack}>

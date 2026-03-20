@@ -1,4 +1,5 @@
 ﻿import Layout from "../../components/Layout";
+import SEO from "../../components/SEO";
 import ServiceHero from "../../components/services/ServiceHero";
 import ServiceScope from "../../components/services/residential/ServiceScope";
 import ClientSegments from "../../components/services/residential/ClientSegments";
@@ -10,6 +11,22 @@ import ResidentialForm from "../../components/services/residential/ResidentialFo
 export default function ResidentialCleaning() {
   return (
     <Layout>
+      <SEO
+        title="Residential Cleaning Services in Nigeria | Inspire Limited"
+        description="Professional, vetted cleaning personnel for homes, apartments, and residential estates in Nigeria. The same corporate standards applied to your home."
+        canonical="/services/residential-cleaning"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Residential Cleaning",
+          provider: {
+            "@type": "Organization",
+            name: "Inspire Limited",
+          },
+          description: "Professional residential cleaning services with vetted personnel for homes, apartments, and estates.",
+          areaServed: "Nigeria",
+        }}
+      />
       <ServiceHero
         title="A Spotless Home, Without the Stress of Finding Someone You Can Trust"
         subtitle="Finding a reliable, honest, and thorough house cleaner is one of the most frustrating household tasks. Inspire Limited removes that frustration entirely, providing professional, vetted cleaning personnel for homes, apartments, and residential estates with the same standards we apply to corporate facilities."
