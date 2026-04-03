@@ -5,6 +5,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./ContactFormSection.module.css";
 
@@ -16,6 +19,12 @@ const contactDetails = [
   { icon: EmailIcon, label: "Email", value: "hello@inspireservicesltd.com", href: "mailto:hello@inspireservicesltd.com" },
   { icon: LocationOnIcon, label: "Address", value: "Lagos, Nigeria", href: null },
   { icon: AccessTimeIcon, label: "Business Hours", value: "Mon - Fri: 8am - 6pm", href: null },
+];
+
+const socialLinks = [
+  { icon: InstagramIcon, href: "https://www.instagram.com/inspire.limited/", label: "Instagram" },
+  { icon: FacebookIcon, href: "https://www.facebook.com/share/1KWZx1e1er/", label: "Facebook" },
+  { icon: LinkedInIcon, href: "https://www.linkedin.com/company/inspireltd/", label: "LinkedIn" },
 ];
 
 const steps = [
@@ -187,6 +196,24 @@ export default function ContactFormSection() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className={styles.socialRow}>
+              <h3 className={styles.socialTitle}>Follow Us</h3>
+              <div className={styles.socialIcons}>
+                {socialLinks.map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialIconLink}
+                    aria-label={label}
+                  >
+                    <Icon />
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className={styles.stepsCard}>

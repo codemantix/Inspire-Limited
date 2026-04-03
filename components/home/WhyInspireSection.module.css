@@ -132,7 +132,7 @@
   }
   
   .commitmentCard {
-    @apply p-8;
+    @apply p-8 mobile:p-4;
   }
   
   .commitmentIcon {

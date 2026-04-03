@@ -1,5 +1,14 @@
 import Link from "next/link";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import styles from "./Footer.module.css";
+
+const socialLinks = [
+  { icon: InstagramIcon, href: "https://www.instagram.com/inspire.limited/", label: "Instagram" },
+  { icon: FacebookIcon, href: "https://www.facebook.com/share/1KWZx1e1er/", label: "Facebook" },
+  { icon: LinkedInIcon, href: "https://www.linkedin.com/company/inspireltd/", label: "LinkedIn" },
+];
 
 const serviceLinks = [
   { href: "/services/bpo-cleaning", label: "Outsourced Personnel" },
@@ -31,6 +40,20 @@ export default function Footer() {
           <p className={styles.quote}>
             "Redefining facility services in Africa"
           </p>
+          <div className={styles.socialLinks}>
+            {socialLinks.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.socialLink}
+                aria-label={label}
+              >
+                <Icon fontSize="small" />
+              </a>
+            ))}
+          </div>
         </div>
         
         <div className={styles.linkColumn}>
