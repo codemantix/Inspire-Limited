@@ -1,0 +1,53 @@
+.page {
+  @apply py-16 md:py-24;
+  background: linear-gradient(180deg, #f8faf9 0%, #fff 40%);
+  min-height: 100vh;
+}
+
+.container {
+  @apply mx-auto w-full max-w-3xl px-5 md:px-8;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.3em] text-brand-green mb-3;
+}
+
+.title {
+  @apply text-3xl font-semibold leading-tight md:text-4xl text-brand-ink mb-2;
+}
+
+.effectiveDate {
+  @apply text-sm text-brand-muted mb-10;
+}
+
+.section {
+  @apply mb-10;
+}
+
+.sectionTitle {
+  @apply text-xl font-semibold text-brand-ink mb-3;
+}
+
+.body {
+  @apply text-sm leading-relaxed text-brand-muted;
+}
+
+.body p {
+  @apply mb-4;
+}
+
+.body ul {
+  @apply list-disc pl-6 mb-4 space-y-1;
+}
+
+.body ol {
+  @apply list-decimal pl-6 mb-4 space-y-1;
+}
+
+.body a {
+  @apply text-brand-green underline;
+}
+
+.divider {
+  @apply border-t border-gray-200 my-10;
+}
