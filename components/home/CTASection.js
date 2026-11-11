@@ -85,8 +85,8 @@ export default function CTASection() {
 								<div className={styles.contactIcon}>
 									<PhoneIcon style={{ fontSize: 24, color: "#228B22" }} />
 								</div>
-								<a href="tel:+2349132736772" className={styles.contactText}>
-									(+234) 913 273 6772
+								<a href="tel:+2349155564050" className={styles.contactText}>
+									(+234) 915 556 4050
 								</a>
 							</motion.div>
 
