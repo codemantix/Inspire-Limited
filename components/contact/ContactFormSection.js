@@ -11,11 +11,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import styles from "./ContactFormSection.module.css";
 
-const WHATSAPP_PHONE = "2349132736772";
+const WHATSAPP_PHONE = "2349155564050";
 
 const contactDetails = [
-  { icon: PhoneIcon, label: "Phone", value: "(+234) 913 273 6772", href: "tel:+2349132736772" },
-  { icon: WhatsAppIcon, label: "WhatsApp", value: "+234 913 273 6772", href: `https://wa.me/${WHATSAPP_PHONE}` },
+  { icon: PhoneIcon, label: "Phone", value: "(+234) 915 556 4050", href: "tel:+2349155564050" },
+  { icon: WhatsAppIcon, label: "WhatsApp", value: "+234 915 556 4050", href: `https://wa.me/${WHATSAPP_PHONE}` },
   { icon: EmailIcon, label: "Email", value: "hello@inspireservicesltd.com", href: "mailto:hello@inspireservicesltd.com" },
   { icon: LocationOnIcon, label: "Address", value: "Lagos, Nigeria", href: null },
   { icon: AccessTimeIcon, label: "Business Hours", value: "Mon - Fri: 8am - 6pm", href: null },
