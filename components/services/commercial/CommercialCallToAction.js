@@ -30,7 +30,7 @@ export default function CommercialCallToAction() {
             <p className={styles.contactLabel}>Or reach us directly</p>
             <div className={styles.contactItem}>
               <PhoneIcon className={styles.contactIcon} />
-              <span>(+234) 913 273 6772</span>
+              <span>(+234) 915 556 4050</span>
             </div>
             <div className={styles.contactItem}>
               <EmailIcon className={styles.contactIcon} />

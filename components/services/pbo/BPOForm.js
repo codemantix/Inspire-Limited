@@ -61,7 +61,7 @@ export default function BPOForm() {
           <div className={styles.whatsappRow}>
             <span className={styles.whatsappNote}>Prefer a quicker response?</span>
             <a
-              href={`https://wa.me/${WHATSAPP_PHONE}`}
+              href={`https://wa.me/2349155564050`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.whatsappButton}

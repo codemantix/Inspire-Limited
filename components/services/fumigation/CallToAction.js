@@ -25,9 +25,9 @@ export default function CallToAction() {
         </div>
 
         <div className={styles.contact}>
-          <a href="tel:+2349132736772" className={styles.contactItem}>
+          <a href="tel:+2349155564050" className={styles.contactItem}>
             <PhoneIcon fontSize="small" />
-            <span>(+234) 913 273 6772</span>
+            <span>(+234) 915 556 4050</span>
           </a>
           <a href="mailto:hello@inspireservicesltd.com" className={styles.contactItem}>
             <EmailIcon fontSize="small" />

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ResidentialForm.module.css";
 
-const WHATSAPP_URL = "https://wa.me/message/FTINUCHUTZIPP1";
+const WHATSAPP_URL = "https://wa.me/message/FOZZ4MA4L5LTB1";
 
 const INITIAL_FORM_STATE = {
   fullName: "",
