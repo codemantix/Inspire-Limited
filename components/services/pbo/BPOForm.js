@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./BPOForm.module.css";
 
-const WHATSAPP_PHONE = "2349132736772";
+const WHATSAPP_PHONE = "2349155564050";
 
 const INITIAL_FORM_STATE = {
   fullName: "",

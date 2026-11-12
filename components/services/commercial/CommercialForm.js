@@ -47,7 +47,7 @@ export default function CommercialForm() {
     });
   };
 
-  const WHATSAPP_PHONE = "2349132736772";
+  const WHATSAPP_PHONE = "2349155564050";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
